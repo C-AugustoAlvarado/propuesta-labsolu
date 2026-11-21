@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-borrador="false">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Absolu en tres tiempos</title>
+<meta name="description" content="Propuesta para Carlo Corinto L'Absolu en Liverpool · 4 al 17 de enero de 2027">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Pixel Bridge">
+<meta property="og:title" content="L'Absolu en tres tiempos">
+<meta property="og:description" content="Propuesta para Carlo Corinto L'Absolu en Liverpool · 4 al 17 de enero de 2027">
+<meta property="og:url" content="https://c-augustoalvarado.github.io/propuesta-labsolu/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F2EE;
+  --paper-bright:#FBFBF8;
+  --stone:#C7CCC4;
+  --ink:#15181A;
+  --muted:#59605D;
+  --line:#D3D7CF;
+  --amber:#96530F;
+  --amber-bright:#DE9A52;
+  --display:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+h1,h2,h3,h4,p,dl,dd,ol,ul,figure,table{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:20px;padding-right:20px}
+.cap{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+.borrador{background:var(--ink);color:var(--paper-bright);font-size:.85rem;padding:10px 20px}
+.nota{border-left:3px solid var(--amber-bright);padding:8px 12px;font-size:.88rem;color:var(--amber);background:color-mix(in srgb,var(--amber-bright) 12%,var(--paper));max-width:62ch}
+.pc{display:inline-block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--amber);border:1px solid currentColor;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+html[data-borrador="false"] .interno{display:none!important}
+.bar{position:sticky;top:0;z-index:20;background:rgba(241,242,238,.9);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:50px}
+.marca{font-family:var(--display);font-style:italic;font-size:1.05rem;text-decoration:none;white-space:nowrap;display:none}
+.idx{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;margin:0 -9px}
+.idx::-webkit-scrollbar{display:none}
+.idx a{flex:none;text-decoration:none;font-size:.86rem;padding:14px 9px 12px;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap}
+.idx a b{font-family:var(--display);font-weight:400;margin-right:4px;font-variant-numeric:tabular-nums}
+.idx a:hover{color:var(--ink)}
+.idx a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--amber)}
+@media(min-width:900px){.marca{display:block}.idx{margin:0}}
+.hero{padding-top:44px;padding-bottom:30px;display:grid;gap:20px}
+.hero .cap{color:var(--muted)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.9rem,11vw,6.4rem);line-height:.95;letter-spacing:-.01em;text-wrap:balance}
+.hero h1 em{font-style:italic}
+.lede{font-size:clamp(1.05rem,2.2vw,1.28rem);max-width:56ch}
+.facts{display:flex;flex-wrap:wrap;gap:6px 30px;font-size:.92rem;color:var(--muted)}
+.facts div{display:flex;flex-direction:row-reverse;justify-content:flex-end;align-items:baseline;gap:8px}
+.facts dd{font-family:var(--display);font-size:1.6rem;font-weight:500;line-height:1.2;color:var(--ink);font-variant-numeric:tabular-nums}
+.strata{display:grid;gap:6px;padding-bottom:22px}
+.tiempo{display:grid;gap:14px;padding:20px 20px 10px}
+.t1{background:var(--paper-bright);outline:1px solid var(--line);outline-offset:-1px}
+.t2{background:var(--stone)}
+.t3{background:var(--ink);color:var(--paper-bright)}
+.t-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.t-time{display:flex;align-items:baseline;gap:8px}
+.t-time .n{font-family:var(--display);font-size:clamp(3.6rem,12vw,5.4rem);line-height:.8}
+.t-time .u{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+.t-body{display:grid;gap:6px}
+.t-verb{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4.2vw,2.1rem);line-height:1.1}
+.t-what{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.78}
+.t-body p:last-child{max-width:54ch}
+.track{position:relative;height:24px;border-top:1px solid color-mix(in srgb,currentColor 40%,transparent);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase}
+.track .tk{position:absolute;top:6px;opacity:.75}
+.track .tk.b{right:0}
+.run{position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--amber-bright)}
+.r1{animation:cross 3s linear infinite}
+.r2{animation:cross 180s linear infinite}
+@keyframes cross{to{left:calc(100% - 7px)}}
+.strata-n{font-size:.84rem;color:var(--muted);max-width:66ch;padding-top:8px}
+@media(min-width:820px){
+  .tiempo{grid-template-columns:210px minmax(0,1fr);column-gap:36px;padding:26px 30px 12px}
+  .t-head{display:grid;gap:14px;justify-content:start;align-items:start;align-content:start}
+  .tiempo .track{grid-column:1/-1}
+  .t1{width:66%}
+  .t2{width:83%}
+}
+.sec{display:grid;gap:22px;padding-top:56px;padding-bottom:56px;border-top:1px solid var(--line);scroll-margin-top:52px}
+.sec-h .num{font-family:var(--display);font-size:1.15rem;color:var(--amber);font-variant-numeric:tabular-nums}
+.sec-h h2{font-family:var(--display);font-weight:400;font-size:clamp(1.75rem,4.4vw,2.3rem);line-height:1.08;text-wrap:balance;overflow-wrap:break-word;margin-top:4px}
+.sec-b{display:grid;gap:26px;min-width:0}
+.sec-b h3{font-size:1.06rem;font-weight:700;text-wrap:balance}
+.prose{display:grid;gap:12px;max-width:62ch}
+.chica{font-size:.86rem;color:var(--muted);max-width:66ch}
+@media(min-width:900px){
+  .sec{grid-template-columns:290px minmax(0,1fr);column-gap:44px;padding-top:80px;padding-bottom:80px}
+  .sec-h{position:sticky;top:78px;align-self:start}
+  .sec-h h2{font-size:1.9rem}
+}
+.pasos{display:grid;gap:14px;counter-reset:p;max-width:62ch}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:2.2rem 1fr;gap:4px}
+.pasos li::before{content:counter(p);font-family:var(--display);font-size:1.5rem;line-height:1.15;color:var(--amber)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;max-width:580px;font-variant-numeric:tabular-nums;font-size:.94rem}
+caption{caption-side:bottom;text-align:left;font-size:.82rem;color:var(--muted);padding-top:8px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;font-weight:400}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+thead th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom-color:var(--ink)}
+.pieza{display:grid;gap:18px;padding-top:26px;border-top:1px solid var(--line)}
+.pieza.primera{border-top:0;padding-top:0}
+.pieza-v{display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap}
+.pieza-t{display:grid;gap:10px;align-content:start;max-width:52ch}
+.pieza-t ul{display:grid;gap:6px;font-size:.94rem;color:var(--muted)}
+.pieza-t li{padding-left:16px;position:relative}
+.pieza-t li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:currentColor}
+figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+svg.esq{display:block;width:100%;height:auto;color:var(--ink);font-family:var(--body)}
+.demo{width:168px;flex:none}
+.panel{border:1px solid var(--ink);background:var(--paper-bright);padding:6px}
+#lenti{display:block;width:100%;aspect-ratio:5/12;touch-action:pan-y}
+.demo label{display:block;font-size:.8rem;font-weight:600;margin-top:10px}
+.demo input[type=range]{display:block;width:100%;accent-color:var(--amber);margin:6px 0 0}
+.demo output{display:block;font-size:.8rem;color:var(--muted);min-height:2.7em;margin-top:6px}
+.fig-totem{flex:1 1 140px;max-width:230px}
+.fig-kit{flex:1 1 260px;max-width:420px}
+.fig-regalo{flex:1 1 220px;max-width:320px}
+.trip{display:flex;gap:10px;width:100%;max-width:390px}
+.pant{flex:1;min-width:0;aspect-ratio:9/17;border-radius:14px;border:1px solid var(--ink);padding:12px 10px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;font-size:.7rem;overflow:hidden}
+.pant .cap{font-size:.6rem}
+.pant b{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.12rem;line-height:1.1;display:block}
+.pir{display:grid;gap:3px;justify-items:center}
+.pir i{display:block;height:9px;background:currentColor;opacity:.22}
+.pir i:nth-child(1){width:38%}
+.pir i:nth-child(2){width:62%}
+.pir i:nth-child(3){width:86%}
+.pir i.on{opacity:1;background:var(--amber-bright)}
+.p1{background:var(--paper-bright)}
+.p2{background:var(--stone)}
+.p3{background:var(--ink);color:var(--paper-bright)}
+.pant .cta{border:1px solid currentColor;border-radius:999px;text-align:center;padding:3px 4px;font-size:.62rem}
+@media(min-width:760px){.pieza{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);column-gap:40px;align-items:start}}
+.ficha{display:grid;gap:10px;padding:20px 0;border-top:1px solid var(--line)}
+.ficha.primera{border-top:0;padding-top:0}
+.ficha h3 small{font-weight:500;color:var(--muted);font-size:.86rem;margin-left:6px;white-space:nowrap}
+.spec{display:grid;grid-template-columns:1fr;gap:3px 20px;font-size:.95rem;max-width:720px}
+.spec dt{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:7px}
+@media(min-width:640px){.spec{grid-template-columns:150px 1fr;row-gap:8px}.spec dt{margin-top:4px}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:1px solid var(--ink);background:transparent;border-radius:999px;padding:7px 13px;font-size:.88rem;cursor:pointer}
+.chips button:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper-bright)}
+.regiones{display:grid;gap:24px 32px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.region[hidden]{display:none}
+.region h4{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);padding-bottom:6px;border-bottom:1px solid var(--ink)}
+.region li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.region li[hidden]{display:none}
+.mk{display:flex;gap:5px;align-items:center;font-size:.68rem;font-weight:700;font-variant-numeric:tabular-nums}
+.mk i{font-style:normal;display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;border:1px solid var(--ink)}
+.mk i.t{background:var(--ink);color:var(--paper-bright)}
+.mk span{min-width:2.4ch;text-align:right;color:var(--amber);font-size:.86rem;font-weight:600}
+.barras{display:grid;gap:7px;font-size:.9rem;max-width:640px}
+.barras li{display:grid;grid-template-columns:minmax(7.5em,10.5em) 1fr 3.2ch;gap:10px;align-items:center}
+.barras .b{height:10px;background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.barras .b i{display:block;height:100%;background:var(--ink)}
+.barras .res .b i{background:repeating-linear-gradient(135deg,var(--amber) 0 3px,transparent 3px 6px)}
+.barras .v{text-align:right;font-variant-numeric:tabular-nums}
+.niveles{display:grid}
+.nivel{display:grid;gap:10px;align-content:start;padding:18px 0 22px;border-top:3px solid var(--line)}
+.nivel[aria-current="true"]{border-top-color:var(--amber)}
+.nivel .tot{font-family:var(--display);font-size:clamp(2rem,5vw,2.5rem);line-height:1;font-variant-numeric:tabular-nums}
+.nivel .pre{font-size:.82rem;color:var(--muted)}
+.nivel ul{display:grid;gap:6px;font-size:.92rem}
+.nivel button{justify-self:start;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:6px 13px;font-size:.84rem;cursor:pointer;margin-top:6px}
+.nivel[aria-current="true"] button{background:var(--ink);color:var(--paper-bright)}
+@media(min-width:820px){.niveles{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px}}
+.desg{display:grid;gap:11px;max-width:680px}
+.desg li{display:grid;grid-template-columns:1fr auto;gap:3px 12px;font-size:.94rem}
+.desg .b{grid-column:1/-1;height:8px;background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.desg .b i{display:block;height:100%;background:var(--amber)}
+.desg .v{font-variant-numeric:tabular-nums}
+.desg .v small{color:var(--muted);margin-left:6px}
+#desg-t{scroll-margin-top:70px}
+.gantt{display:grid;gap:13px;max-width:760px}
+.g-head,.g-track{display:grid;grid-template-columns:repeat(9,minmax(0,1fr))}
+.g-head span{font-size:.64rem;line-height:1.2;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-left:1px solid var(--line);padding-left:4px}
+.g-row{display:grid;gap:5px}
+.g-row p{font-size:.94rem;display:flex;flex-wrap:wrap;gap:0 10px;align-items:baseline}
+.g-row small{color:var(--muted);font-size:.82rem}
+.g-track{height:10px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.g-track i{background:var(--ink)}
+.g-track i.camp{background:var(--amber)}
+.fin{border-top:1px solid var(--ink);padding-top:40px;padding-bottom:64px;display:grid;gap:18px}
+.fin h2{font-family:var(--display);font-weight:400;font-size:1.6rem}
+.fin ol{display:grid;gap:8px;max-width:62ch;counter-reset:f}
+.fin li{counter-increment:f;display:grid;grid-template-columns:1.7rem 1fr}
+.fin li::before{content:counter(f) ".";color:var(--amber);font-variant-numeric:tabular-nums}
+.firma{font-size:.86rem;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .r1,.r2{animation:none}
+}
+</style>
+</head>
+<body>
+
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <a class="marca" href="#inicio">L'Absolu en tres tiempos</a>
+    <nav class="idx" id="idx" aria-label="Los seis puntos de la propuesta">
+      <a href="#concepto"><b>01</b>Concepto</a>
+      <a href="#piezas"><b>02</b>Piezas</a>
+      <a href="#materiales"><b>03</b>Materiales</a>
+      <a href="#tiendas"><b>04</b>Tiendas</a>
+      <a href="#inversion"><b>05</b>Inversión</a>
+      <a href="#tiempos"><b>06</b>Tiempos</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero wrap" id="inicio">
+  <p class="cap">Propuesta para Carlo Corinto L'Absolu en Liverpool · 4 al 17 de enero de 2027</p>
+  <h1>L'Absolu en <em>tres tiempos</em></h1>
+  <p class="lede">Un perfume se revela por etapas: salida, corazón y fondo. La campaña sigue el mismo orden. Una pieza detiene al cliente en segundos, un ritual lo retiene unos minutos y un regalo lo acompaña por semanas.</p>
+  <dl class="facts">
+    <div><dt>tiendas Liverpool</dt><dd>32</dd></div>
+    <div><dt>activaciones</dt><dd>25</dd></div>
+    <div><dt>traffic stoppers y regalos</dt><dd>13</dd></div>
+    <div><dt>días de campaña</dt><dd>14</dd></div>
+  </dl>
+</header>
+
+<section class="strata wrap" aria-label="Los tres tiempos de la campaña">
+  <article class="tiempo t1">
+    <div class="t-head">
+      <p class="cap">Salida</p>
+      <p class="t-time"><span class="n">3</span><span class="u">segundos</span></p>
+    </div>
+    <div class="t-body">
+      <h2 class="t-verb">Detiene</h2>
+      <p class="t-what">Traffic stopper · 13 tiendas</p>
+      <p>Un panel que cambia mientras el cliente camina: el frasco se abre en sus tres tiempos. Hay movimiento sin corriente eléctrica.</p>
+    </div>
+    <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 s</span><span class="run r1"></span></div>
+  </article>
+  <article class="tiempo t2">
+    <div class="t-head">
+      <p class="cap">Corazón</p>
+      <p class="t-time"><span class="n">3</span><span class="u">minutos</span></p>
+    </div>
+    <div class="t-body">
+      <h2 class="t-verb">Retiene</h2>
+      <p class="t-what">Activación · 25 tiendas</p>
+      <p>Un ritual de prueba en tres pasos. Lo guía el personal de la marca con apoyo del celular del cliente.</p>
+    </div>
+    <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 min</span><span class="run r2"></span></div>
+  </article>
+  <article class="tiempo t3">
+    <div class="t-head">
+      <p class="cap">Fondo</p>
+      <p class="t-time"><span class="n">6</span><span class="u">semanas</span></p>
+    </div>
+    <div class="t-body">
+      <h2 class="t-verb">Permanece</h2>
+      <p class="t-what">Regalo por compra · 13 tiendas</p>
+      <p>Un objeto con chip que el cliente se lleva. Un toque abre contenido que cambia hasta el 14 de febrero.</p>
+    </div>
+    <div class="track" aria-hidden="true"><span class="tk">4 ene</span><span class="tk b">14 feb</span><span class="run"></span></div>
+  </article>
+  <p class="strata-n">Cada punto avanza en tiempo real: el primero cruza en tres segundos, el segundo en tres minutos y el tercero tardará seis semanas, del 4 de enero al 14 de febrero.</p>
+</section>
+
+<main>
+
+<section class="sec wrap" id="concepto">
+  <header class="sec-h"><p class="num">01</p><h2>Conceptualización creativa</h2></header>
+  <div class="sec-b">
+    <div class="prose">
+      <p>La marca habla de una masculinidad sin concesiones. La campaña conserva ese tono: sobria, precisa y sin dinámicas de feria. Cada formato del brief cumple un tiempo del perfume, y los tres se conectan con un toque de celular.</p>
+    </div>
+    <h3>Un toque conecta las tres piezas</h3>
+    <ol class="pasos">
+      <li><span><b>Toca o escanea.</b> Cada pieza lleva un chip NFC y un código QR que abren la experiencia sin descargar nada.</span></li>
+      <li><span><b>Vive los tres tiempos.</b> En 60 a 90 segundos el cliente ve cómo evoluciona la fragancia sobre la piel.</span></li>
+      <li><span><b>Ve el frasco en su espacio.</b> La realidad aumentada lo coloca sobre su mesa a tamaño real.</span></li>
+      <li><span><b>Recibe su regalo.</b> El personal de la marca lo activa con un toque al entregarlo y queda registrado.</span></li>
+    </ol>
+    <h3>La marca ve lo que pasa en cada tienda</h3>
+    <div class="prose">
+      <p>Un tablero por tienda y por día muestra cuántas personas escanearon, cuántas terminaron el ritual y cuántos regalos se entregaron. Con ese dato, la reserva de regalos sale hacia la tienda que más lo necesita.</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <caption>Ejemplo del formato al día 7 de 14. Los datos son ficticios, no una proyección.</caption>
+        <thead><tr><th scope="col">Tienda</th><th scope="col">Escaneos</th><th scope="col">Rituales</th><th scope="col">Regalos</th></tr></thead>
+        <tbody>
+          <tr><td>Perisur</td><td>412</td><td>168</td><td>41</td></tr>
+          <tr><td>Polanco</td><td>380</td><td>150</td><td>46</td></tr>
+          <tr><td>Satélite</td><td>265</td><td>121</td><td>29</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="piezas">
+  <header class="sec-h"><p class="num">02</p><h2>Referencias visuales</h2></header>
+  <div class="sec-b">
+
+    <article class="pieza primera">
+      <div class="pieza-v">
+        <div class="demo">
+          <div class="panel"><canvas id="lenti" width="168" height="403" role="img" aria-label="Demostración del panel lenticular: un bloque que se abre en tres estratos y se dispersa"></canvas></div>
+          <label for="paso">Camina frente a la pieza</label>
+          <input type="range" id="paso" min="0" max="100" value="62">
+          <output id="paso-t" for="paso">Al alejarse: la salida se evapora y el fondo permanece.</output>
+        </div>
+        <figure class="fig-totem">
+          <svg class="esq" viewBox="0 0 300 424" role="img" aria-label="Alzado del tótem: 60 centímetros de ancho y 160 de alto, junto a una persona de 170 centímetros">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="14" y1="372" x2="288" y2="372"/>
+              <rect x="62" y="52" width="120" height="320"/>
+              <line x1="62" y1="356" x2="182" y2="356"/>
+              <rect x="72" y="66" width="100" height="240" fill="#C7CCC4"/>
+              <rect x="112" y="314" width="20" height="20"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1" opacity=".55">
+              <circle cx="246" cy="44" r="12"/>
+              <path d="M230 372V84a16 16 0 0 1 32 0v288"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M62 392h120M62 387v10M182 387v10"/>
+              <path d="M38 52v320M33 52h10M33 372h10"/>
+            </g>
+            <g fill="currentColor" font-size="12" text-anchor="middle">
+              <text x="122" y="412">60 cm</text>
+              <text transform="translate(27 212) rotate(-90)">160 cm</text>
+              <text x="122" y="178">Panel</text>
+              <text x="122" y="194">lenticular</text>
+              <text x="122" y="210">50 × 120 cm</text>
+              <text x="122" y="349" font-size="10">NFC · QR</text>
+              <text x="246" y="22" font-size="11">170 cm</text>
+            </g>
+          </svg>
+          <figcaption>Alzado a escala, junto a una persona de 170 cm.</figcaption>
+        </figure>
+      </div>
+      <div class="pieza-t">
+        <h3>Traffic stopper lenticular</h3>
+        <p>Un tótem autoportante con un panel lenticular. La imagen cambia con el ángulo de quien pasa, así que la pieza se mueve sin pantalla ni corriente.</p>
+        <ul>
+          <li>Tres fotogramas: frasco cerrado, tres tiempos y notas en el aire</li>
+          <li>Chip NFC y código QR a la altura de la mano</li>
+          <li>En las seis tiendas con los tres tiempos se suma una vitrina con animación flotante, en el nivel Insignia</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pieza">
+      <div class="pieza-v">
+        <figure class="fig-kit">
+          <svg class="esq" viewBox="0 0 420 316" role="img" aria-label="Vista superior del kit: charola de 40 por 30 centímetros con probador, tarjetas olfativas, tarjeta con chip y guía del ritual">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="40" y="24" width="320" height="240" rx="8"/>
+              <rect x="62" y="46" width="76" height="76"/>
+              <circle cx="100" cy="84" r="24" fill="#C7CCC4"/>
+              <rect x="62" y="152" width="76" height="90"/>
+              <path d="M168 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
+              <path d="M190 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
+              <path d="M212 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
+              <rect x="256" y="46" width="82" height="118"/>
+              <path d="M289 113a12 12 0 0 1 0-16M281 120a22 22 0 0 1 0-30M297 106a4 4 0 0 1 0-2"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M40 284h320M40 279v10M360 279v10"/>
+              <path d="M382 24v240M377 24h10M377 264h10"/>
+            </g>
+            <g fill="currentColor" font-size="12" text-anchor="middle">
+              <text x="100" y="139">Probador</text>
+              <text x="100" y="194">Guía</text>
+              <text x="100" y="210">del ritual</text>
+              <text x="198" y="250">Tarjetas olfativas</text>
+              <text x="297" y="182">Tarjeta con</text>
+              <text x="297" y="198">chip y QR</text>
+              <text x="200" y="304">40 cm</text>
+              <text transform="translate(401 144) rotate(-90)">30 cm</text>
+            </g>
+          </svg>
+          <figcaption>Vista superior de la charola de mostrador.</figcaption>
+        </figure>
+      </div>
+      <div class="pieza-t">
+        <h3>Kit de activación</h3>
+        <p>Todo el ritual cabe en una charola de mostrador. Llega por paquetería y el personal de la marca la monta en cinco minutos, sin herramientas.</p>
+        <ul>
+          <li>Probador al centro del ritual</li>
+          <li>Tarjetas olfativas impresas con los tres tiempos</li>
+          <li>Tarjeta de mostrador con chip NFC y código QR</li>
+          <li>Guía del ritual para el personal</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pieza">
+      <div class="pieza-v">
+        <figure class="fig-regalo">
+          <svg class="esq" viewBox="0 0 320 216" role="img" aria-label="Tarjetero de 10 por 7 centímetros con chip NFC">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="44" y="20" width="200" height="140" rx="10" fill="#C7CCC4"/>
+              <rect x="52" y="28" width="184" height="124" rx="6" stroke-dasharray="4 4" stroke-width="1"/>
+              <path d="M44 74h200"/>
+              <path d="M128 106h32M122 116h44M116 126h56" stroke-width="2"/>
+              <path d="M216 56a8 8 0 0 1 0-12M209 61a16 16 0 0 1 0-22"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M44 180h200M44 175v10M244 175v10"/>
+              <path d="M264 20v140M259 20h10M259 160h10"/>
+            </g>
+            <g fill="currentColor" font-size="12" text-anchor="middle">
+              <text x="144" y="200">10 cm</text>
+              <text transform="translate(283 90) rotate(-90)">7 cm</text>
+              <text x="198" y="54" font-size="10" text-anchor="end">Chip NFC</text>
+            </g>
+          </svg>
+          <figcaption>Tarjetero grabado con el emblema de los tres tiempos.</figcaption>
+        </figure>
+      </div>
+      <div class="pieza-t">
+        <h3>Regalo por compra</h3>
+        <p>Un objeto de uso diario que lleva la marca más allá de la tienda. El chip abre contenido propio de L'Absolu, y ese contenido cambia hasta el 14 de febrero.</p>
+        <ul>
+          <li>Propuesta: tarjetero grabado, hecho en México</li>
+          <li>Se activa con un toque al entregarlo</li>
+          <li>Cada entrega queda registrada por tienda</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pieza">
+      <div class="pieza-v">
+        <div class="trip" role="img" aria-label="Tres pantallas de celular: salida, corazón y fondo">
+          <div class="pant p1"><span class="cap">Salida</span><div class="pir"><i class="on"></i><i></i><i></i></div><b>Así abre</b></div>
+          <div class="pant p2"><span class="cap">Corazón</span><div class="pir"><i></i><i class="on"></i><i></i></div><b>Así evoluciona</b></div>
+          <div class="pant p3"><span class="cap">Fondo</span><div class="pir"><i></i><i></i><i class="on"></i></div><b>Así permanece</b><span class="cta">Activar regalo</span></div>
+        </div>
+      </div>
+      <div class="pieza-t">
+        <h3>Experiencia en el celular</h3>
+        <p>La misma página sirve a las 32 tiendas. Abre en segundos, sin app, y guía al cliente por los tres tiempos antes de mostrarle el frasco en realidad aumentada.</p>
+        <ul>
+          <li>Dura de 60 a 90 segundos</li>
+          <li>Funciona en iPhone y Android</li>
+          <li>Alimenta el tablero por tienda</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap" id="materiales">
+  <header class="sec-h"><p class="num">03</p><h2>Materiales, acabados y producción</h2></header>
+  <div class="sec-b">
+    <div>
+      <article class="ficha primera">
+        <h3>Traffic stopper lenticular <small>13 piezas</small></h3>
+        <dl class="spec">
+          <dt>Medidas</dt><dd>Base de 60 × 60 cm y 160 cm de alto.</dd>
+          <dt>Materiales y acabados</dt><dd>Cuerpo de MDF laqueado mate, panel lenticular de 50 × 120 cm con tres fotogramas, base con contrapeso y placa con chip NFC y código QR. En el nivel Esencial el cuerpo es de PVC rígido.</dd>
+          <dt>Producción</dt><dd>Corte CNC, laqueado e impresión lenticular de gran formato. Viaja en dos partes y se arma sin herramientas ni anclaje.</dd>
+          <dt>Instalación</dt><dd>Sin corriente eléctrica. Una visita de montaje por tienda.</dd>
+        </dl>
+      </article>
+      <article class="ficha">
+        <h3>Vitrina con animación flotante <small>6 piezas, nivel Insignia</small></h3>
+        <dl class="spec">
+          <dt>Medidas</dt><dd>Módulo de 40 × 40 × 50 cm sobre el tótem.</dd>
+          <dt>Materiales y acabados</dt><dd>Acrílico de 6 mm, pantalla oculta y lámina reflejante a 45°. El frasco real va al centro y la animación parece flotar a su alrededor.</dd>
+          <dt>Producción</dt><dd>Animación generada desde el modelo 3D del frasco.</dd>
+          <dt>Instalación</dt><dd>Requiere una toma de corriente.</dd>
+        </dl>
+      </article>
+      <article class="ficha">
+        <h3>Kit de activación <small>25 kits</small></h3>
+        <dl class="spec">
+          <dt>Medidas</dt><dd>Charola de 40 × 30 cm.</dd>
+          <dt>Materiales y acabados</dt><dd>Charola laqueada, porta tarjetas, 300 tarjetas olfativas impresas, tarjeta de mostrador con chip NFC y código QR, y guía del ritual. En el nivel Esencial la charola es de cartón rígido.</dd>
+          <dt>Producción</dt><dd>Un kit por caja, listo para paquetería.</dd>
+          <dt>Instalación</dt><dd>La monta el personal de la marca con una guía en video.</dd>
+        </dl>
+      </article>
+      <article class="ficha">
+        <h3>Regalo por compra <small>1,000 piezas</small></h3>
+        <dl class="spec">
+          <dt>Medidas</dt><dd>10 × 7 cm.</dd>
+          <dt>Materiales y acabados</dt><dd>Tarjetero de piel con grabado y chip NFC, en estuche individual. En el nivel Esencial es de metal grabado, sin chip.</dd>
+          <dt>Producción</dt><dd>Hecho en México, con grabado láser.</dd>
+          <dt>Entrega</dt><dd>850 piezas a tienda y 150 de reserva central.</dd>
+        </dl>
+      </article>
+      <article class="ficha">
+        <h3>Experiencia web y tablero <small>una para las 32 tiendas</small></h3>
+        <dl class="spec">
+          <dt>Formato</dt><dd>Página para celular, sin app. Abre por NFC o código QR.</dd>
+          <dt>Contenido</dt><dd>Los tres tiempos animados, el frasco en realidad aumentada y la activación del regalo.</dd>
+          <dt>Tablero</dt><dd>Escaneos, rituales completados y regalos entregados, por tienda y por día.</dd>
+          <dt>Producción</dt><dd>Desarrollo propio de Pixel Bridge.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="tiendas">
+  <header class="sec-h"><p class="num">04</p><h2>Alcance y distribución por punto de venta</h2></header>
+  <div class="sec-b">
+    <div class="prose">
+      <p>Las 25 tiendas con activación reciben el kit. Las 13 con traffic stopper reciben también los regalos. Seis tiendas viven los tres tiempos completos.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Filtrar tiendas por formato">
+      <button type="button" data-f="todas" aria-pressed="true">Todas, 32</button>
+      <button type="button" data-f="a" aria-pressed="false">Activación, 25</button>
+      <button type="button" data-f="t" aria-pressed="false">Traffic stopper y regalo, 13</button>
+      <button type="button" data-f="at" aria-pressed="false">Los tres tiempos, 6</button>
+    </div>
+    <p class="chica">A: activación. T: traffic stopper y regalo. El número es la cantidad de regalos.</p>
+    <div class="regiones" id="regiones"></div>
+
+    <h3>Regalos por tienda</h3>
+    <div class="prose">
+      <p>De 1,000 regalos, 850 salen a las 13 tiendas y 150 quedan de reserva en la Ciudad de México. El reparto pondera el tamaño de cada tienda y el ingreso de su zona, y se afina con la venta de la marca por tienda.</p>
+    </div>
+    <ol class="barras" id="barras" aria-label="Regalos por tienda"></ol>
+  </div>
+</section>
+
+<section class="sec wrap" id="inversion">
+  <header class="sec-h"><p class="num">05</p><h2>Desglose de inversión</h2></header>
+  <div class="sec-b">
+    <div class="prose">
+      <p>Tres niveles sobre el mismo concepto. Cambian los materiales, el regalo y las piezas insignia. La experiencia web y el tablero están en los tres.</p>
+    </div>
+    <div class="niveles" id="niveles">
+      <article class="nivel" data-n="esencial" aria-current="false">
+        <h3 class="cap">Esencial</h3>
+        <p class="tot">$500,000</p>
+        <ul>
+          <li>Experiencia web de tres tiempos para las 32 tiendas</li>
+          <li>Frasco en realidad aumentada</li>
+          <li>Tablero por tienda y por día</li>
+          <li>13 traffic stoppers lenticulares en PVC rígido</li>
+          <li>25 kits de activación en cartón rígido</li>
+          <li>1,000 regalos de metal grabado</li>
+          <li>Envío a 32 tiendas y montaje en 13</li>
+        </ul>
+        <button type="button">Ver desglose</button>
+      </article>
+      <article class="nivel" data-n="completa" aria-current="true">
+        <h3 class="cap">Completa</h3>
+        <p class="tot">$750,000</p>
+        <p class="pre">Todo lo de Esencial, con estos cambios:</p>
+        <ul>
+          <li>Traffic stoppers en MDF laqueado</li>
+          <li>Kits con charola laqueada</li>
+          <li>Regalos de piel con chip NFC</li>
+          <li>Guía en video para el personal de la marca</li>
+          <li>Reabasto de regalos a media campaña</li>
+        </ul>
+        <button type="button">Ver desglose</button>
+      </article>
+      <article class="nivel" data-n="insignia" aria-current="false">
+        <h3 class="cap">Insignia</h3>
+        <p class="tot">$1,000,000</p>
+        <p class="pre">Todo lo de Completa, más:</p>
+        <ul>
+          <li>Vitrina con animación flotante en las 6 tiendas con los tres tiempos</li>
+          <li>Gemelo virtual de una perfumería para aprobar el montaje antes de producir</li>
+          <li>Reporte final con resultados por tienda</li>
+        </ul>
+        <button type="button">Ver desglose</button>
+      </article>
+    </div>
+    <h3 id="desg-t" aria-live="polite">Desglose del nivel Completa</h3>
+    <ol class="desg" id="desg"></ol>
+    <p class="chica">Precios en pesos mexicanos.</p>
+  </div>
+</section>
+
+<section class="sec wrap" id="tiempos">
+  <header class="sec-h"><p class="num">06</p><h2>Producción, logística e instalación</h2></header>
+  <div class="sec-b">
+    <div class="prose">
+      <p>Nueve semanas, del arranque al reporte final. La producción termina antes de Navidad para que los envíos foráneos lleguen con margen.</p>
+    </div>
+    <div class="gantt">
+      <div class="g-head" aria-hidden="true"><span>23<br>nov</span><span>30<br>nov</span><span>7<br>dic</span><span>14<br>dic</span><span>21<br>dic</span><span>28<br>dic</span><span>4<br>ene</span><span>11<br>ene</span><span>18<br>ene</span></div>
+      <div class="g-row"><p>Adjudicación y arranque <small>23 al 27 de noviembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:1/2"></i></div></div>
+      <div class="g-row"><p>Diseño final y aprobación de artes <small>30 de noviembre al 4 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/3"></i></div></div>
+      <div class="g-row"><p>Experiencia web y tablero <small>30 de noviembre al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/5"></i></div></div>
+      <div class="g-row"><p>Producción de piezas, kits y regalos <small>7 al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:3/5"></i></div></div>
+      <div class="g-row"><p>Envíos a tiendas <small>21 al 30 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:5/7;width:71%"></i></div></div>
+      <div class="g-row"><p>Montaje y capacitación del personal <small>2 y 3 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:6/7;width:29%;justify-self:end"></i></div></div>
+      <div class="g-row"><p>Campaña en tienda <small>4 al 17 de enero</small></p><div class="g-track" aria-hidden="true"><i class="camp" style="grid-column:7/9"></i></div></div>
+      <div class="g-row"><p>Retiro de piezas y reporte final <small>18 al 22 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:9/10"></i></div></div>
+    </div>
+    <p class="chica">El 25 de diciembre y el 1 de enero no hay operación.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="fin wrap">
+  <h2>Para cerrar la propuesta</h2>
+  <ol>
+    <li>Lineamientos de Liverpool para piezas de piso y de mostrador.</li>
+    <li>Definición del regalo con la marca.</li>
+    <li>Venta de la marca por tienda, para afinar el reparto de regalos.</li>
+    <li>Nivel de inversión.</li>
+  </ol>
+  <p class="firma">Propuesta preparada por Pixel Bridge, Ciudad de México.</p>
+</footer>
+
+<script>
+const TIENDAS=[
+  ["Polanco","Valle de México",1,1,95],["Perisur","Valle de México",1,1,85],["Parque Delta","Valle de México",1,1,65],
+  ["Lindavista","Valle de México",1,1,60],["Satélite","Valle de México",1,1,60],["Mitikah","Valle de México",0,1,70],
+  ["Ecatepec","Valle de México",0,1,55],["Insurgentes","Valle de México",1,0,0],
+  ["Monterrey","Norte y noroeste",1,0,0],["Monterrey La Fe","Norte y noroeste",1,1,50],["Monterrey Valle","Norte y noroeste",0,1,60],
+  ["Cd. Juárez","Norte y noroeste",1,0,0],["Tijuana","Norte y noroeste",1,0,0],["Mexicali","Norte y noroeste",1,0,0],
+  ["Culiacán","Norte y noroeste",1,0,0],["Mazatlán","Norte y noroeste",1,0,0],
+  ["Guadalajara","Occidente y Bajío",1,0,0],["Zapopan","Occidente y Bajío",1,0,0],["Zapopan La Perla","Occidente y Bajío",1,0,0],
+  ["Oblatos","Occidente y Bajío",0,1,55],["León","Occidente y Bajío",1,0,0],["León Norte","Occidente y Bajío",0,1,45],
+  ["Querétaro Antea","Occidente y Bajío",0,1,75],["Morelia","Occidente y Bajío",1,0,0],
+  ["Puebla","Centro y sur",1,0,0],["Angelópolis Puebla","Centro y sur",0,1,75],["Pachuca","Centro y sur",1,0,0],["Oaxaca","Centro y sur",1,0,0],
+  ["Mérida","Sureste",1,0,0],["Cancún","Sureste",1,0,0],["Chetumal","Sureste",1,0,0],["Tapachula","Sureste",1,0,0]
+];
+const REGIONES=["Valle de México","Norte y noroeste","Occidente y Bajío","Centro y sur","Sureste"];
+const RESERVA=150;
+const NIVELES={esencial:["Esencial",500000],completa:["Completa",750000],insignia:["Insignia",1000000]};
+const REPARTO=[
+  ["Experiencia web, realidad aumentada y tablero",.20],
+  ["Traffic stoppers",.25],
+  ["Kits de activación",.15],
+  ["Regalos por compra",.25],
+  ["Envíos y montaje",.10],
+  ["Gestión y contingencia",.05]
+];
+const mxn=new Intl.NumberFormat("es-MX",{style:"currency",currency:"MXN",minimumFractionDigits:0,maximumFractionDigits:0});
+const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+(function(){
+  const cont=document.getElementById("regiones");
+  REGIONES.forEach(r=>{
+    const d=el("div","region"), ul=el("ul");
+    d.appendChild(el("h4",null,r));
+    TIENDAS.filter(t=>t[1]===r).forEach(t=>{
+      const li=el("li"), m=el("span","mk");
+      li.dataset.a=t[2]; li.dataset.t=t[3];
+      if(t[2]){const i=el("i","a","A");i.title="Activación";m.appendChild(i)}
+      if(t[3]){const i=el("i","t","T");i.title="Traffic stopper y regalo";m.appendChild(i);m.appendChild(el("span",null,t[4]))}
+      li.append(el("span",null,t[0]),m); ul.appendChild(li);
+    });
+    d.appendChild(ul); cont.appendChild(d);
+  });
+  const btns=[...document.querySelectorAll(".chips button")];
+  const pasa={todas:()=>true,a:li=>li.dataset.a==="1",t:li=>li.dataset.t==="1",at:li=>li.dataset.a==="1"&&li.dataset.t==="1"};
+  btns.forEach(b=>b.addEventListener("click",()=>{
+    btns.forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));
+    cont.querySelectorAll(".region").forEach(reg=>{
+      let n=0;
+      reg.querySelectorAll("li").forEach(li=>{const ok=pasa[b.dataset.f](li);li.hidden=!ok;if(ok)n++});
+      reg.hidden=n===0;
+    });
+  }));
+})();
+(function(){
+  const ol=document.getElementById("barras");
+  const filas=TIENDAS.filter(t=>t[4]>0).sort((a,b)=>b[4]-a[4]).map(t=>[t[0],t[4],false]);
+  filas.push(["Reserva central",RESERVA,true]);
+  const max=Math.max(...filas.map(f=>f[1]));
+  filas.forEach(f=>{
+    const li=el("li",f[2]?"res":null), b=el("span","b"), i=el("i");
+    i.style.width=(f[1]/max*100)+"%"; b.appendChild(i);
+    li.append(el("span",null,f[0]),b,el("span","v",f[1])); ol.appendChild(li);
+  });
+})();
+(function(){
+  const cards=[...document.querySelectorAll(".nivel")], ol=document.getElementById("desg"), tit=document.getElementById("desg-t");
+  function pinta(id){
+    const [nombre,total]=NIVELES[id];
+    cards.forEach(c=>c.setAttribute("aria-current",c.dataset.n===id?"true":"false"));
+    tit.textContent="Desglose del nivel "+nombre+": "+mxn.format(total);
+    ol.textContent="";
+    REPARTO.forEach(([c,p])=>{
+      const li=el("li"), v=el("span","v",mxn.format(total*p)), b=el("span","b"), i=el("i");
+      v.appendChild(el("small",null,Math.round(p*100)+"%"));
+      i.style.width=(p/Math.max(...REPARTO.map(r=>r[1]))*100)+"%"; b.appendChild(i);
+      li.append(el("span",null,c),v,b); ol.appendChild(li);
+    });
+  }
+  cards.forEach(c=>c.querySelector("button").addEventListener("click",()=>{
+    pinta(c.dataset.n);
+    const r=ol.getBoundingClientRect();
+    if(r.bottom>innerHeight||r.top<0)tit.scrollIntoView({block:"start"});
+  }));
+  pinta("completa");
+})();
+(function(){
+  const cv=document.getElementById("lenti"), sl=document.getElementById("paso"), out=document.getElementById("paso-t");
+  if(!cv||!cv.getContext)return;
+  const ctx=cv.getContext("2d");
+  const INK=[21,24,26], TONOS=[[172,180,170],[112,121,113],[21,24,26]], AMBAR="#DE9A52";
+  const azar=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+  const r=azar(11);
+  const P=[90,70,45].map(n=>Array.from({length:n},()=>({x:r(),y:r(),dx:r()-.5,dy:r(),s:.8+r()*2,a:.35+r()*.65,am:r()<.07})));
+  const suave=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
+  const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")";
+  function dibuja(t){
+    const dpr=Math.min(window.devicePixelRatio||1,2), w=cv.clientWidth, h=cv.clientHeight;
+    if(!w||!h)return;
+    if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr)}
+    ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
+    const p1=suave(t/.5), p2=suave((t-.5)/.5);
+    const mw=w*.5, mh=h*.58, mx=(w-mw)/2, sep=p1*h*.03;
+    const alto=[.22,.33,.45], ancho=[.56,.78,1], volatil=[1,.5,.12];
+    let y=h*.26-sep;
+    for(let b=0;b<3;b++){
+      const bh=mh*alto[b], bw=mw*(1+(ancho[b]-1)*p1), bx=mx+(mw-bw)/2, col=mezcla(INK,TONOS[b],p1), k=p2*volatil[b];
+      ctx.globalAlpha=1-k*.92; ctx.fillStyle=col; ctx.fillRect(bx,y,bw,bh);
+      if(k>0)for(const q of P[b]){
+        ctx.globalAlpha=q.a*Math.min(1,k*1.6); ctx.fillStyle=q.am?AMBAR:col;
+        ctx.beginPath(); ctx.arc(bx+q.x*bw+q.dx*w*.7*k,y+q.y*bh-q.dy*h*.24*k,q.s,0,6.2832); ctx.fill();
+      }
+      y+=bh+sep;
+    }
+    ctx.globalAlpha=1;
+  }
+  const frase=t=>t<.2?"De frente: el frasco cerrado.":t<.6?"Al pasar: se abre en tres tiempos.":"Al alejarse: la salida se evapora y el fondo permanece.";
+  function pon(){const t=sl.value/100;dibuja(t);out.textContent=frase(t)}
+  sl.addEventListener("input",pon);
+  cv.addEventListener("pointermove",e=>{
+    if(e.pointerType!=="mouse")return;
+    const b=cv.getBoundingClientRect();
+    sl.value=Math.max(0,Math.min(100,Math.round((e.clientX-b.left)/b.width*100))); pon();
+  });
+  if("ResizeObserver" in window)new ResizeObserver(pon).observe(cv); else window.addEventListener("resize",pon);
+  pon();
+})();
+(function(){
+  const nav=document.getElementById("idx"), links=[...nav.querySelectorAll("a")];
+  const secs=links.map(a=>document.getElementById(a.getAttribute("href").slice(1)));
+  if(!("IntersectionObserver" in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const l=links[secs.indexOf(e.target)];
+    links.forEach(x=>x.removeAttribute("aria-current"));
+    l.setAttribute("aria-current","true");
+    nav.scrollTo({left:Math.max(0,l.offsetLeft-16),behavior:"smooth"});
+  }),{rootMargin:"-40% 0px -55% 0px"});
+  secs.forEach(s=>io.observe(s));
+})();
+</script>
+</body>
+</html>
