@@ -13,6 +13,10 @@
 <meta property="og:title" content="L'Absolu en tres tiempos">
 <meta property="og:description" content="Propuesta para Carlo Corinto L'Absolu en Liverpool · 4 al 17 de enero de 2027">
 <meta property="og:url" content="https://c-augustoalvarado.github.io/propuesta-labsolu/">
+<meta property="og:image" content="https://c-augustoalvarado.github.io/propuesta-labsolu/assets/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,12 +75,13 @@ html[data-borrador="false"] .interno{display:none!important}
 .avance{position:absolute;left:0;bottom:-1px;width:100%;height:2px;background:var(--amber-bright);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
 @media(min-width:900px){.marca{display:block}.idx{margin:0}}
 .hero{background:radial-gradient(80% 65% at 80% 46%,rgba(222,154,82,.13),rgba(222,154,82,0) 64%),var(--paper-bright)}
-.hero-in{min-height:calc(100vh - var(--barra));min-height:calc(100svh - var(--barra));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(190px,1fr) auto auto auto;grid-template-areas:"cap" "h1" "v" "lede" "facts" "cue";gap:16px;padding-top:26px;padding-bottom:18px}
+.hero-in{min-height:calc(100vh - var(--barra));min-height:calc(100svh - var(--barra));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(230px,1fr) auto auto auto;grid-template-areas:"cap" "h1" "v" "lede" "facts" "cue";gap:16px;padding-top:26px;padding-bottom:18px}
 .hero .cap{grid-area:cap;color:var(--muted);max-width:46ch}
 .hero h1{grid-area:h1;font-family:var(--display);font-weight:400;font-size:clamp(3rem,14vw,5.6rem);line-height:.9;letter-spacing:-.015em}
 .hero h1 em{display:block;font-style:italic}
-.hero-v{grid-area:v;position:relative;min-height:190px}
-#humo{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-v{grid-area:v;position:relative;min-height:230px}
+.hero-v img{position:absolute;left:50%;bottom:2%;height:90%;max-height:560px;width:auto;transform:translateX(-50%);filter:drop-shadow(0 24px 28px rgba(21,24,26,.3))}
+#humo{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
 .lede{grid-area:lede;font-size:clamp(1.05rem,2.2vw,1.28rem);max-width:50ch}
 .facts{grid-area:facts;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;padding-top:16px;border-top:1px solid var(--line)}
 .facts div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:4px}
@@ -167,9 +172,13 @@ thead th{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var
 .pieza-t li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1px;background:currentColor}
 figcaption{font-size:.8rem;color:var(--muted);margin-top:10px}
 svg.esq{display:block;width:100%;height:auto;color:var(--ink);font-family:var(--body)}
-.fig-totem{flex:1 1 160px;max-width:250px}
+.fig-podium{flex:0 1 auto;max-width:100%}
+.fig-podium img{display:block;height:min(560px,72vh);width:auto;margin:0 auto}
+.fig-podium figcaption{text-align:center}
 .fig-kit{flex:1 1 260px;max-width:440px}
 .fig-regalo{flex:1 1 220px;max-width:340px}
+.fig-regalo img{display:block;width:100%;height:auto}
+.fig-regalo figcaption{text-align:center}
 .trip{display:flex;gap:10px;width:100%;max-width:390px}
 .pant{flex:1;min-width:0;aspect-ratio:9/17;border-radius:14px;border:1px solid var(--ink);padding:12px 10px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;font-size:.7rem;overflow:hidden}
 .pant .cap{font-size:.6rem}
@@ -188,40 +197,43 @@ svg.esq{display:block;width:100%;height:auto;color:var(--ink);font-family:var(--
   .pieza{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:60px;align-items:center;padding:56px 0}
   .pieza.par .pieza-v{order:2}
 }
-html:not(.js) .lenti{display:none}
-.lenti{margin:10px 0}
-.lenti-pista{position:relative;height:calc(100vh + 170vh);height:calc(100svh + 170svh)}
-.lenti-escena{position:sticky;top:var(--barra);height:calc(100vh - var(--barra));height:calc(100svh - var(--barra));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto minmax(0,1fr) auto auto;grid-template-areas:"cap" "barras" "ins" "pasos" "frente" "planta" "como";gap:10px;padding:18px 20px 16px;overflow:hidden}
-.lenti-cap{grid-area:cap;color:var(--amber-bright)}
-.lenti-barras{grid-area:barras;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
-.lenti-barras span{height:2px;background:rgba(251,251,248,.2);overflow:hidden}
-.lenti-barras i{display:block;height:100%;background:var(--amber-bright);transform:scaleX(0);transform-origin:0 50%}
-.lenti-ins{grid-area:ins;font-size:.82rem;color:var(--muted-dark)}
-.lenti-pasos{grid-area:pasos;display:grid}
-.lenti-pasos li{grid-area:1/1;display:grid;gap:2px;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .45s var(--suave)}
-.lenti-pasos li.on{opacity:1;transform:none}
-.lenti-pasos b{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.8rem,6.4vw,2.8rem);line-height:1.05}
-.lenti-pasos span{color:var(--muted-dark);font-size:1.02rem}
-.lenti-frente{grid-area:frente;position:relative;min-height:150px;background:radial-gradient(closest-side,rgba(222,154,82,.14),rgba(222,154,82,0))}
-.lenti-frente canvas,.lienzo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.lenti-planta{grid-area:planta}
-.lienzo{position:relative;height:96px}
-.lenti-planta figcaption{margin-top:6px;font-size:.72rem;color:var(--muted-dark)}
+html:not(.js) .rev{display:none}
+.rev{margin:10px 0}
+.rev-pista{position:relative;height:calc(100vh + 160vh);height:calc(100svh + 160svh)}
+.rev-escena{position:sticky;top:var(--barra);height:calc(100vh - var(--barra));height:calc(100svh - var(--barra));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto minmax(0,1fr) auto auto;grid-template-areas:"cap" "barras" "ins" "pasos" "frente" "corte" "como";gap:10px;padding:18px 20px 16px;overflow:hidden}
+.rev-cap{grid-area:cap;color:var(--amber-bright)}
+.rev-barras{grid-area:barras;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.rev-barras span{height:2px;background:rgba(251,251,248,.2);overflow:hidden}
+.rev-barras i{display:block;height:100%;background:var(--amber-bright);transform:scaleX(0);transform-origin:0 50%}
+.rev-ins{grid-area:ins;font-size:.82rem;color:var(--muted-dark)}
+.rev-pasos{grid-area:pasos;display:grid}
+.rev-pasos li{grid-area:1/1;display:grid;gap:2px;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .45s var(--suave)}
+.rev-pasos li.on{opacity:1;transform:none}
+.rev-pasos b{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.8rem,6.4vw,2.8rem);line-height:1.05}
+.rev-pasos span{color:var(--muted-dark);font-size:1.02rem}
+.rev-frente{grid-area:frente;position:relative;min-height:170px;background:radial-gradient(closest-side,rgba(222,154,82,.16),rgba(222,154,82,0))}
+.rev-frente canvas,.lienzo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.rev-corte{grid-area:corte}
+.lienzo{position:relative;height:92px}
+.rev-corte figcaption{margin-top:6px;font-size:.72rem;color:var(--muted-dark)}
 .ley{white-space:nowrap}
 .k{display:inline-block;width:9px;height:9px;margin:0 5px 0 6px;vertical-align:-1px}
-.k0{background:#6F7872}
-.k1{background:#C7CCC4}
-.k2{background:#FBFBF8}
-.lenti-como{grid-area:como;font-size:.8rem;line-height:1.45;color:var(--muted-dark);max-width:58ch}
+.k0{background:#FBFBF8}
+.k1{background:#D98B3A}
+.k2{background:#B9AE9F}
+.rev-como{grid-area:como;font-size:.8rem;line-height:1.45;color:var(--muted-dark);max-width:58ch}
+.rev-fija{display:none;margin-top:30px;margin-bottom:30px}
+.rev-fija img{display:block;width:100%;height:auto}
+html:not(.js) .rev-fija{display:block}
 @media(min-width:900px){
-  .lenti{margin:30px 0}
-  .lenti-pista{height:calc(100vh + 150vh)}
-  .lenti-escena{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto auto auto auto 1fr auto;grid-template-areas:"cap frente" "barras frente" "ins frente" "pasos frente" "como frente" "como planta";column-gap:64px;row-gap:16px;padding:46px var(--margen) 30px}
-  .lenti-pasos{gap:20px;margin-top:10px}
-  .lenti-pasos li{grid-area:auto;opacity:.32;transform:none;transition:opacity .35s}
-  .lenti-pasos li.on{opacity:1}
-  .lenti-como{align-self:end;font-size:.9rem}
-  .lienzo{height:140px}
+  .rev{margin:30px 0}
+  .rev-pista{height:calc(100vh + 140vh)}
+  .rev-escena{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto auto auto auto 1fr auto;grid-template-areas:"cap frente" "barras frente" "ins frente" "pasos frente" "como frente" "como corte";column-gap:64px;row-gap:16px;padding:46px var(--margen) 30px}
+  .rev-pasos{gap:20px;margin-top:10px}
+  .rev-pasos li{grid-area:auto;opacity:.32;transform:none;transition:opacity .35s}
+  .rev-pasos li.on{opacity:1}
+  .rev-como{align-self:end;font-size:.9rem}
+  .lienzo{height:130px}
 }
 .fichas{display:grid}
 .ficha{display:grid;gap:12px;padding:26px 0;border-top:1px solid var(--line)}
@@ -298,10 +310,11 @@ html:not(.js) .lenti{display:none}
   .js .rv,.js .tiempo.rv{opacity:1;transform:none;transition:none}
   .r1,.r2,.cue i::after{animation:none}
   .js .barras:not(.in) .b i,.js .gantt:not(.in) .g-track i{transform:none}
-  .lenti-pasos li{transition:none}
+  .rev-pasos li{transition:none}
 }
 @media print{
-  .bar,.cue,.lenti,.hero-v{display:none!important}
+  .bar,.cue,.rev,#humo{display:none!important}
+  .rev-fija{display:block!important}
   .js .rv{opacity:1!important;transform:none!important}
   .hero-in{min-height:0}
 }
@@ -331,7 +344,7 @@ html:not(.js) .lenti{display:none}
   <div class="wrap hero-in">
     <p class="cap rv">Propuesta para Carlo Corinto L'Absolu en Liverpool · 4 al 17 de enero de 2027</p>
     <h1 class="rv" style="--d:.08s">L'Absolu en <em>tres tiempos</em></h1>
-    <div class="hero-v" aria-hidden="true"><canvas id="humo"></canvas></div>
+    <div class="hero-v"><img src="assets/img/frasco.webp" width="349" height="701" alt="Frasco de Carlo Pour Homme L'Absolu" fetchpriority="high"><canvas id="humo" aria-hidden="true"></canvas></div>
     <p class="lede rv" style="--d:.16s">Un perfume se revela por etapas: salida, corazón y fondo. La campaña sigue el mismo orden. Una pieza detiene al cliente en segundos, un ritual lo retiene unos minutos y un regalo lo acompaña por semanas.</p>
     <dl class="facts rv" style="--d:.24s">
       <div><dt>tiendas Liverpool</dt><dd>32</dd></div>
@@ -353,7 +366,7 @@ html:not(.js) .lenti{display:none}
       <div class="t-body">
         <h2 class="t-verb">Detiene</h2>
         <p class="t-what">Traffic stopper · 13 tiendas</p>
-        <p>Un panel que cambia mientras el cliente camina: el frasco se abre en sus tres tiempos. Hay movimiento sin corriente eléctrica.</p>
+        <p>Un podium de madera y metal que pone a L'Absolu a la altura de la mirada, iluminado como pieza de colección.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 s</span><span class="run r1"></span></div>
     </div>
@@ -367,7 +380,7 @@ html:not(.js) .lenti{display:none}
       <div class="t-body">
         <h2 class="t-verb">Retiene</h2>
         <p class="t-what">Activación · 25 tiendas</p>
-        <p>Un ritual de prueba en tres pasos. Lo guía el personal de la marca con apoyo del celular del cliente.</p>
+        <p>Un ritual de prueba en tres pasos. Al rociar la tarjeta olfativa aparece un paisaje que estaba oculto. Lo guía el personal de la marca con apoyo del celular del cliente.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 min</span><span class="run r2"></span></div>
     </div>
@@ -381,7 +394,7 @@ html:not(.js) .lenti{display:none}
       <div class="t-body">
         <h2 class="t-verb">Permanece</h2>
         <p class="t-what">Regalo por compra · 13 tiendas</p>
-        <p>Un objeto con chip que el cliente se lleva. Un toque abre contenido que cambia hasta el 14 de febrero.</p>
+        <p>Un kit de regalo que el cliente se lleva, con un tarjetero con chip. Un toque abre contenido que cambia hasta el 14 de febrero.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">4 ene</span><span class="tk b">14 feb</span><span class="run r3"></span></div>
     </div>
@@ -429,86 +442,36 @@ html:not(.js) .lenti{display:none}
 
       <article class="pieza primera rv">
         <div class="pieza-v">
-          <figure class="fig-totem">
-            <svg class="esq" viewBox="0 0 300 424" role="img" aria-label="Alzado del tótem: 60 centímetros de ancho y 160 de alto, junto a una persona de 170 centímetros">
-              <g fill="none" stroke="currentColor" stroke-width="1.5">
-                <line x1="14" y1="372" x2="288" y2="372"/>
-                <rect x="62" y="52" width="120" height="320"/>
-                <line x1="62" y1="356" x2="182" y2="356"/>
-                <rect x="72" y="66" width="100" height="240" fill="#C7CCC4"/>
-                <rect x="112" y="314" width="20" height="20"/>
-              </g>
-              <g fill="none" stroke="currentColor" stroke-width="1" opacity=".55">
-                <circle cx="246" cy="44" r="12"/>
-                <path d="M230 372V84a16 16 0 0 1 32 0v288"/>
-              </g>
-              <g fill="none" stroke="currentColor" stroke-width="1">
-                <path d="M62 392h120M62 387v10M182 387v10"/>
-                <path d="M38 52v320M33 52h10M33 372h10"/>
-              </g>
-              <g fill="currentColor" font-size="12" text-anchor="middle">
-                <text x="122" y="412">60 cm</text>
-                <text transform="translate(27 212) rotate(-90)">160 cm</text>
-                <text x="122" y="178">Panel</text>
-                <text x="122" y="194">lenticular</text>
-                <text x="122" y="210">50 × 120 cm</text>
-                <text x="122" y="349" font-size="10">NFC · QR</text>
-                <text x="246" y="22" font-size="11">170 cm</text>
-              </g>
-            </svg>
-            <figcaption>Alzado a escala, junto a una persona de 170 cm.</figcaption>
+          <figure class="fig-podium">
+            <img src="assets/img/podium.webp" width="489" height="1467" alt="Podium de madera de nogal y metal en bronce: arriba la marca Carlo Corinto L'Absolu y el frasco en un nicho iluminado; en la repisa, una caja de regalo abierta" loading="lazy" decoding="async">
+            <figcaption>Propuesta de diseño del podium.</figcaption>
           </figure>
         </div>
         <div class="pieza-t">
-          <h3>Traffic stopper lenticular</h3>
-          <p>Un tótem autoportante con un panel lenticular. La imagen cambia con el ángulo de quien pasa, así que la pieza se mueve sin pantalla ni corriente.</p>
+          <h3>Traffic stopper: el podium L'Absolu</h3>
+          <p>Un podium autoportante de madera y metal que presenta a L'Absolu como pieza de colección en el pasillo de perfumería. Arriba, la marca y el frasco en un nicho iluminado; en la repisa, el regalo por compra a la vista.</p>
           <ul>
-            <li>Tres fotogramas: frasco cerrado, tres tiempos y notas en el aire</li>
+            <li>Chapa de madera de nogal con paneles de metal en bronce cepillado</li>
+            <li>Nicho iluminado para el frasco, a la altura de la mirada</li>
             <li>Chip NFC y código QR a la altura de la mano</li>
             <li>En las seis tiendas con los tres tiempos se suma una vitrina con animación flotante, en el nivel Insignia</li>
           </ul>
         </div>
       </article>
-    </div>
-  </div>
 
-  <div class="lenti oscuro" data-tema="oscuro" role="region" aria-label="Cómo funciona el panel lenticular">
-    <div class="lenti-pista">
-      <div class="lenti-escena">
-        <p class="cap lenti-cap">Cómo funciona el lenticular</p>
-        <div class="lenti-barras" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span></div>
-        <p class="lenti-ins">Desliza hacia abajo: es como caminar frente a la pieza.</p>
-        <ol class="lenti-pasos">
-          <li class="on"><b>Al acercarse</b><span>El frasco cerrado.</span></li>
-          <li><b>De frente</b><span>Se abre en tres tiempos.</span></li>
-          <li><b>Al alejarse</b><span>La salida se evapora y el fondo permanece.</span></li>
-        </ol>
-        <figure class="lenti-frente">
-          <canvas id="lenti-c" role="img" aria-label="El panel lenticular visto de frente: cambia de imagen según dónde está quien camina"></canvas>
-        </figure>
-        <figure class="lenti-planta">
-          <div class="lienzo"><canvas id="planta-c" role="img" aria-label="Vista desde arriba del pasillo: cada microlente cubre tres tiras, una de cada imagen, y según el lugar desde donde se mira solo deja ver las de una"></canvas></div>
-          <figcaption>Vista desde arriba, ampliada <span class="ley"><i class="k k0"></i>cerrado</span> <span class="ley"><i class="k k1"></i>tres tiempos</span> <span class="ley"><i class="k k2"></i>en el aire</span></figcaption>
-        </figure>
-        <p class="lenti-como">Las tres imágenes se imprimen en tiras muy finas, intercaladas. Encima va una lámina de microlentes que dirige cada tira hacia un ángulo distinto: desde cada punto del pasillo se ve una sola imagen completa, sin pantalla ni corriente.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="sec-b">
-      <article class="pieza rv">
+      <article class="pieza par rv">
         <div class="pieza-v">
           <figure class="fig-kit">
-            <svg class="esq" viewBox="0 0 420 316" role="img" aria-label="Vista superior del kit: charola de 40 por 30 centímetros con probador, tarjetas olfativas, tarjeta con chip y guía del ritual">
+            <svg class="esq" viewBox="0 0 420 316" role="img" aria-label="Vista superior del kit: charola de 40 por 30 centímetros con probador, tarjetas olfativas que revelan un paisaje, tarjeta con chip y guía del ritual">
               <g fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="40" y="24" width="320" height="240" rx="8"/>
                 <rect x="62" y="46" width="76" height="76"/>
                 <circle cx="100" cy="84" r="24" fill="#C7CCC4"/>
                 <rect x="62" y="152" width="76" height="90"/>
-                <path d="M168 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
-                <path d="M190 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
-                <path d="M212 46h16v170l-8 14-8-14z" fill="#FBFBF8"/>
+                <rect x="158" y="64" width="56" height="96" fill="#FBFBF8" transform="rotate(-9 186 112)"/>
+                <rect x="172" y="58" width="56" height="96" fill="#FBFBF8" transform="rotate(-2 200 106)"/>
+                <rect x="186" y="54" width="56" height="96" fill="#FBFBF8" transform="rotate(6 214 102)"/>
+                <rect x="195" y="98" width="38" height="36" fill="#E3CDA8" transform="rotate(6 214 102)"/>
                 <rect x="256" y="46" width="82" height="118"/>
                 <path d="M289 113a12 12 0 0 1 0-16M281 120a22 22 0 0 1 0-30M297 106a4 4 0 0 1 0-2"/>
               </g>
@@ -520,7 +483,8 @@ html:not(.js) .lenti{display:none}
                 <text x="100" y="139">Probador</text>
                 <text x="100" y="194">Guía</text>
                 <text x="100" y="210">del ritual</text>
-                <text x="198" y="250">Tarjetas olfativas</text>
+                <text x="202" y="200">Tarjetas</text>
+                <text x="202" y="216">que revelan</text>
                 <text x="297" y="182">Tarjeta con</text>
                 <text x="297" y="198">chip y QR</text>
                 <text x="200" y="304">40 cm</text>
@@ -532,52 +496,63 @@ html:not(.js) .lenti{display:none}
         </div>
         <div class="pieza-t">
           <h3>Kit de activación</h3>
-          <p>Todo el ritual cabe en una charola de mostrador. Llega por paquetería y el personal de la marca la monta en cinco minutos, sin herramientas.</p>
+          <p>Todo el ritual cabe en una charola de mostrador. Llega por paquetería y el personal de la marca la monta en cinco minutos, sin herramientas. Su atractivo es la tarjeta olfativa: al rociarla con el perfume aparece un paisaje que estaba oculto.</p>
           <ul>
             <li>Probador al centro del ritual</li>
-            <li>Tarjetas olfativas impresas con los tres tiempos</li>
+            <li>Tarjetas olfativas con un paisaje de naranjos oculto bajo tinta hidrocrómica</li>
             <li>Tarjeta de mostrador con chip NFC y código QR</li>
             <li>Guía del ritual para el personal</li>
           </ul>
         </div>
       </article>
+    </div>
+  </div>
 
-      <article class="pieza par rv">
+  <div class="rev oscuro" data-tema="oscuro" role="region" aria-label="Cómo funciona la tarjeta que revela el paisaje">
+    <div class="rev-pista">
+      <div class="rev-escena">
+        <p class="cap rev-cap">La tarjeta que revela</p>
+        <div class="rev-barras" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+        <p class="rev-ins">Desliza hacia abajo: es como rociar la tarjeta.</p>
+        <ol class="rev-pasos">
+          <li class="on"><b>En blanco</b><span>El paisaje ya está impreso, escondido bajo una capa blanca.</span></li>
+          <li><b>Al rociar</b><span>Donde cae el perfume, la capa se vuelve transparente.</span></li>
+          <li><b>El paisaje</b><span>Un campo de naranjos aparece junto con el aroma.</span></li>
+        </ol>
+        <figure class="rev-frente">
+          <canvas id="rev-c" role="img" aria-label="La tarjeta olfativa de Carlo Corinto L'Absolu: al rociarla con el perfume aparece un paisaje de naranjos"></canvas>
+        </figure>
+        <figure class="rev-corte">
+          <div class="lienzo"><canvas id="corte-c" role="img" aria-label="La tarjeta en corte: el papel, el paisaje impreso y encima la capa blanca, que se vuelve transparente donde la moja el perfume"></canvas></div>
+          <figcaption>La tarjeta en corte <span class="ley"><i class="k k0"></i>capa hidrocrómica</span> <span class="ley"><i class="k k1"></i>paisaje impreso</span> <span class="ley"><i class="k k2"></i>papel</span></figcaption>
+        </figure>
+        <p class="rev-como">El paisaje se imprime a color y se cubre con tinta hidrocrómica, una capa blanca y opaca. Cuando la moja un líquido, como el alcohol del perfume, esa capa se vuelve transparente y deja ver lo que tiene debajo, parecido a una hoja de papel que se transparenta al mojarse.</p>
+      </div>
+    </div>
+  </div>
+  <figure class="rev-fija wrap"><img src="assets/img/tarjeta-pasos.webp" width="1439" height="754" alt="La tarjeta en tres pasos: en blanco, al rociarla con el perfume y con el paisaje de naranjos completo" loading="lazy" decoding="async"></figure>
+
+  <div class="wrap">
+    <div class="sec-b">
+      <article class="pieza rv">
         <div class="pieza-v">
           <figure class="fig-regalo">
-            <svg class="esq" viewBox="0 0 320 216" role="img" aria-label="Tarjetero de 10 por 7 centímetros con chip NFC">
-              <g fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="44" y="20" width="200" height="140" rx="10" fill="#C7CCC4"/>
-                <rect x="52" y="28" width="184" height="124" rx="6" stroke-dasharray="4 4" stroke-width="1"/>
-                <path d="M44 74h200"/>
-                <path d="M128 106h32M122 116h44M116 126h56" stroke-width="2"/>
-                <path d="M216 56a8 8 0 0 1 0-12M209 61a16 16 0 0 1 0-22"/>
-              </g>
-              <g fill="none" stroke="currentColor" stroke-width="1">
-                <path d="M44 180h200M44 175v10M244 175v10"/>
-                <path d="M264 20v140M259 20h10M259 160h10"/>
-              </g>
-              <g fill="currentColor" font-size="12" text-anchor="middle">
-                <text x="144" y="200">10 cm</text>
-                <text transform="translate(283 90) rotate(-90)">7 cm</text>
-                <text x="198" y="54" font-size="10" text-anchor="end">Chip NFC</text>
-              </g>
-            </svg>
-            <figcaption>Tarjetero grabado con el emblema de los tres tiempos.</figcaption>
+            <img src="assets/img/regalo.webp" width="750" height="1114" alt="Kit de regalo Carlo Corinto abierto: libreta, pluma, memoria USB y tarjetero en un estuche con asa de cuerda" loading="lazy" decoding="async">
+            <figcaption>Propuesta del kit de regalo.</figcaption>
           </figure>
         </div>
         <div class="pieza-t">
           <h3>Regalo por compra</h3>
-          <p>Un objeto de uso diario que lleva la marca más allá de la tienda. El chip abre contenido propio de L'Absolu, y ese contenido cambia hasta el 14 de febrero.</p>
+          <p>Un kit de uso diario que lleva la marca más allá de la tienda: libreta, pluma, memoria USB y tarjetero en un estuche con asa. El tarjetero lleva el chip que abre contenido propio de L'Absolu, y ese contenido cambia hasta el 14 de febrero.</p>
           <ul>
-            <li>Propuesta: tarjetero grabado, hecho en México</li>
+            <li>Libreta y tarjetero de piel con el emblema grabado</li>
             <li>Se activa con un toque al entregarlo</li>
             <li>Cada entrega queda registrada por tienda</li>
           </ul>
         </div>
       </article>
 
-      <article class="pieza rv">
+      <article class="pieza par rv">
         <div class="pieza-v">
           <div class="trip" role="img" aria-label="Tres pantallas de celular: salida, corazón y fondo">
             <div class="pant p1"><span class="cap">Salida</span><div class="pir"><i class="on"></i><i></i><i></i></div><b>Así abre</b></div>
@@ -605,18 +580,18 @@ html:not(.js) .lenti{display:none}
     <div class="sec-b">
       <div class="fichas">
         <article class="ficha rv">
-          <h3>Traffic stopper lenticular <small>13 piezas</small></h3>
+          <h3>Podium traffic stopper <small>13 piezas</small></h3>
           <dl class="spec">
-            <dt>Medidas</dt><dd>Base de 60 × 60 cm y 160 cm de alto.</dd>
-            <dt>Materiales y acabados</dt><dd>Cuerpo de MDF laqueado mate, panel lenticular de 50 × 120 cm con tres fotogramas, base con contrapeso y placa con chip NFC y código QR. En el nivel Esencial el cuerpo es de PVC rígido.</dd>
-            <dt>Producción</dt><dd>Corte CNC, laqueado e impresión lenticular de gran formato. Viaja en dos partes y se arma sin herramientas ni anclaje.</dd>
-            <dt>Instalación</dt><dd>Sin corriente eléctrica. Una visita de montaje por tienda.</dd>
+            <dt>Medidas</dt><dd>Se ajustan a los lineamientos de Liverpool para piezas de piso.</dd>
+            <dt>Materiales y acabados</dt><dd>Estructura autoportante con chapa de madera de nogal y paneles de metal en bronce cepillado, logotipo en relieve metálico, nicho iluminado para el frasco, repisa de exhibición y placa con chip NFC y código QR. En el nivel Esencial, la madera y el metal son acabados impresos.</dd>
+            <dt>Producción</dt><dd>Carpintería con chapa natural, paneles metálicos y letras en relieve.</dd>
+            <dt>Instalación</dt><dd>Una visita de montaje por tienda. La iluminación del nicho necesita una toma de corriente.</dd>
           </dl>
         </article>
         <article class="ficha rv">
           <h3>Vitrina con animación flotante <small>6 piezas, nivel Insignia</small></h3>
           <dl class="spec">
-            <dt>Medidas</dt><dd>Módulo de 40 × 40 × 50 cm sobre el tótem.</dd>
+            <dt>Medidas</dt><dd>Módulo de 40 × 40 × 50 cm.</dd>
             <dt>Materiales y acabados</dt><dd>Acrílico de 6 mm, pantalla oculta y lámina reflejante a 45°. El frasco real va al centro y la animación parece flotar a su alrededor.</dd>
             <dt>Producción</dt><dd>Animación generada desde el modelo 3D del frasco.</dd>
             <dt>Instalación</dt><dd>Requiere una toma de corriente.</dd>
@@ -626,16 +601,16 @@ html:not(.js) .lenti{display:none}
           <h3>Kit de activación <small>25 kits</small></h3>
           <dl class="spec">
             <dt>Medidas</dt><dd>Charola de 40 × 30 cm.</dd>
-            <dt>Materiales y acabados</dt><dd>Charola laqueada, porta tarjetas, 300 tarjetas olfativas impresas, tarjeta de mostrador con chip NFC y código QR, y guía del ritual. En el nivel Esencial la charola es de cartón rígido.</dd>
-            <dt>Producción</dt><dd>Un kit por caja, listo para paquetería.</dd>
+            <dt>Materiales y acabados</dt><dd>Charola laqueada, porta tarjetas, 300 tarjetas olfativas de papel texturizado con el paisaje impreso a color y cubierto con tinta hidrocrómica, tarjeta de mostrador con chip NFC y código QR, y guía del ritual. En el nivel Esencial la charola es de cartón rígido.</dd>
+            <dt>Producción</dt><dd>Un kit por caja, listo para paquetería. Las tarjetas se prueban con L'Absolu antes de imprimir el tiraje.</dd>
             <dt>Instalación</dt><dd>La monta el personal de la marca con una guía en video.</dd>
           </dl>
         </article>
         <article class="ficha rv">
           <h3>Regalo por compra <small>1,000 piezas</small></h3>
           <dl class="spec">
-            <dt>Medidas</dt><dd>10 × 7 cm.</dd>
-            <dt>Materiales y acabados</dt><dd>Tarjetero de piel con grabado y chip NFC, en estuche individual. En el nivel Esencial es de metal grabado, sin chip.</dd>
+            <dt>Medidas</dt><dd>Tarjetero de 10 × 7 cm; el estuche se define con el contenido.</dd>
+            <dt>Materiales y acabados</dt><dd>Estuche rígido con asa de cuerda e interior de gamuza, con libreta y tarjetero de piel grabados con el emblema, pluma metálica y memoria USB. El tarjetero lleva el chip NFC. En el nivel Esencial el regalo es solo el tarjetero, de metal grabado y sin chip.</dd>
             <dt>Producción</dt><dd>Hecho en México, con grabado láser.</dd>
             <dt>Entrega</dt><dd>850 piezas a tienda y 150 de reserva central.</dd>
           </dl>
@@ -694,8 +669,8 @@ html:not(.js) .lenti{display:none}
             <li>Experiencia web de tres tiempos para las 32 tiendas</li>
             <li>Frasco en realidad aumentada</li>
             <li>Tablero por tienda y por día</li>
-            <li>13 traffic stoppers lenticulares en PVC rígido</li>
-            <li>25 kits de activación en cartón rígido</li>
+            <li>13 podiums traffic stopper con acabados impresos</li>
+            <li>25 kits de activación en cartón rígido, con las tarjetas que revelan el paisaje</li>
             <li>1,000 regalos de metal grabado</li>
             <li>Envío a 32 tiendas y montaje en 13</li>
           </ul>
@@ -706,9 +681,9 @@ html:not(.js) .lenti{display:none}
           <p class="tot">$750,000</p>
           <p class="pre">Todo lo de Esencial, con estos cambios:</p>
           <ul>
-            <li>Traffic stoppers en MDF laqueado</li>
+            <li>Podiums con chapa de madera, metal y nicho iluminado</li>
             <li>Kits con charola laqueada</li>
-            <li>Regalos de piel con chip NFC</li>
+            <li>Kit de regalo: libreta, pluma, USB y tarjetero de piel con chip NFC</li>
             <li>Guía en video para el personal de la marca</li>
             <li>Reabasto de regalos a media campaña</li>
           </ul>
@@ -791,7 +766,7 @@ const RESERVA=150;
 const NIVELES={esencial:["Esencial",500000],completa:["Completa",750000],insignia:["Insignia",1000000]};
 const REPARTO=[
   ["Experiencia web, realidad aumentada y tablero",.20],
-  ["Traffic stoppers",.25],
+  ["Podiums traffic stopper",.25],
   ["Kits de activación",.15],
   ["Regalos por compra",.25],
   ["Envíos y montaje",.10],
@@ -804,8 +779,7 @@ const quieto=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const limita=(v,a,b)=>Math.max(a,Math.min(b,v));
 const suave=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
 const azar=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
-const INK=[21,24,26], TONOS=[[172,180,170],[112,121,113],[21,24,26]], AMBAR="#DE9A52";
-const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")";
+const AMBAR="#DE9A52";
 (function(){
   const cont=document.getElementById("regiones");
   REGIONES.forEach(r=>{
@@ -890,12 +864,12 @@ const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")
     dpr=Math.min(window.devicePixelRatio||1,2); w=cv.clientWidth; h=cv.clientHeight;
     cv.width=Math.max(1,Math.round(w*dpr)); cv.height=Math.max(1,Math.round(h*dpr));
   }
+  const img=cv.parentNode.querySelector("img");
   function capas(){
-    const pie=h-16, total=Math.min(pie*.84,w*1.15,470), base=total*.62, cx=w/2, sep=3+abre*total*.05;
-    const alto=[.2,.27,.53].map(v=>v*total), ancho=[.5,.76,1].map(v=>v*base);
-    const c=[]; let y=pie;
-    for(let i=2;i>=0;i--){y-=alto[i];c[i]={x:cx-ancho[i]/2,y,w:ancho[i],h:alto[i]};y-=sep}
-    return c;
+    if(!img||!img.complete||!img.naturalWidth)return null;
+    const b=img.getBoundingClientRect(), c=cv.getBoundingClientRect();
+    const x=b.left-c.left, y=b.top-c.top, iw=b.width, ih=b.height;
+    return [{x:x+iw*.2,y:y+ih*.012,w:iw*.62,h:0},{x:x+iw*.03,y:y+ih*.235,w:iw*.94,h:0}];
   }
   function nace(c,capa,tapa){
     let x=c.x+Math.random()*c.w;
@@ -905,9 +879,11 @@ const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")
   }
   function avanza(dt){
     const c=capas(), tasa=(30+abre*40)*dt;
-    let n=Math.floor(tasa); if(Math.random()<tasa-n)n++;
-    for(let k=0;k<n;k++)parts.push(nace(c[0],0));
-    if(Math.random()<10*dt)parts.push(nace(c[1],1,c[0]));
+    if(c){
+      let n=Math.floor(tasa); if(Math.random()<tasa-n)n++;
+      for(let k=0;k<n;k++)parts.push(nace(c[0],0));
+      if(Math.random()<10*dt)parts.push(nace(c[1],1,c[0]));
+    }
     for(const p of parts){
       p.vida+=dt;
       p.x+=(p.vx+Math.sin(p.fase+p.vida*1.4)*(6+p.vida*5))*dt; p.y+=p.vy*dt;
@@ -918,9 +894,6 @@ const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")
   }
   function dibuja(){
     ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
-    const c=capas();
-    for(let i=2;i>=0;i--){const q=c[i];ctx.fillStyle="rgb("+TONOS[i].join(",")+")";ctx.fillRect(q.x,q.y,q.w,q.h)}
-    ctx.fillStyle=AMBAR; ctx.fillRect(c[2].x,c[2].y+c[2].h+8,Math.max(18,c[2].w*.16),1.5);
     for(const p of parts){
       const k=p.vida/p.max;
       ctx.globalAlpha=p.a*Math.min(1,p.vida*1.6)*Math.pow(1-k,.7);
@@ -936,9 +909,10 @@ const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")
   }
   function arranca(){if(!raf&&!quieto&&visible){prev=0;raf=requestAnimationFrame(cuadro)}}
   medir();
-  if(quieto){for(let k=0;k<160;k++)avanza(1/30);dibuja()}
-  if("ResizeObserver" in window)new ResizeObserver(()=>{medir();if(quieto)dibuja()}).observe(cv);
-  else addEventListener("resize",()=>{medir();if(quieto)dibuja()});
+  function fija(){parts=[];for(let k=0;k<160;k++)avanza(1/30);dibuja()}
+  if(quieto){if(img&&!img.complete)img.addEventListener("load",fija);else fija()}
+  if("ResizeObserver" in window)new ResizeObserver(()=>{medir();if(quieto)fija()}).observe(cv);
+  else addEventListener("resize",()=>{medir();if(quieto)fija()});
   if("IntersectionObserver" in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting;arranca()}).observe(cv);
   hero.addEventListener("pointermove",e=>{const b=cv.getBoundingClientRect();px=e.clientX-b.left;py=e.clientY-b.top});
   hero.addEventListener("pointerleave",()=>{px=py=-1e4});
@@ -959,108 +933,125 @@ const mezcla=(a,b,k)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*k)).join(",")+")
   requestAnimationFrame(paso);
 })();
 (function(){
-  const caja=document.querySelector(".lenti"); if(!caja)return;
-  const pista=caja.querySelector(".lenti-pista"), esc=caja.querySelector(".lenti-escena");
-  const cv=document.getElementById("lenti-c"), pl=document.getElementById("planta-c");
-  if(!cv.getContext||!pl.getContext)return;
-  const c1=cv.getContext("2d"), c2=pl.getContext("2d");
-  const pasos=[...caja.querySelectorAll(".lenti-pasos li")], barras=[...caja.querySelectorAll(".lenti-barras i")];
-  const COL=["#6F7872","#C7CCC4","#FBFBF8"];
-  const r=azar(11);
-  const P=[90,70,45].map(n=>Array.from({length:n},()=>({x:r(),y:r(),dx:r()-.5,dy:r(),s:.8+r()*2,a:.35+r()*.65,am:r()<.07})));
-  let dpr=1,W=0,H=0,PW=0,PH=0,pw=0,ph=0,marcos=[],p=0,pend=false,tope=0;
-  function frasco(ctx,w,h,t){
-    const g=ctx.createLinearGradient(0,0,0,h); g.addColorStop(0,"#FBFBF8"); g.addColorStop(1,"#DCE0D8");
-    ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
-    const e=w/154, p1=suave(t/.5), p2=suave((t-.5)/.5);
-    const mw=w*.5, mh=h*.58, mx=(w-mw)/2, sep=p1*h*.03;
-    const alto=[.22,.33,.45], ancho=[.56,.78,1], volatil=[1,.5,.12];
-    let y=h*.26-sep;
-    for(let b=0;b<3;b++){
-      const bh=mh*alto[b], bw=mw*(1+(ancho[b]-1)*p1), bx=mx+(mw-bw)/2, col=mezcla(INK,TONOS[b],p1), k=p2*volatil[b];
-      ctx.globalAlpha=1-k*.92; ctx.fillStyle=col; ctx.fillRect(bx,y,bw,bh);
-      if(k>0)for(const q of P[b]){
-        ctx.globalAlpha=q.a*Math.min(1,k*1.6); ctx.fillStyle=q.am?AMBAR:col;
-        ctx.beginPath(); ctx.arc(bx+q.x*bw+q.dx*w*.7*k,y+q.y*bh-q.dy*h*.24*k,q.s*e,0,6.2832); ctx.fill();
-      }
-      y+=bh+sep;
-    }
-    ctx.globalAlpha=1;
-  }
-  function fotograma(v){
-    const c0=.36,c1=.64,a=.045;
-    if(v<c0-a)return 0;
-    if(v<=c0+a)return (v-c0+a)/(2*a);
-    if(v<c1-a)return 1;
-    if(v<=c1+a)return 1+(v-c1+a)/(2*a);
-    return 2;
-  }
+  const caja=document.querySelector(".rev"); if(!caja)return;
+  const pista=caja.querySelector(".rev-pista"), esc=caja.querySelector(".rev-escena");
+  const cv=document.getElementById("rev-c"), co=document.getElementById("corte-c");
+  if(!cv.getContext||!co.getContext)return;
+  const c1=cv.getContext("2d"), c2=co.getContext("2d");
+  const pasos=[...caja.querySelectorAll(".rev-pasos li")], barras=[...caja.querySelectorAll(".rev-barras i")];
+  const VENTANA=[.158,.455,.854,.851];
+  const r=azar(5);
+  const BORDE=Array.from({length:6},(_,i)=>({f:2+i+Math.floor(r()*3),a:.03+r()*.06,fase:r()*6.3}));
+  const BRISA=Array.from({length:160},()=>({t:r(),d:r()-.5,s:.5+r()*1.5,a:.3+r()*.6}));
+  const GOTAS=Array.from({length:24},()=>({x:r()-.5,t:r(),s:1.2+r()*1.8}));
+  const tramo=(v,a,b)=>limita((v-a)/(b-a),0,1);
+  const moja=v=>suave(tramo(v,.3,.72));
+  const brisa=v=>tramo(v,.24,.32)*(1-tramo(v,.66,.76));
+  const boquilla=v=>tramo(v,.16,.26)*(1-tramo(v,.74,.84));
+  let dpr=1,W=0,H=0,CW=0,CH=0,p=0,pend=false,tope=0,cargadas=0;
+  const blanca=new Image(), revelada=new Image();
+  [blanca,revelada].forEach(im=>{im.onload=()=>{cargadas++;actualiza(true)}});
+  blanca.src="assets/img/tarjeta-blanca.webp"; revelada.src="assets/img/tarjeta-revelada.webp";
   function medir(){
     dpr=Math.min(window.devicePixelRatio||1,2);
     W=cv.clientWidth; H=cv.clientHeight; cv.width=Math.max(1,Math.round(W*dpr)); cv.height=Math.max(1,Math.round(H*dpr));
-    PW=pl.clientWidth; PH=pl.clientHeight; pl.width=Math.max(1,Math.round(PW*dpr)); pl.height=Math.max(1,Math.round(PH*dpr));
-    ph=H*.94; pw=ph*5/12; if(pw>W*.8){pw=W*.8;ph=pw*12/5}
+    CW=co.clientWidth; CH=co.clientHeight; co.width=Math.max(1,Math.round(CW*dpr)); co.height=Math.max(1,Math.round(CH*dpr));
     tope=parseFloat(getComputedStyle(esc).top)||0;
-    marcos=[0,.5,1].map(t=>{
-      const o=document.createElement("canvas"); o.width=Math.max(1,Math.round(pw*dpr)); o.height=Math.max(1,Math.round(ph*dpr));
-      const x=o.getContext("2d"); x.setTransform(dpr,0,0,dpr,0,0); frasco(x,pw,ph,t); return o;
-    });
   }
-  function frente(f){
-    const i=Math.min(2,Math.floor(f)), k=f-i, x=Math.round((W-pw)/2), y=Math.round((H-ph)/2);
+  function frente(){
     c1.setTransform(dpr,0,0,dpr,0,0); c1.clearRect(0,0,W,H);
-    c1.fillStyle="rgba(0,0,0,.4)"; c1.fillRect(x+7,y+9,pw,ph);
-    c1.drawImage(marcos[i],x,y,pw,ph);
-    if(k>0&&i<2){c1.globalAlpha=k;c1.drawImage(marcos[i+1],x,y,pw,ph);c1.globalAlpha=1}
-    c1.fillStyle="rgba(21,24,26,.06)";
-    for(let lx=x+2;lx<x+pw;lx+=4)c1.fillRect(lx,y,1,ph);
-    const bx=x+pw*(1.3-p*1.6), g=c1.createLinearGradient(bx-pw*.35,0,bx+pw*.35,0);
-    g.addColorStop(0,"rgba(255,255,255,0)"); g.addColorStop(.5,"rgba(255,255,255,.3)"); g.addColorStop(1,"rgba(255,255,255,0)");
-    c1.fillStyle=g; c1.fillRect(x,y,pw,ph);
-    c1.strokeStyle="rgba(251,251,248,.6)"; c1.lineWidth=1; c1.strokeRect(x+.5,y+.5,pw-1,ph-1);
-  }
-  function planta(f){
-    const i=Math.min(2,Math.floor(f)), k=f-i;
-    c2.setTransform(dpr,0,0,dpr,0,0); c2.clearRect(0,0,PW,PH);
-    const n=PW<420?7:9, ancho=Math.min(PW*.62,380), L=ancho/n, x0=(PW-ancho)/2, y0=6, th=Math.max(5,L*.42), ly=y0+th, lh=L*.36;
-    const cx=PW*.06+PW*.88*p, cy=PH-14;
-    c2.fillStyle="rgba(222,154,82,.09)";
-    c2.beginPath(); c2.moveTo(cx,cy); c2.lineTo(x0,ly+lh*.6); c2.lineTo(x0+ancho,ly+lh*.6); c2.closePath(); c2.fill();
-    c2.setLineDash([2,5]); c2.strokeStyle="rgba(251,251,248,.3)"; c2.lineWidth=1;
-    c2.beginPath(); c2.moveTo(PW*.03,cy); c2.lineTo(PW*.97,cy); c2.stroke(); c2.setLineDash([]);
-    for(let j=0;j<n;j++){
-      const lx=x0+j*L;
-      for(let s=0;s<3;s++){
-        const fr=2-s, vis=fr===i?1-k:(fr===i+1?k:0);
-        c2.globalAlpha=.18+.82*vis; c2.fillStyle=COL[fr]; c2.fillRect(lx+s*L/3+.5,y0,L/3-1,th);
+    if(cargadas<2)return;
+    const ar=blanca.naturalWidth/blanca.naturalHeight;
+    let ch=H*.94, cw=ch*ar;
+    if(cw>W*.6){cw=W*.6;ch=cw/ar}
+    const x=Math.round((W-cw)/2-cw*.1), y=Math.round((H-ch)/2);
+    c1.fillStyle="rgba(0,0,0,.4)"; c1.fillRect(x+7,y+9,cw,ch);
+    c1.drawImage(blanca,x,y,cw,ch);
+    const vx=x+cw*VENTANA[0], vy=y+ch*VENTANA[1], vw=cw*(VENTANA[2]-VENTANA[0]), vh=ch*(VENTANA[3]-VENTANA[1]);
+    const cx=vx+vw*.64, cy=vy+vh*.42, m=moja(p);
+    if(m>0){
+      const R=Math.hypot(vw,vh)*(.04+1.6*Math.pow(m,1.7));
+      c1.save();
+      c1.beginPath(); c1.rect(vx,vy,vw,vh); c1.clip();
+      c1.beginPath();
+      for(let k=0;k<=72;k++){
+        const t=k/72*6.2832; let f=1;
+        for(const b of BORDE)f+=b.a*Math.sin(b.f*t+b.fase);
+        const px=cx+Math.cos(t)*R*f, py=cy+Math.sin(t)*R*f*.9;
+        if(k)c1.lineTo(px,py); else c1.moveTo(px,py);
       }
-      c2.globalAlpha=1; c2.strokeStyle="rgba(251,251,248,.75)";
-      c2.beginPath(); c2.ellipse(lx+L/2,ly,L/2-.6,lh,0,0,Math.PI); c2.stroke();
-      if(n<8||j%2===0){
-        c2.strokeStyle="rgba(222,154,82,.5)";
-        c2.beginPath(); c2.moveTo(cx,cy-5); c2.lineTo(lx+L/2,ly+lh); c2.stroke();
-      }
+      c1.closePath();
+      c1.save(); c1.clip(); c1.drawImage(revelada,x,y,cw,ch); c1.restore();
+      c1.strokeStyle="rgba(120,92,58,.3)"; c1.lineWidth=2.5; c1.stroke();
+      c1.restore();
     }
-    c2.fillStyle=AMBAR; c2.beginPath(); c2.ellipse(cx,cy,10,5.5,0,0,6.2832); c2.fill();
-    c2.fillStyle="#FBFBF8"; c2.beginPath(); c2.arc(cx,cy,4,0,6.2832); c2.fill();
+    const bx=x+cw+16, by=cy, br=brisa(p), bq=boquilla(p);
+    if(br>0){
+      c1.fillStyle="#FBFBF8";
+      for(const g of BRISA){
+        const t=(g.t+p*7)%1, gx=bx-8+(cx-bx+8)*t, gy=by+g.d*t*vh*.5;
+        c1.globalAlpha=g.a*br*(1-t*.55);
+        c1.beginPath(); c1.arc(gx,gy,g.s*(.6+t),0,6.2832); c1.fill();
+      }
+      c1.globalAlpha=1;
+    }
+    if(bq>0){
+      c1.globalAlpha=bq;
+      const g=c1.createLinearGradient(0,by-15,0,by+15);
+      g.addColorStop(0,"#7F8387"); g.addColorStop(.45,"#E2E4E6"); g.addColorStop(1,"#4A4E52");
+      c1.fillStyle=g;
+      if(c1.roundRect){c1.beginPath();c1.roundRect(bx,by-15,44,30,5);c1.fill()}else c1.fillRect(bx,by-15,44,30);
+      c1.fillStyle="#2A2E32"; c1.fillRect(bx-7,by-5,9,10);
+      c1.globalAlpha=1;
+    }
   }
-  function actualiza(){
+  function corte(){
+    c2.setTransform(dpr,0,0,dpr,0,0); c2.clearRect(0,0,CW,CH);
+    const x0=Math.round(CW*.04), ancho=Math.round(CW*.92), m=moja(p), br=brisa(p);
+    const hP=Math.max(10,CH*.13), hI=Math.max(6,CH*.08), hC=Math.max(10,CH*.15);
+    const yP=CH-hP-4, yI=yP-hI, yC=yI-hC;
+    c2.fillStyle="#B9AE9F"; c2.fillRect(x0,yP,ancho,hP);
+    const g=c2.createLinearGradient(x0,0,x0+ancho,0);
+    g.addColorStop(0,"#7E8F4E"); g.addColorStop(.3,"#D98B3A"); g.addColorStop(.55,"#A3AE63"); g.addColorStop(.8,"#D98B3A"); g.addColorStop(1,"#7E8F4E");
+    c2.fillStyle=g; c2.fillRect(x0,yI,ancho,hI);
+    c2.fillStyle="#FBFBF8"; c2.fillRect(x0,yC,ancho,hC);
+    const cx=x0+ancho*.64, mitad=ancho*(.03+m*.75), a=Math.max(x0,cx-mitad), b=Math.min(x0+ancho,cx+mitad);
+    if(m>0&&b>a){
+      c2.globalAlpha=.85; c2.fillStyle=g; c2.fillRect(a,yC,b-a,hC);
+      c2.globalAlpha=.2; c2.fillStyle="#BFD9EA"; c2.fillRect(a,yC,b-a,hC);
+      c2.globalAlpha=1;
+    }
+    c2.fillStyle="rgba(21,24,26,.18)";
+    for(let x=x0+3;x<x0+ancho-2;x+=6){
+      if(m>0&&x>a&&x<b)continue;
+      c2.fillRect(x,yC+hC*.3,1.5,1.5); c2.fillRect(x+3,yC+hC*.65,1.5,1.5);
+    }
+    if(br>0){
+      c2.fillStyle="#BFD9EA";
+      for(const d of GOTAS){
+        const t=(d.t+p*6)%1;
+        c2.globalAlpha=br*(.35+.65*(1-t));
+        c2.beginPath(); c2.arc(cx+d.x*ancho*.5,4+(yC-8)*t,d.s,0,6.2832); c2.fill();
+      }
+      c2.globalAlpha=1;
+    }
+  }
+  function actualiza(forzar){
     pend=false;
     const b=pista.getBoundingClientRect();
-    if(b.bottom<-50||b.top>innerHeight+50)return;
+    if(!forzar&&(b.bottom<-50||b.top>innerHeight+50))return;
     const total=b.height-esc.offsetHeight;
     p=total>0?limita((tope-b.top)/total,0,1):0;
-    const f=fotograma(p), fi=Math.round(f);
-    frente(f); planta(f);
+    frente(); corte();
+    const fi=p<.3?0:p<.7?1:2;
     pasos.forEach((li,j)=>li.classList.toggle("on",j===fi));
-    barras.forEach((s,j)=>s.style.transform="scaleX("+limita(p*3-j,0,1)+")");
+    [tramo(p,0,.3),tramo(p,.3,.7),tramo(p,.7,1)].forEach((v,j)=>barras[j].style.transform="scaleX("+v+")");
   }
-  const pide=()=>{if(!pend){pend=true;requestAnimationFrame(actualiza)}};
   medir();
-  addEventListener("scroll",pide,{passive:true});
-  if("ResizeObserver" in window)new ResizeObserver(()=>{medir();actualiza()}).observe(esc);
-  else addEventListener("resize",()=>{medir();actualiza()});
-  actualiza();
+  addEventListener("scroll",()=>{if(!pend){pend=true;requestAnimationFrame(()=>actualiza())}},{passive:true});
+  if("ResizeObserver" in window)new ResizeObserver(()=>{medir();actualiza(true)}).observe(esc);
+  else addEventListener("resize",()=>{medir();actualiza(true)});
+  actualiza(true);
 })();
 (function(){
   const bar=document.getElementById("barra"), av=bar.querySelector(".avance");
