@@ -11,12 +11,13 @@
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Pixel Bridge">
 <meta property="og:title" content="L'Absolu · Carlo Corinto">
-<meta property="og:description" content="La página que abre el chip del podium: registro, la tarjeta que se rocía y la tarjeta del día, en demostración.">
+<meta property="og:description" content="La página que abre el chip del mueble y del acrílico: registro, la tarjeta que se rocía y el kit de regalo, en demostración.">
 <meta property="og:url" content="https://propuesta-labsolu.pages.dev/experiencia/">
-<meta property="og:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=2">
+<meta property="og:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<script>if(window.parent!==window)document.documentElement.classList.add("en-marco")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,6 +39,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{margin:0;min-height:100%;overscroll-behavior-y:none}
+html.en-marco,html.en-marco body{overscroll-behavior-y:auto}
 body{background:var(--tinta);color:var(--papel);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;overflow-x:hidden;overflow-x:clip}
 h1,h2,p{margin:0}
 button,input{font:inherit;color:inherit}
@@ -62,8 +64,6 @@ h1{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(
 .lema{text-align:center;color:var(--piedra);font-size:clamp(.9rem,2.2svh,1rem);max-width:34ch;margin:0 auto;text-wrap:balance}
 .estado{display:flex;align-items:baseline;justify-content:center;gap:8px;font-size:.78rem;line-height:1.35;color:var(--papel);text-align:left;max-width:44ch;margin:0 auto}
 .estado i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--ambar);box-shadow:0 0 0 3px rgba(222,154,82,.18);transform:translateY(-1px)}
-.estado.fuera{color:var(--piedra)}
-.estado.fuera i{background:var(--gris);box-shadow:none}
 form{display:grid;gap:8px}
 .modo{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--linea);border-radius:999px;padding:3px;margin:0;min-width:0}
 .modo label{position:relative;display:block}
@@ -91,18 +91,19 @@ form{display:grid;gap:8px}
 .reglas a,.aviso a{color:var(--piedra);text-underline-offset:2px}
 .hecho{display:grid;gap:6px;justify-items:center;text-align:center;padding:16px 16px 10px;border:1px solid var(--linea);border-radius:16px;background:rgba(251,251,248,.04)}
 .hecho .cap{color:var(--ambar)}
-.h-premio{font-family:var(--display);font-size:clamp(1.3rem,3.4svh,1.6rem);line-height:1.1;text-wrap:balance}
+.h-paisaje{font-family:var(--display);font-size:clamp(1.3rem,3.4svh,1.6rem);line-height:1.1;text-wrap:balance}
 .h-det{font-size:.8rem;color:var(--piedra)}
 .otra{border:0;background:none;color:var(--gris);font-size:.76rem;text-decoration:underline;text-underline-offset:2px;cursor:pointer;padding:8px}
 .pie{grid-area:pie;display:grid;gap:6px;justify-items:center;text-align:center}
 .demo{display:inline-block;font-size:.66rem;line-height:1.35;padding:2px 10px;border:1px solid var(--linea);border-radius:999px;color:var(--piedra)}
 @media (max-height:700px){
+  .pantalla{grid-template-rows:auto minmax(40px,1fr) auto auto}
   .lema{display:none}
   .hoja.res .carta{height:min(17svh,170px)}
 }
 @media (max-height:640px){
   :root{--aire:6px}
-  .pantalla{padding-top:max(10px,env(safe-area-inset-top));padding-bottom:max(8px,env(safe-area-inset-bottom));grid-template-rows:auto minmax(56px,1fr) auto auto}
+  .pantalla{padding-top:max(10px,env(safe-area-inset-top));padding-bottom:max(8px,env(safe-area-inset-bottom));grid-template-rows:auto minmax(24px,1fr) auto auto}
   .lema{display:none}
   h1{font-size:2.15rem}
   .modo span{padding:5px 0}
@@ -121,7 +122,7 @@ form{display:grid;gap:8px}
   .pie{align-self:end}
 }
 @media (min-aspect-ratio:1/1) and (max-height:500px){
-  .pantalla{--aire:5px;grid-template-rows:auto auto auto;align-content:center;padding-top:max(5px,env(safe-area-inset-top));padding-bottom:max(3px,env(safe-area-inset-bottom))}
+  .pantalla{--aire:4px;grid-template-rows:auto auto auto;align-content:center;padding-top:max(5px,env(safe-area-inset-top));padding-bottom:max(3px,env(safe-area-inset-bottom))}
   .lema,.titulo .cap{display:none}
   .visual img{max-height:100%;bottom:0}
   h1{font-size:1.5rem}
@@ -156,22 +157,20 @@ dialog.ve .hoja{transform:none}
 .resultado{min-height:5em;display:grid;align-content:start;justify-items:center;gap:6px;text-align:center;width:100%}
 .registrado{display:flex;align-items:baseline;justify-content:center;gap:8px;font-size:.84rem;line-height:1.4;color:var(--papel);text-align:left;max-width:38ch}
 .registrado i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--ambar);box-shadow:0 0 0 3px rgba(222,154,82,.18);transform:translateY(-1px)}
-.registrado.fuera{color:var(--piedra)}
-.registrado.fuera i{background:var(--gris);box-shadow:none}
 .hoja .demo{margin-top:2px}
 .r-cap{color:var(--ambar)}
-.r-premio{font-family:var(--display);font-size:clamp(1.35rem,3.6svh,1.7rem);line-height:1.1;max-width:22ch;text-wrap:balance}
+.r-titulo{font-family:var(--display);font-size:clamp(1.35rem,3.6svh,1.7rem);line-height:1.1;max-width:22ch;text-wrap:balance}
 .r-det{font-size:.82rem;color:var(--piedra);max-width:38ch}
-.r-nota{font-size:.78rem;color:var(--gris);max-width:38ch}
-.sms{width:100%;max-width:330px;text-align:left;background:rgba(251,251,248,.07);border:1px solid var(--linea);border-radius:14px 14px 14px 4px;padding:8px 12px;font-size:.78rem;line-height:1.4;color:var(--piedra)}
-.sms .cap{display:block;font-size:.58rem;color:var(--gris);margin-bottom:2px}
 .codigo{display:inline-block;font-variant-numeric:tabular-nums;letter-spacing:.14em;font-weight:700;color:var(--papel);border:1px dashed rgba(222,154,82,.6);border-radius:8px;padding:1px 8px}
-.reenviar{border:0;background:none;color:var(--gris);font-size:.74rem;text-decoration:underline;text-underline-offset:2px;cursor:pointer;padding:2px 6px}
-.reenviar[disabled]{text-decoration:none;cursor:default;opacity:.7}
+.kit a{color:var(--papel);text-underline-offset:2px}
+.kit{width:100%;max-width:340px;text-align:left;background:rgba(222,154,82,.08);border:1px solid rgba(222,154,82,.35);border-radius:12px;padding:10px 12px;font-size:.8rem;line-height:1.5;color:var(--piedra)}
+.kit .cap{display:block;font-size:.6rem;color:var(--ambar);margin-bottom:4px}
 .acciones{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:360px;margin-top:6px}
 .acciones .boton{margin:0;height:48px;font-size:.92rem}
 .boton.claro{background:transparent;color:var(--papel);border:1px solid rgba(251,251,248,.35)}
 .hecho .acciones{max-width:320px}
+.hecho .h-bases{font-size:.72rem;color:var(--gris)}
+.hecho .h-bases a{color:var(--piedra);text-underline-offset:2px}
 .r-cap:focus,.hecho .cap:focus{outline:none}
 .boton.claro:hover{background:rgba(251,251,248,.06)}
 .aparece{animation:aparece .6s var(--suave) both}
@@ -181,7 +180,8 @@ dialog.ve .hoja{transform:none}
   dialog.ve .hoja{transform:translate(0,-50%);opacity:1}
 }
 @media (min-aspect-ratio:1/1) and (max-height:520px){
-  .hoja{grid-template-columns:auto minmax(0,1fr);justify-items:start;align-items:center;column-gap:24px;max-width:760px;max-height:100%;border-radius:20px 20px 0 0}
+  #giro .hoja{grid-template-columns:auto minmax(0,1fr);justify-items:start;align-items:center;column-gap:24px;max-width:760px;max-height:100%;border-radius:20px 20px 0 0}
+  .legal .hoja{max-width:760px;max-height:100%;border-radius:20px 20px 0 0}
   .carta,.hoja.res .carta{grid-row:1/span 4;height:min(76svh,330px)}
   .hoja-t,.hoja .ins{text-align:left}
   .resultado{justify-items:start;text-align:left;min-height:0}
@@ -191,6 +191,7 @@ dialog.ve .hoja{transform:none}
 .legal .texto{display:grid;gap:10px;font-size:.84rem;color:var(--piedra);overflow:auto}
 .legal .texto b{color:var(--papel);font-weight:600}
 .legal .nota-demo{font-size:.74rem;color:var(--gris);border-top:1px solid var(--linea);padding-top:10px}
+@media print{html{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -215,7 +216,7 @@ dialog.ve .hoja{transform:none}
       <h1 id="titulo">L'Absolu</h1>
     </div>
     <p class="lema" id="lema">Regístrate, rocía tu tarjeta y llévate tu paisaje.</p>
-    <p class="estado" id="estado" role="status"><i aria-hidden="true"></i><span id="estado-t">Tarjeta de regalo Liverpool de $150: disponible hoy</span></p>
+    <p class="estado" id="estado" role="status"><i aria-hidden="true"></i><span id="estado-t">Con tu compra de L'Absolu, kit de regalo: quedan 45 en esta tienda</span></p>
     <form id="registro" method="dialog" novalidate>
       <fieldset class="modo">
         <legend class="sr">Regístrate con</legend>
@@ -229,19 +230,20 @@ dialog.ve .hoja{transform:none}
       <p class="error" id="acepto-e" aria-live="polite"></p>
       <label class="acepto"><input type="checkbox" id="novedades"><span>Quiero recibir novedades de Carlo Corinto (opcional).</span></label>
       <button class="boton" type="submit">Registrarme y revelar</button>
-      <p class="reglas">Sin compra ni sorteo. Del 4 al 17 de enero de 2027, cada tienda tiene una tarjeta de regalo Liverpool de <span class="valor">$150</span> al día (448 en total) para la primera persona que se registra desde las 12:00; se recoge en 30 minutos con el código que te enviamos. Mayores de 18, una por persona. <a href="#bases" data-abre="bases">Bases</a>.</p>
+      <p class="reglas" id="reglas">Del 4 al 17 de enero de 2027. Con la compra de Carlo Pour Homme L'Absolu en esta tienda, un kit de regalo por persona, hasta agotar los 45 de esta tienda: muestra tu código y tu ticket a la promotora el mismo día. Sin sorteo. Mayores de 18. <a href="#bases" data-abre="bases">Bases</a>.</p>
     </form>
     <div class="hecho" id="hecho" hidden>
       <p class="cap" id="hecho-t" tabindex="-1">Ya participaste</p>
-      <p class="h-premio" id="h-premio"></p>
-      <p class="h-det">Tu código <span class="codigo" id="h-cod"></span></p>
-      <div class="acciones"><button class="boton" type="button" data-fondo>Guardar mi fondo</button><button class="boton claro" id="pedir" type="button">Volver a pedir la tarjeta</button></div>
+      <p class="h-paisaje">Tu paisaje L'Absolu</p>
+      <p class="h-det" id="h-det">Con tu compra, tu código para el kit <span class="codigo" id="h-cod"></span></p>
+      <div class="acciones"><button class="boton" type="button" data-fondo>Guardar mi fondo</button><button class="boton claro" id="ver" type="button">Ver mi tarjeta</button></div>
+      <p class="h-bases"><a href="#bases" data-abre="bases">Bases de la promoción</a></p>
       <button class="otra" id="otra" type="button">Probar otra vez (demostración)</button>
     </div>
   </section>
 
   <footer class="pie">
-    <p class="aviso">Carlo Corinto ([razón social]) usa tu dato, la tienda y la hora de tu registro para tu participación, el conteo por tienda y la entrega de la tarjeta; novedades, solo si marcas la casilla. <a href="#aviso" data-abre="aviso">Aviso de privacidad</a>.</p>
+    <p class="aviso" id="aviso-pie">Carlo Corinto ([razón social]) usa tu dato, la tienda y la hora de tu registro para tu participación, el conteo por tienda y, si compras, la entrega del kit; novedades, solo si marcas la casilla. <a href="#aviso" data-abre="aviso">Aviso de privacidad</a>.</p>
     <p class="demo">Demostración: no se envía ni se guarda lo que escribas.</p>
   </footer>
 </main>
@@ -261,7 +263,7 @@ dialog.ve .hoja{transform:none}
     </div>
     <button class="rociar" id="rociar" type="button" autofocus>Rociar por mí</button>
     <div class="resultado" id="resultado" aria-live="polite"></div>
-    <p class="demo">Demostración: el registro, el código y la tarjeta son simulados.</p>
+    <p class="demo">Demostración: el registro y el código son simulados.</p>
   </div>
 </dialog>
 
@@ -276,35 +278,33 @@ dialog.ve .hoja{transform:none}
 
 <script>
 const CAMPANA={
-  niveles:{esencial:"$100",completa:"$150",insignia:"$200"},
-  nivel:"completa",
-  apartada:30,
+  kitsPorTienda:45,
   tiendas:{
-    polanco:["Polanco","at"],perisur:["Perisur","at"],"parque-delta":["Parque Delta","at"],lindavista:["Lindavista","at"],
-    satelite:["Satélite","at"],"monterrey-la-fe":["Monterrey La Fe","at"],
-    mitikah:["Mitikah","t"],ecatepec:["Ecatepec","t"],"monterrey-valle":["Monterrey Valle","t"],oblatos:["Oblatos","t"],
-    "leon-norte":["León Norte","t"],"queretaro-antea":["Querétaro Antea","t"],"angelopolis-puebla":["Angelópolis Puebla","t"],
-    insurgentes:["Insurgentes","a"],monterrey:["Monterrey","a"],"cd-juarez":["Cd. Juárez","a"],tijuana:["Tijuana","a"],
-    mexicali:["Mexicali","a"],culiacan:["Culiacán","a"],mazatlan:["Mazatlán","a"],guadalajara:["Guadalajara","a"],
-    zapopan:["Zapopan","a"],"zapopan-la-perla":["Zapopan La Perla","a"],leon:["León","a"],morelia:["Morelia","a"],
-    puebla:["Puebla","a"],pachuca:["Pachuca","a"],oaxaca:["Oaxaca","a"],merida:["Mérida","a"],cancun:["Cancún","a"],
-    chetumal:["Chetumal","a"],tapachula:["Tapachula","a"]
+    polanco:["Polanco","c"],perisur:["Perisur","c"],"parque-delta":["Parque Delta","c"],lindavista:["Lindavista","c"],
+    satelite:["Satélite","c"],monterrey:["Monterrey","c"],"monterrey-la-fe":["Monterrey La Fe","c"],
+    guadalajara:["Guadalajara","c"],puebla:["Puebla","c"],merida:["Mérida","c"],
+    insurgentes:["Insurgentes","d"],"cd-juarez":["Cd. Juárez","d"],tijuana:["Tijuana","d"],mexicali:["Mexicali","d"],
+    culiacan:["Culiacán","d"],mazatlan:["Mazatlán","d"],zapopan:["Zapopan","d"],"zapopan-la-perla":["Zapopan La Perla","d"],
+    leon:["León","d"],morelia:["Morelia","d"],pachuca:["Pachuca","d"],oaxaca:["Oaxaca","d"],cancun:["Cancún","d"],
+    chetumal:["Chetumal","d"],tapachula:["Tapachula","d"]
   },
+  demoCompleta:"perisur",
+  demoDigital:"tijuana",
   legal:{
     aviso:["<b>Responsable.</b> [Razón social de la marca] («Carlo Corinto»), con domicilio en [domicilio], es responsable de tus datos personales.",
-           "<b>Qué datos.</b> Tu celular o tu correo, y la tienda, la fecha y la hora de tu registro. No pedimos datos sensibles.",
-           "<b>Para qué.</b> Para registrar tu participación, evitar registros repetidos, contar cuántas personas participan en cada tienda y, si te corresponde, entregarte la tarjeta del día. Sin estos datos no puedes participar.",
+           "<b>Qué datos.</b> Tu celular o tu correo, y la tienda, la fecha y la hora de tu registro. Si recoges el kit, también el número, la fecha y la tienda de tu ticket de compra. No pedimos datos sensibles.",
+           "<b>Para qué.</b> Para registrar tu participación, evitar registros repetidos, contar cuántas personas participan en cada tienda y, si compras L'Absolu en una tienda con kits, entregarte el kit de regalo. Sin estos datos no puedes participar.",
            "<b>Novedades, solo si las aceptas.</b> Si marcas la casilla, también te enviaremos información de la marca. Puedes darte de baja cuando quieras.",
-           "<b>Quién más los trata.</b> No transferimos tus datos. Por cuenta de la marca los tratan Pixel Bridge, que opera la página, y los proveedores que la alojan y envían el SMS o el correo; el personal que entrega la tarjeta solo ve tu código.",
-           "<b>Cuándo se borran.</b> Los de quienes no recibieron tarjeta, el [28 de febrero de 2027]. Los de quienes la recibieron se conservan bloqueados [plazo que defina la marca], solo para comprobar la entrega. Quedan las cifras por tienda y, aparte, los contactos de quienes aceptaron novedades.",
+           "<b>Quién más los trata.</b> No transferimos tus datos. Por cuenta de la marca los tratan Pixel Bridge, que opera la página, y el proveedor que la aloja; la promotora que entrega el kit solo ve tu código.",
+           "<b>Cuándo se borran.</b> El [28 de febrero de 2027]. Los de quienes recibieron un kit se conservan bloqueados [plazo que defina la marca], solo para comprobar la entrega. Quedan las cifras por tienda y, aparte, los contactos de quienes aceptaron novedades.",
            "<b>Tus derechos.</b> Para acceder a tus datos, corregirlos, cancelarlos, oponerte a su uso o retirar tu consentimiento, escribe a [correo de privacidad]. Aviso de privacidad integral: [enlace]."],
     bases:["<b>Organiza.</b> [Razón social de la marca], con domicilio en [domicilio]. Promoción de Carlo Pour Homme L'Absolu. Liverpool no organiza esta promoción.",
-           "<b>Vigencia.</b> Del 4 al 17 de enero de 2027, en las 32 tiendas Liverpool participantes: [lista de tiendas].",
-           "<b>Quién participa.</b> Personas de 18 años o más. Sin compra. Un registro por persona, con celular o con correo; la marca puede negar la entrega si detecta que la misma persona ya recibió una tarjeta. No participan empleados de la marca, de Liverpool, de la agencia ni de Pixel Bridge.",
+           "<b>Vigencia.</b> Del 4 al 17 de enero de 2027, en las 25 tiendas Liverpool participantes: {tiendas}.",
+           "<b>Quién participa.</b> Personas de 18 años o más, con un registro por persona, con celular o con correo. Para registrarte y guardar tu paisaje no hace falta comprar. No participan empleados de la marca, de Liverpool, de la agencia ni de Pixel Bridge.",
            "<b>Tu paisaje.</b> Todas las personas registradas reciben el paisaje de L'Absolu como fondo de pantalla.",
-           "<b>Tarjeta del día.</b> Una tarjeta de regalo Liverpool de {valor} por tienda cada día (448 en total). Se libera a las 12:00 y se puede apartar y recoger hasta las [20:00], hora local. Es para la primera persona que se registra mientras está disponible, y lo sabe en cuanto se registra; quien ya se registró y no tiene tarjeta puede pedirla volviendo a escribir su dato. Si hay tarjetas de días anteriores, se liberan a la misma hora para las siguientes personas que se registren. Las que no se entreguen el 17 de enero regresan a la marca. No hay sorteo ni azar.",
-           "<b>Entrega.</b> Te enviamos un código por SMS o correo. Tienes 30 minutos para recogerla en la misma tienda, con el personal de L'Absolu o, donde no lo hay, en el mostrador de perfumería que entrega el regalo por compra; si no, vuelve a estar disponible. Una por persona en toda la campaña.",
-           "<b>La tarjeta de regalo.</b> Se usa conforme a las condiciones de Liverpool ([vigencia y dónde se usa]) y no se cambia por efectivo.",
+           "<b>Kit de regalo.</b> Solo en las 10 tiendas con experiencia completa: {completas}. Con la compra de Carlo Pour Homme L'Absolu [presentación participante] durante la vigencia, un kit por persona, hasta agotar existencias: 500 kits, 45 por tienda y 50 de reserva. Todas las personas que compran reciben el mismo kit: no hay sorteo ni azar.",
+           "<b>Entrega.</b> Tu código es personal y sirve una vez: muéstralo a la promotora con tu ticket, el mismo día y en la tienda de la compra, de [horario de la promotora]. Si te registraste en otra tienda, al abrir la página en una tienda con kit aparece tu código. La entrega queda registrada.",
+           "<b>El kit.</b> No se cambia por dinero ni por otro producto.",
            "<b>Dudas.</b> [Teléfono y horario de atención]."]
   }
 };
@@ -312,26 +312,29 @@ const CAMPANA={
   const $=id=>document.getElementById(id);
   const quieto=matchMedia("(prefers-reduced-motion: reduce)").matches;
   const q=new URLSearchParams(location.search);
-  const T=CAMPANA.tiendas[(q.get("t")||"").toLowerCase()];
-  const tienda=T?T[0]:"", formato=T?T[1]:"at", origen=(q.get("o")||"podium").toLowerCase();
-  if(tienda)$("tienda").textContent="Liverpool "+tienda;
-  let nivel=CAMPANA.niveles[q.get("n")]?q.get("n"):CAMPANA.nivel;
-  const valor=()=>CAMPANA.niveles[nivel];
-  const hora=min=>{const d=new Date(Date.now()+min*60000);return d.getHours()+":"+String(d.getMinutes()).padStart(2,"0")};
+  const slug=(q.get("t")||"").toLowerCase();
+  const T0=Object.prototype.hasOwnProperty.call(CAMPANA.tiendas,slug)?CAMPANA.tiendas[slug]:null;
+  let tienda=T0?T0[0]:"", formato=T0?T0[1]:"d";
   const avisa=paso=>{try{if(parent!==window&&parent.LAbsoluMarco)parent.LAbsoluMarco(paso)}catch(e){}};
-  let dia="libre", vuelve="";
-  const estado=$("estado"), estadoT=$("estado-t");
-  function ponEstado(){
-    const textos={
-      libre:"Tarjeta de regalo Liverpool de "+valor()+": disponible hoy",
-      apartada:"Tarjeta del día apartada; si no se recoge, vuelve a las "+vuelve,
-      entregada:"La tarjeta de hoy ya se entregó; mañana hay otra a las 12:00"
-    };
-    estadoT.textContent=textos[dia];
-    estado.classList.toggle("fuera",dia!=="libre");
-    document.querySelectorAll(".valor").forEach(v=>v.textContent=valor());
+  const estado=$("estado"), estadoT=$("estado-t"), reglas=$("reglas");
+  const BASES='<a href="#bases" data-abre="bases">Bases</a>.';
+  const REGLAS={
+    c:"Del 4 al 17 de enero de 2027. Con la compra de Carlo Pour Homme L'Absolu en esta tienda, un kit de regalo por persona, hasta agotar los "+CAMPANA.kitsPorTienda+" de esta tienda: muestra tu código y tu ticket a la promotora el mismo día. Sin sorteo. Mayores de 18. "+BASES,
+    d:"Del 4 al 17 de enero de 2027. Regístrate, rocía tu tarjeta y guarda tu paisaje; no hace falta comprar. Mayores de 18, un registro por persona. "+BASES
+  };
+  const AVISO={
+    c:"Carlo Corinto ([razón social]) usa tu dato, la tienda y la hora de tu registro para tu participación, el conteo por tienda y, si compras, la entrega del kit; novedades, solo si marcas la casilla. ",
+    d:"Carlo Corinto ([razón social]) usa tu dato, la tienda y la hora de tu registro para tu participación y el conteo por tienda; novedades, solo si marcas la casilla. "
+  };
+  function ponTienda(){
+    $("tienda").textContent=tienda?"Liverpool "+tienda:"Liverpool";
+    $("aviso-pie").innerHTML=AVISO[formato]+'<a href="#aviso" data-abre="aviso">Aviso de privacidad</a>.';
+    estado.hidden=formato!=="c";
+    estadoT.textContent="Con tu compra de L'Absolu, kit de regalo: quedan "+CAMPANA.kitsPorTienda+" en esta tienda";
+    reglas.innerHTML=REGLAS[formato];
   }
-  ponEstado();
+  function usaTienda(slug){const t=CAMPANA.tiendas[slug];tienda=t[0];formato=t[1];ponTienda()}
+  ponTienda();
   const form=$("registro"), dato=$("dato"), datoL=$("dato-l"), datoE=$("dato-e"), acepto=$("acepto"), aceptoE=$("acepto-e");
   const VIAS={
     cel:{type:"tel",inputmode:"tel",autocomplete:"tel-national",ph:"Tu celular, a 10 dígitos",label:"Tu celular, a 10 dígitos",ej:"55 1234 5678"},
@@ -368,13 +371,8 @@ const CAMPANA={
     marca(acepto,aceptoE,acepto.checked?"":"Para participar, confirma tu edad y acepta las bases.");
     if(err){dato.focus();return}
     if(!acepto.checked){acepto.focus();return}
-    contacto=v; dato.blur(); registra(); abreCarta();
+    contacto=v; dato.blur(); porMarco=false; registra(); abreCarta();
   });
-  function oculto(c){
-    if(!c)return "tu celular";
-    if(/^\d{10}$/.test(c))return c.slice(0,2)+" •••• "+c.slice(6);
-    const [u,d]=c.split("@");return u.slice(0,1)+"•••@"+d;
-  }
   const giro=$("giro"), legal=$("legal");
   function abre(dlg){
     clearTimeout(dlg._t);
@@ -395,20 +393,22 @@ const CAMPANA={
     dlg.addEventListener("click",e=>{if((e.target===dlg&&fuera)||e.target.closest("[data-cierra]"))cierra(dlg)});
     dlg.addEventListener("cancel",e=>{e.preventDefault();cierra(dlg)});
   });
-  document.querySelectorAll("[data-abre]").forEach(a=>a.addEventListener("click",e=>{
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("[data-abre]"); if(!a)return;
     e.preventDefault();
     const k=a.dataset.abre;
     $("legal-t").textContent=k==="aviso"?"Aviso de privacidad":"Bases de la promoción";
-    $("legal-texto").innerHTML=CAMPANA.legal[k].map(p=>"<p>"+p.replace("{valor}",valor())+"</p>").join("");
+    const lista=f=>Object.values(CAMPANA.tiendas).filter(t=>!f||t[1]===f).map(t=>t[0]).join(", ");
+    $("legal-texto").innerHTML=CAMPANA.legal[k].map(p=>"<p>"+p.replace("{tiendas}",lista()).replace("{completas}",lista("c"))+"</p>").join("");
     abre(legal);
-  }));
+  });
   const hoja=giro.querySelector(".hoja"), res=$("resultado"), ins=$("giro-ins");
   const carta=$("carta"), cc=$("carta-c"), rociarB=$("rociar");
   const VENTANA=[.158,.455,.854,.851];
   const blanca=new Image(); blanca.src="../assets/img/tarjeta-blanca.webp";
-  let cctx=null,cw=0,ch=0,cdpr=1,rociando=false,revelada=true,chequeo=0,px=0,py=0,sostiene=0,auto=0,reenvio=0,tRes=0,tPaso=0;
+  let cctx=null,cw=0,ch=0,cdpr=1,rociando=false,revelada=true,chequeo=0,px=0,py=0,sostiene=0,auto=0,tRes=0,tPaso=0;
   function preparaCarta(){
-    clearInterval(auto); clearInterval(sostiene); clearTimeout(reenvio);
+    clearInterval(auto); clearInterval(sostiene);
     revelada=false; rociando=false; rociarB.disabled=false; rociarB.hidden=false;
     carta.style.transition=cc.style.transition="none";
     carta.classList.remove("lista","tocada"); hoja.classList.remove("res");
@@ -484,56 +484,30 @@ const CAMPANA={
     if(w>1&&(Math.abs(w-cw)>2||Math.abs(h-ch)>2)){cw=w;ch=h;cc.width=cw;cc.height=ch;if(blanca.complete&&blanca.naturalWidth)cctx.drawImage(blanca,0,0,cw,ch)}
   }).observe(cc);
   function codigo(){const A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let c="LA-";for(let i=0;i<4;i++)c+=A[Math.floor(Math.random()*A.length)];return c}
-  let asignada=null, ultimo=null;
+  let ultimo=null, porMarco=false;
   const hecho=$("hecho"), lema=$("lema"), LEMA=lema.textContent;
-  const V=()=>'<span class="valor">'+valor()+'</span>';
-  function registra(con){
-    const tiene=con!=null?con:dia==="libre";
-    if(tiene){
-      dia="apartada"; vuelve=hora(CAMPANA.apartada);
-      asignada={con:true,cod:codigo(),limite:vuelve};
-      ultimo={premio:"Tarjeta de regalo Liverpool de "+V(),cod:asignada.cod};
-    }else{
-      if(dia==="libre")dia="entregada";
-      asignada={con:false};
-      ultimo={premio:"Tu paisaje L'Absolu",cod:""};
-    }
-    ponEstado();
-  }
-  const lineaDia=()=>dia==="apartada"?"La tarjeta del día está apartada; si no se recoge, vuelve a estar disponible a las "+vuelve+".":"La tarjeta de hoy en esta tienda ya se entregó; mañana hay otra a las 12:00.";
+  function registra(){ultimo={cod:formato==="c"?codigo():""}}
   function registrado(){
-    if(!asignada)return "";
-    return asignada.con
-      ?'<p class="registrado"><i aria-hidden="true"></i><span>Registrado. La tarjeta del día es tuya: apartada hasta las '+asignada.limite+'.</span></p>'
-      :'<p class="registrado fuera"><i aria-hidden="true"></i><span>Registrado. '+lineaDia()+'</span></p>';
+    if(!ultimo)return "";
+    return '<p class="registrado"><i aria-hidden="true"></i><span>'+(formato==="c"
+      ?"Registrado. Al revelar tu paisaje aparece también tu código para el kit."
+      :"Registrado. Tu paisaje está escondido en la tarjeta.")+'</span></p>';
   }
   function resultado(){
-    if(!asignada||!giro.open)return;
+    if(!ultimo||!giro.open)return;
     hoja.classList.add("res"); precarga();
     ins.textContent="Así se revela L'Absolu.";
-    const lugar=tienda?"Liverpool "+tienda:"esta tienda";
-    const botones='<div class="acciones aparece" style="animation-delay:.24s"><button class="boton" type="button" data-fondo>Guardar mi fondo</button><button class="boton claro" type="button" data-cierra>Listo</button></div>';
-    if(asignada.con){
-      const quien=formato==="t"?"muéstralo en el mostrador de perfumería donde se entrega el regalo por compra":"muéstralo al personal de L'Absolu y recibe tu tarjeta en su funda";
-      res.innerHTML='<p class="cap r-cap aparece" tabindex="-1">La tarjeta del día es tuya</p>'+
-        '<p class="r-premio aparece" style="animation-delay:.08s">Tarjeta de regalo Liverpool de '+V()+'</p>'+
-        '<p class="r-det aparece" style="animation-delay:.16s">Apartada para ti hasta las '+asignada.limite+' en '+lugar+'. Te enviamos tu código a '+oculto(contacto)+': '+quien+'.</p>'+
-        '<p class="sms aparece" style="animation-delay:.2s"><span class="cap">Mensaje · simulación</span>Carlo Corinto: tu código para la tarjeta del día es <span class="codigo">'+asignada.cod+'</span>. Recógela en '+lugar+' antes de las '+asignada.limite+'.</p>'+
-        '<button class="reenviar aparece" style="animation-delay:.22s" type="button" data-reenviar disabled>¿No llegó? Podrás pedirlo otra vez en 30 segundos</button>'+botones;
-      const rb=res.querySelector("[data-reenviar]");
-      clearTimeout(reenvio); reenvio=setTimeout(()=>{rb.textContent="¿No llegó? Reenviar el código";rb.disabled=false},30000);
-      rb.addEventListener("click",()=>{rb.textContent="Reenviado (simulación)";rb.disabled=true});
-      chispa();
-      avisa("premio");
+    let html='<p class="cap r-cap aparece" tabindex="-1">Tu paisaje L\'Absolu</p>'+
+      '<p class="r-titulo aparece" style="animation-delay:.08s">Es tuyo: guárdalo como fondo de pantalla.</p>';
+    if(formato==="c"){
+      html+='<p class="kit aparece" style="animation-delay:.16s"><span class="cap">Kit de regalo con tu compra</span>Tu código <span class="codigo">'+ultimo.cod+'</span>. Muéstralo con tu ticket de L\'Absolu a la promotora, el mismo día. Uno por persona, hasta agotar los '+CAMPANA.kitsPorTienda+' de esta tienda. <a href="#bases" data-abre="bases">Bases</a>.</p>';
     }else{
-      const extra=formato!=="t"&&origen!=="personal"?"El personal de L'Absolu te rocía tu tarjeta para llevar.":"";
-      res.innerHTML='<p class="cap r-cap aparece" tabindex="-1">Tu paisaje L\'Absolu</p>'+
-        '<p class="r-premio aparece" style="animation-delay:.08s">Es tuyo: guárdalo como fondo de pantalla.</p>'+
-        '<p class="r-det aparece" style="animation-delay:.16s">'+lineaDia()+'</p>'+
-        (extra?'<p class="r-nota aparece" style="animation-delay:.2s">'+extra+'</p>':'')+botones;
-      avisa("sinpremio");
+      html+='<p class="r-det aparece" style="animation-delay:.16s">Carlo Pour Homme L\'Absolu: pomelo en la salida, violeta en el corazón y cedro en el fondo.</p>';
     }
-    const t=res.querySelector(".r-cap"); if(t)t.focus({preventScroll:true});
+    res.innerHTML=html+'<div class="acciones aparece" style="animation-delay:.24s"><button class="boton" type="button" data-fondo>Guardar mi fondo</button><button class="boton claro" type="button" data-cierra>Listo</button></div>';
+    if(formato==="c")chispa();
+    avisa(formato==="c"?"kit":"digital");
+    const t=res.querySelector(".r-cap"); if(t&&!porMarco)t.focus({preventScroll:true});
   }
   const FONDO="../assets/img/paisaje-labsolu.jpg";
   let fondo=null;
@@ -553,28 +527,23 @@ const CAMPANA={
   });
   function ponHecho(){
     if(!ultimo)return;
+    const nuevo=hecho.hidden;
     form.hidden=true; hecho.hidden=false; lema.textContent="Gracias por participar.";
-    $("h-premio").innerHTML=ultimo.premio; $("h-cod").textContent=ultimo.cod;
-    $("h-cod").parentNode.hidden=!ultimo.cod;
-    $("pedir").hidden=!!ultimo.cod;
-    $("hecho-t").focus({preventScroll:true});
+    $("h-cod").textContent=ultimo.cod; $("h-det").hidden=!ultimo.cod;
+    if(nuevo&&!porMarco)$("hecho-t").focus({preventScroll:true});
   }
   function reinicia(){
-    clearInterval(auto); clearTimeout(tRes); clearTimeout(tPaso); clearTimeout(reenvio);
-    asignada=null; ultimo=null; contacto=""; hecho.hidden=true; form.hidden=false; form.reset(); ponVia("cel"); lema.textContent=LEMA;
+    clearInterval(auto); clearTimeout(tRes); clearTimeout(tPaso);
+    ultimo=null; contacto=""; hecho.hidden=true; form.hidden=false; form.reset(); ponVia("cel"); lema.textContent=LEMA;
     marca(acepto,aceptoE,"");
   }
   function alCerrarGiro(){
-    clearInterval(auto); clearInterval(sostiene); clearTimeout(tRes); clearTimeout(tPaso); clearTimeout(reenvio);
-    rociando=false; if(!hecho.hidden)return; ponHecho(); if(!ultimo)avisa("registro");
+    clearInterval(auto); clearInterval(sostiene); clearTimeout(tRes); clearTimeout(tPaso);
+    rociando=false; ponHecho(); if(!ultimo)avisa("registro");
   }
   giro.addEventListener("close",alCerrarGiro);
-  $("pedir").addEventListener("click",()=>{
-    const c=contacto; reinicia();
-    if(/^\d{10}$/.test(c)){ponVia("cel");dato.value=c.slice(0,2)+" "+c.slice(2,6)+" "+c.slice(6)}else if(c){form.querySelector('input[value="correo"]').checked=true;ponVia("correo");dato.value=c}
-    avisa("registro"); dato.focus();
-  });
-  $("otra").addEventListener("click",()=>{reinicia();avisa("registro");dato.focus()});
+  $("otra").addEventListener("click",()=>{porMarco=false;reinicia();avisa("registro");dato.focus()});
+  $("ver").addEventListener("click",()=>{porMarco=false;abreCarta()});
   const cv=$("notas"), img=document.querySelector(".visual img");
   let chispa=()=>{};
   if(cv.getContext){
@@ -616,24 +585,27 @@ const CAMPANA={
   }
   window.LAbsolu={
     ir(paso){
-      clearTimeout(tPaso); clearTimeout(tRes); clearInterval(auto); clearTimeout(reenvio);
+      clearTimeout(tPaso); clearTimeout(tRes); clearInterval(auto);
       cierra(legal);
-      if(paso==="registro"){dia="libre";ponEstado();cierra(giro,reinicia);return}
+      porMarco=true;
+      const deVuelta=()=>{if(T0){tienda=T0[0];formato=T0[1];ponTienda()}else usaTienda(CAMPANA.demoCompleta)};
+      if(paso==="registro"){cierra(giro,()=>{reinicia();deVuelta()});return}
+      if(paso==="digital"){if(T0&&T0[1]==="d"){tienda=T0[0];formato="d";ponTienda()}else usaTienda(CAMPANA.demoDigital)}
+      else if(paso==="kit"){deVuelta();if(formato!=="c")usaTienda(CAMPANA.demoCompleta)}
+      else if(paso==="rociar"){const antes=tienda;deVuelta();if(tienda!==antes)ultimo=null}
       if(!contacto)contacto="5512345678";
       const abierta=giro.open&&giro.classList.contains("ve");
       if(paso==="rociar"){
-        if(!asignada)registra();
+        if(!ultimo)registra();
         if(abierta)preparaCarta();else abreCarta(false);
         return;
       }
-      if(paso==="premio"||paso==="sinpremio"){
-        dia=paso==="premio"?"libre":"entregada";
-        registra(paso==="premio");
+      if(paso==="kit"||paso==="digital"){
+        registra();
         if(abierta)preparaCarta();else abreCarta(false);
         tPaso=setTimeout(()=>rociaSolo(true),abierta?120:560);
       }
     },
-    nivel(n){if(CAMPANA.niveles[n]){nivel=n;ponEstado()}},
     activo(v){if(window.__activo)window.__activo(v)}
   };
 })();

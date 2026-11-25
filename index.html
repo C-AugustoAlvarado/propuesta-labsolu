@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L'Absolu en tres tiempos</title>
-<meta name="description" content="Propuesta para Carlo Corinto L'Absolu en Liverpool: podium, tarjeta que revela un paisaje y regalo por compra en 32 tiendas, del 4 al 17 de enero de 2027.">
+<meta name="description" content="Propuesta para Carlo Corinto L'Absolu en 25 tiendas Liverpool, del 4 al 17 de enero de 2027: mueble y kit de regalo en 10, acrílico con NFC en 15 y la experiencia en el celular en todas.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F1F2EE">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="Pixel Bridge">
 <meta property="og:title" content="L'Absolu en tres tiempos · Propuesta para Carlo Corinto">
-<meta property="og:description" content="Podium, tarjeta que revela un paisaje y regalo por compra en 32 tiendas Liverpool, del 4 al 17 de enero de 2027.">
+<meta property="og:description" content="25 tiendas Liverpool, del 4 al 17 de enero de 2027: mueble y kit de regalo en 10, acrílico con NFC en 15 y la experiencia en el celular en todas.">
 <meta property="og:url" content="https://propuesta-labsolu.pages.dev/">
-<meta property="og:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=2">
-<meta property="og:image:secure_url" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=2">
+<meta property="og:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=3">
+<meta property="og:image:secure_url" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="El frasco de Carlo Pour Homme L'Absolu junto a la tarjeta que revela un paisaje de cítricos">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=2">
+<meta name="twitter:image" content="https://propuesta-labsolu.pages.dev/assets/img/compartir.jpg?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -153,6 +153,14 @@ html[data-borrador="false"] .interno{display:none!important}
 .pasos li{counter-increment:p;display:grid;grid-template-columns:2.7rem 1fr;gap:6px;max-width:62ch}
 .pasos li::before{content:counter(p,decimal-leading-zero);font-family:var(--display);font-size:1.5rem;line-height:1.1;color:var(--amber)}
 .pasos b{display:block;font-weight:600;margin-bottom:3px}
+.formatos{display:grid;gap:16px}
+.formato{display:grid;gap:6px;align-content:start;background:var(--paper-bright);border:1px solid var(--line);padding:22px 22px 24px}
+.formato .cap{color:var(--amber)}
+.formato h4{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.4vw,1.9rem);line-height:1.1;margin-bottom:8px}
+.formato ul{display:grid;gap:7px;font-size:.95rem;color:var(--muted)}
+.formato li{padding-left:18px;position:relative}
+.formato li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1px;background:currentColor}
+@media(min-width:760px){.formatos{grid-template-columns:1fr 1fr}}
 .tablero{background:var(--paper-bright);border:1px solid var(--line);padding:16px 20px 14px;max-width:640px}
 .scroll{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.95rem}
@@ -188,6 +196,17 @@ svg.esq{display:block;width:100%;height:auto;color:var(--ink);font-family:var(--
 .fig-regalo{flex:1 1 220px;max-width:340px}
 .fig-regalo img{display:block;width:100%;height:auto}
 .fig-regalo figcaption{text-align:center}
+.fig-acri{display:grid;justify-items:center;gap:22px;width:100%}
+.acri{position:relative;width:min(100%,210px);display:grid;gap:8px;padding:12px 12px 10px;border-radius:6px;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,255,255,.3) 45%,rgba(255,255,255,.6));border:1px solid rgba(255,255,255,.95);box-shadow:inset 0 0 0 1px rgba(21,24,26,.06),0 26px 32px -18px rgba(21,24,26,.45)}
+.acri::after{content:"";position:absolute;left:-14px;right:-14px;bottom:-13px;height:12px;border-radius:3px;background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(199,204,196,.75));box-shadow:0 10px 14px -8px rgba(21,24,26,.35)}
+.acri-carta{display:block;width:100%;height:auto;border-radius:3px;clip-path:inset(0 0 0 1px)}
+.acri-pie{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;background:var(--ink);color:var(--paper-bright);border-radius:3px;padding:7px 8px}
+.acri-nfc{width:16px;height:16px;border:2px solid var(--amber-bright);border-radius:50%;position:relative}
+.acri-nfc::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--amber-bright)}
+.acri-txt{font-size:.66rem;font-weight:600;line-height:1.2}
+.acri-txt small{display:block;font-weight:400;color:var(--muted-dark);font-size:.6rem}
+.acri-qr{display:block;width:40px;height:40px;background:#fff;border-radius:2px}
+.fig-acri figcaption{text-align:center}
 .fig-cel{display:grid;justify-items:center;gap:14px;width:100%;max-width:340px}
 .cel{width:min(100%,300px);padding:9px;border-radius:50px;background:linear-gradient(145deg,#2A2F32,#0B0D0E 40%);box-shadow:inset 0 0 0 1px rgba(251,251,248,.08),0 34px 50px -26px rgba(21,24,26,.6)}
 .cel-p{position:relative;aspect-ratio:390/844;border-radius:41px;overflow:hidden;background:var(--ink);isolation:isolate}
@@ -207,50 +226,31 @@ html:not(.js) .cel-pasos{display:none}
   .qr img{flex:none;width:96px;height:96px;border-radius:6px;box-shadow:0 0 0 1px var(--line)}
 }
 .flujo{display:grid;gap:12px;counter-reset:f;font-size:.95rem}
-.pieza-t .flujo li{counter-increment:f;display:grid;grid-template-columns:2rem 1fr;gap:4px;padding-left:0}
-.pieza-t .flujo li::before{content:counter(f,decimal-leading-zero);position:static;width:auto;height:auto;background:none;font-family:var(--display);font-size:1.2rem;line-height:1.2;color:var(--amber)}
+.flujo li{counter-increment:f;display:grid;grid-template-columns:2rem 1fr;gap:4px;padding-left:0}
+.flujo li::before{content:counter(f,decimal-leading-zero);font-family:var(--display);font-size:1.2rem;line-height:1.2;color:var(--amber)}
+.oscuro .flujo li::before{color:var(--amber-bright)}
 .flujo b{font-weight:600}
 @media(min-width:860px){
   .pieza{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:60px;align-items:center;padding:56px 0}
   .pieza.par .pieza-v{order:2}
 }
-html:not(.js) .rev{display:none}
-.rev{margin:10px 0}
-.rev-pista{position:relative;height:calc(100vh + 160vh);height:calc(100svh + 160svh)}
-.rev-escena{position:sticky;top:var(--barra);height:calc(100vh - var(--barra));height:calc(100svh - var(--barra));display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto minmax(0,1fr) auto auto;grid-template-areas:"cap" "barras" "ins" "pasos" "frente" "corte" "como";gap:10px;padding:18px 20px 16px;overflow:hidden}
-.rev-cap{grid-area:cap;color:var(--amber-bright)}
-.rev-barras{grid-area:barras;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
-.rev-barras span{height:2px;background:rgba(251,251,248,.2);overflow:hidden}
-.rev-barras i{display:block;height:100%;background:var(--amber-bright);transform:scaleX(0);transform-origin:0 50%}
-.rev-ins{grid-area:ins;font-size:.82rem;color:var(--muted-dark)}
-.rev-pasos{grid-area:pasos;display:grid}
-.rev-pasos li{grid-area:1/1;display:grid;gap:2px;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .45s var(--suave)}
-.rev-pasos li.on{opacity:1;transform:none}
-.rev-pasos b{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.8rem,6.4vw,2.8rem);line-height:1.05}
-.rev-pasos span{color:var(--muted-dark);font-size:1.02rem}
-.rev-frente{grid-area:frente;position:relative;min-height:170px;background:radial-gradient(closest-side,rgba(222,154,82,.16),rgba(222,154,82,0))}
-.rev-frente canvas,.lienzo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.rev-corte{grid-area:corte}
-.lienzo{position:relative;height:92px}
-.rev-corte figcaption{margin-top:6px;font-size:.72rem;color:var(--muted-dark)}
-.ley{white-space:nowrap}
-.k{display:inline-block;width:9px;height:9px;margin:0 5px 0 6px;vertical-align:-1px}
-.k0{background:#FBFBF8}
-.k1{background:#D98B3A}
-.k2{background:#B9AE9F}
-.rev-como{grid-area:como;font-size:.8rem;line-height:1.45;color:var(--muted-dark);max-width:58ch}
-.rev-fija{display:none;margin-top:30px;margin-bottom:30px}
-.rev-fija img{display:block;width:100%;height:auto}
-html:not(.js) .rev-fija{display:block}
+.app{padding:64px 0;margin:10px 0}
+.app-in{display:grid;gap:34px;align-items:center}
+.app-v{display:flex;justify-content:center}
+.app-t{display:grid;gap:16px;align-content:center;max-width:56ch}
+.app-t .cap{color:var(--amber-bright)}
+.app-t h3{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.05}
+.app-t ul{display:grid;gap:7px;font-size:.93rem;color:var(--muted-dark)}
+.app-t ul li{padding-left:18px;position:relative}
+.app-t ul li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1px;background:currentColor}
+.app .cel{box-shadow:inset 0 0 0 1px rgba(251,251,248,.16),0 34px 60px -26px rgba(0,0,0,.85)}
+.app .cel-pasos button{border-color:rgba(251,251,248,.5)}
+.app .cel-pasos button:hover{background:rgba(251,251,248,.08)}
+.app .cel-pasos button[aria-pressed="true"]{background:var(--amber-bright);border-color:var(--amber-bright);color:var(--ink)}
+.app .fig-cel figcaption{color:var(--muted-dark)}
 @media(min-width:900px){
-  .rev{margin:30px 0}
-  .rev-pista{height:calc(100vh + 140vh)}
-  .rev-escena{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto auto auto auto 1fr auto;grid-template-areas:"cap frente" "barras frente" "ins frente" "pasos frente" "como frente" "como corte";column-gap:64px;row-gap:16px;padding:46px var(--margen) 30px}
-  .rev-pasos{gap:20px;margin-top:10px}
-  .rev-pasos li{grid-area:auto;opacity:.32;transform:none;transition:opacity .35s}
-  .rev-pasos li.on{opacity:1}
-  .rev-como{align-self:end;font-size:.9rem}
-  .lienzo{height:130px}
+  .app{padding:110px 0;margin:30px 0}
+  .app-in{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:70px}
 }
 .fichas{display:grid}
 .ficha{display:grid;gap:12px;padding:26px 0;border-top:1px solid var(--line)}
@@ -273,7 +273,7 @@ html:not(.js) .rev-fija{display:block}
 .region li[hidden]{display:none}
 .mk{display:flex;gap:5px;align-items:center;font-size:.68rem;font-weight:700;font-variant-numeric:tabular-nums}
 .mk i{font-style:normal;display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;border:1px solid var(--ink)}
-.mk i.t{background:var(--ink);color:var(--paper-bright)}
+.mk i.c{background:var(--ink);color:var(--paper-bright)}
 .mk span{min-width:2.4ch;text-align:right;color:var(--amber);font-size:.86rem;font-weight:600}
 .barras{display:grid;gap:8px;font-size:.9rem;max-width:680px}
 .barras li{display:grid;grid-template-columns:minmax(7.5em,10.5em) 1fr 3.2ch;gap:12px;align-items:center}
@@ -282,21 +282,32 @@ html:not(.js) .rev-fija{display:block}
 .js .barras:not(.in) .b i{transform:scaleX(0)}
 .barras .res .b i{background:repeating-linear-gradient(135deg,var(--amber) 0 3px,transparent 3px 6px)}
 .barras .v{text-align:right;font-variant-numeric:tabular-nums}
-.niveles{display:grid;gap:16px}
-.nivel{display:grid;gap:12px;align-content:start;padding:24px 22px;border:1px solid var(--line-dark);background:rgba(251,251,248,.02);transition:border-color .3s,background-color .3s}
-.nivel[aria-current="true"]{border-color:var(--amber-bright);background:rgba(222,154,82,.08)}
-.nivel h3{color:var(--muted-dark);transition:color .3s}
-.nivel[aria-current="true"] h3{color:var(--amber-bright)}
-.nivel .tot{font-family:var(--display);font-size:clamp(2.3rem,5.4vw,3rem);line-height:1;font-variant-numeric:lining-nums tabular-nums}
-.nivel .pre{font-size:.84rem;color:var(--muted-dark)}
-.nivel ul{display:grid;gap:7px;font-size:.93rem}
-.nivel li{padding-left:16px;position:relative}
-.nivel li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--amber-bright)}
-.nivel button{justify-self:start;border:1px solid currentColor;background:transparent;border-radius:999px;padding:8px 15px;font-size:.86rem;cursor:pointer;margin-top:8px;transition:background-color .2s,color .2s,border-color .2s}
-.nivel button:hover{background:rgba(251,251,248,.08)}
-.nivel[aria-current="true"] button{background:var(--amber-bright);border-color:var(--amber-bright);color:var(--ink)}
-@media(min-width:820px){.niveles{grid-template-columns:repeat(3,minmax(0,1fr))}}
-#desg-t{scroll-margin-top:70px}
+.presupuesto{max-width:780px}
+.oscuro table th,.oscuro table td{border-bottom-color:var(--line-dark)}
+.oscuro thead th{color:var(--muted-dark);border-bottom-color:var(--paper-bright)}
+.oscuro caption{color:var(--muted-dark)}
+.presupuesto tfoot th{font-weight:400;text-align:left;padding-left:0}
+.presupuesto tfoot td{font-variant-numeric:tabular-nums}
+.presupuesto tfoot .total th,.presupuesto tfoot .total td{font-family:var(--display);font-size:clamp(1.2rem,3.4vw,1.9rem);color:var(--amber-bright);border-bottom:0;padding-top:16px}
+.presupuesto td:nth-child(n+2),.presupuesto tfoot td{white-space:nowrap}
+@media(max-width:560px){
+  .tablero table{font-size:.84rem}
+  .tablero th,.tablero td{padding:9px 5px}
+  .tablero th:first-child,.tablero td:first-child{padding-left:0}
+  .tablero thead th{font-size:.6rem;letter-spacing:.06em}
+  .tablero td:first-child{font-size:.95rem}
+  .presupuesto table{font-size:.84rem}
+  .presupuesto th,.presupuesto td{padding:9px 5px}
+  .presupuesto th:first-child,.presupuesto td:first-child{padding-left:0}
+  .presupuesto td:last-child,.presupuesto th:last-child{padding-right:0}
+  .presupuesto td:first-child{font-size:.95rem}
+  .presupuesto thead th{font-size:.6rem;letter-spacing:.06em}
+}
+.excluye{display:grid;gap:10px;max-width:640px;border:1px solid var(--line-dark);padding:18px 20px}
+.excluye .cap{color:var(--amber-bright)}
+.excluye ul{display:grid;gap:6px;font-size:.95rem;color:var(--muted-dark)}
+.excluye li{padding-left:16px;position:relative}
+.excluye li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--amber-bright)}
 .desg{display:grid;gap:13px;max-width:700px}
 .desg li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;font-size:.95rem}
 .desg .b{grid-column:1/-1;height:8px;background:rgba(251,251,248,.1)}
@@ -327,11 +338,11 @@ html:not(.js) .rev-fija{display:block}
   .js .rv,.js .tiempo.rv{opacity:1;transform:none;transition:none}
   .r1,.r2,.cue i::after,.nfc::after{animation:none}
   .js .barras:not(.in) .b i,.js .gantt:not(.in) .g-track i{transform:none}
-  .rev-pasos li{transition:none}
 }
 @media print{
-  .bar,.cue,.rev,#humo{display:none!important}
-  .rev-fija{display:block!important}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bar,.cue,#humo,.chips,.fin-marca{display:none!important}
+  .js .barras .b i,.js .gantt .g-track i{transform:none!important}
   .cel-pasos{display:none!important}
   .qr{display:flex!important;justify-content:center}
   .js .rv{opacity:1!important;transform:none!important}
@@ -366,9 +377,9 @@ html:not(.js) .rev-fija{display:block}
     <div class="hero-v"><img src="assets/img/frasco.webp" width="349" height="701" alt="Frasco de Carlo Pour Homme L'Absolu" fetchpriority="high"><canvas id="humo" aria-hidden="true"></canvas></div>
     <p class="lede rv" style="--d:.16s">L'Absolu se revela por etapas: pomelo en la salida, violeta en el corazón y cedro en el fondo. La campaña sigue el mismo orden. Una pieza detiene al cliente en segundos, un ritual lo retiene unos minutos y un regalo lo acompaña por semanas.</p>
     <dl class="facts rv" style="--d:.24s">
-      <div><dt>tiendas Liverpool</dt><dd>32</dd></div>
-      <div><dt>activaciones</dt><dd>25</dd></div>
-      <div><dt>traffic stoppers y regalos</dt><dd>13</dd></div>
+      <div><dt>tiendas Liverpool</dt><dd>25</dd></div>
+      <div><dt>con experiencia completa</dt><dd>10</dd></div>
+      <div><dt>con dinámica digital</dt><dd>15</dd></div>
       <div><dt>días de campaña</dt><dd>14</dd></div>
     </dl>
     <a class="cue" href="#tres-tiempos"><i></i>Desliza</a>
@@ -384,8 +395,8 @@ html:not(.js) .rev-fija{display:block}
       </div>
       <div class="t-body">
         <h2 class="t-verb">Detiene</h2>
-        <p class="t-what">Traffic stopper · 13 tiendas</p>
-        <p>Un podium de madera y metal que pone a L'Absolu a la altura de la mirada, iluminado como pieza de colección.</p>
+        <p class="t-what">Mueble traffic stopper · 10 tiendas</p>
+        <p>Un mueble de madera y metal que pone a L'Absolu a la altura de la mirada, iluminado como pieza de colección. En las otras 15 tiendas, un acrílico en el mostrador invita a acercar el celular.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 s</span><span class="run r1"></span></div>
     </div>
@@ -398,8 +409,8 @@ html:not(.js) .rev-fija{display:block}
       </div>
       <div class="t-body">
         <h2 class="t-verb">Retiene</h2>
-        <p class="t-what">Activación · 25 tiendas</p>
-        <p>Un ritual de prueba en tres pasos. Al rociar la tarjeta olfativa aparece un paisaje que estaba oculto, y el cliente se la lleva con el aroma. Lo guía el personal de la marca con apoyo del celular del cliente.</p>
+        <p class="t-what">Experiencia en el celular · 25 tiendas</p>
+        <p>Un toque al chip abre una página: el cliente se registra, rocía su tarjeta con el dedo y aparece un paisaje que estaba oculto. En las 10 tiendas con experiencia completa lo guía la promotora con el probador.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">0</span><span class="tk b">3 min</span><span class="run r2"></span></div>
     </div>
@@ -412,8 +423,8 @@ html:not(.js) .rev-fija{display:block}
       </div>
       <div class="t-body">
         <h2 class="t-verb">Permanece</h2>
-        <p class="t-what">Regalo por compra · 13 tiendas</p>
-        <p>Un regalo que el cliente se lleva. En Completa e Insignia lleva un chip: un toque abre contenido que cambia hasta el 14 de febrero.</p>
+        <p class="t-what">Kit de regalo · 10 tiendas</p>
+        <p>Con su compra, el cliente se lleva un kit con chip: un toque abre contenido que cambia hasta el 14 de febrero. Y todos se quedan con su paisaje como fondo de pantalla.</p>
       </div>
       <div class="track" aria-hidden="true"><span class="tk">4 ene</span><span class="tk b">14 feb</span><span class="run r3"></span></div>
     </div>
@@ -426,27 +437,49 @@ html:not(.js) .rev-fija{display:block}
     <header class="sec-h rv"><p class="num">01</p><h2>Conceptualización creativa</h2></header>
     <div class="sec-b">
       <div class="prose grande rv">
-        <p>La marca habla de una masculinidad sin concesiones. La campaña conserva ese tono: sobria, precisa y sin dinámicas de feria. Cada formato del brief cumple un tiempo del perfume, y los tres se conectan con un toque de celular.</p>
+        <p>La marca habla de una masculinidad sin concesiones. La campaña conserva ese tono: sobria, precisa y sin dinámicas de feria. Cada pieza cumple un tiempo del perfume, y todas se conectan con un toque de celular.</p>
       </div>
-      <h3 class="sub rv">Un toque conecta las tres piezas</h3>
+      <h3 class="sub rv">Dos formatos, una sola experiencia</h3>
+      <div class="formatos rv">
+        <article class="formato">
+          <p class="cap">10 tiendas</p>
+          <h4>Experiencia completa</h4>
+          <ul>
+            <li>Mueble traffic stopper con chip NFC y código QR</li>
+            <li>Promotora que da a probar L'Absolu</li>
+            <li>Kit de regalo con la compra, entregado vía registro en la plataforma</li>
+            <li>La página en el celular</li>
+          </ul>
+        </article>
+        <article class="formato">
+          <p class="cap">15 tiendas</p>
+          <h4>Dinámica digital</h4>
+          <ul>
+            <li>Acrílico de mostrador con chip NFC y código QR</li>
+            <li>La misma página en el celular: registro, la tarjeta que se rocía y el paisaje</li>
+            <li>Sin mueble, promotora ni kits, para llegar a más tiendas dentro del presupuesto</li>
+          </ul>
+        </article>
+      </div>
+      <h3 class="sub rv">Un toque conecta las piezas</h3>
       <ol class="pasos rv">
-        <li><span><b>Toca o escanea.</b> El chip NFC y el código QR abren una página en el celular, sin descargar nada y con el nombre de la tienda.</span></li>
+        <li><span><b>Toca o escanea.</b> El chip NFC y el código QR del mueble o del acrílico abren una página en el celular, sin descargar nada y con el nombre de la tienda.</span></li>
         <li><span><b>Se registra.</b> Con su celular o su correo, en una sola pantalla. Cada registro queda contado por tienda.</span></li>
-        <li><span><b>Rocía su tarjeta.</b> En el celular pasa el dedo por su propia tarjeta y aparece el paisaje, que puede guardar como fondo de pantalla. Cada día, desde las 12:00, la primera persona que se registra en cada tienda se lleva además una tarjeta de regalo Liverpool: lo sabe en cuanto se registra y la recoge con un código en los 30 minutos siguientes.</span></li>
-        <li><span><b>Se lleva L'Absolu.</b> Si compra en una de las 13 tiendas con traffic stopper, recibe el regalo por compra y la entrega queda registrada; en Completa e Insignia, el personal lo activa con un toque al entregarlo.</span></li>
+        <li><span><b>Rocía su tarjeta.</b> Pasa el dedo por su tarjeta en el celular y aparece el paisaje, que puede guardar como fondo de pantalla.</span></li>
+        <li><span><b>Se lleva el kit.</b> En las 10 tiendas con experiencia completa, si compra L'Absolu, muestra su código y su ticket a la promotora y recibe el kit de regalo. La entrega queda registrada.</span></li>
       </ol>
       <h3 class="sub rv">La marca ve lo que pasa en cada tienda</h3>
       <div class="prose rv">
-        <p>Un tablero por tienda y por día muestra cuántas veces se tocó el chip, cuántas personas se registraron y cuántas tarjetas y regalos se entregaron. En Completa e Insignia, con ese dato la reserva de regalos sale hacia la tienda que más lo necesita.</p>
+        <p>Un tablero por tienda y por día muestra cuántas veces se tocó el chip, cuántas personas se registraron y cuántos kits se entregaron. Con ese dato, la reserva de kits sale hacia la tienda que más la necesita.</p>
       </div>
       <div class="tablero scroll rv">
         <table>
           <caption>Ejemplo del formato al día 7 de 14. Los datos son ficticios, no una proyección.</caption>
-          <thead><tr><th scope="col">Tienda</th><th scope="col">Toques</th><th scope="col">Registros</th><th scope="col">Tarjetas del día</th><th scope="col">Regalos por compra</th></tr></thead>
+          <thead><tr><th scope="col">Tienda</th><th scope="col">Formato</th><th scope="col">Toques</th><th scope="col">Registros</th><th scope="col">Kits</th></tr></thead>
           <tbody>
-            <tr><td>Perisur</td><td>412</td><td>168</td><td>7</td><td>41</td></tr>
-            <tr><td>Polanco</td><td>380</td><td>150</td><td>7</td><td>46</td></tr>
-            <tr><td>Satélite</td><td>265</td><td>121</td><td>6</td><td>29</td></tr>
+            <tr><td>Perisur</td><td>Completa</td><td>412</td><td>168</td><td>21</td></tr>
+            <tr><td>Polanco</td><td>Completa</td><td>380</td><td>150</td><td>24</td></tr>
+            <tr><td>Tijuana</td><td>Digital</td><td>140</td><td>62</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -463,7 +496,7 @@ html:not(.js) .rev-fija{display:block}
         <div class="pieza-v">
           <figure class="fig-podium">
             <div class="anota">
-              <img src="assets/img/podium.webp" width="489" height="1467" alt="Podium de madera de nogal y metal en bronce: arriba la marca Carlo Corinto L'Absolu y el frasco en un nicho iluminado; en la repisa, una caja de regalo abierta. Al frente, a la altura de la mano, el punto del chip NFC" loading="lazy" decoding="async">
+              <img src="assets/img/podium.webp" width="489" height="1467" alt="Mueble de madera de nogal y metal en bronce: arriba la marca Carlo Corinto L'Absolu y el frasco en un nicho iluminado; en la repisa, el kit de regalo abierto. Al frente, a la altura de la mano, el punto del chip NFC" loading="lazy" decoding="async">
               <span class="nfc" style="--x:40%;--y:55%" aria-hidden="true"></span>
             </div>
             <figcaption>Diseñado para adaptarse a los espacios autorizados por Liverpool en cada piso.</figcaption>
@@ -471,42 +504,53 @@ html:not(.js) .rev-fija{display:block}
           </figure>
         </div>
         <div class="pieza-t">
-          <h3>Traffic stopper: el podium L'Absolu</h3>
-          <p>Un podium autoportante de madera y metal que presenta a L'Absolu como pieza de colección en el pasillo de perfumería. Arriba, la marca y el frasco en un nicho iluminado; en la repisa, el regalo por compra a la vista.</p>
+          <h3>Mueble traffic stopper</h3>
+          <p>Un mueble autoportante de madera y metal que presenta a L'Absolu como pieza de colección en el pasillo de perfumería. Arriba, la marca y el frasco en un nicho iluminado; en la repisa, el kit de regalo a la vista.</p>
           <ul>
             <li>Chapa de madera de nogal con paneles de metal en bronce cepillado</li>
             <li>Nicho iluminado para el frasco, a la altura de la mirada</li>
             <li>Al frente, a la altura de la mano, el chip NFC y el código QR que abren la experiencia en el celular</li>
-            <li>En las seis tiendas con los tres tiempos se suma una vitrina con animación flotante, en el nivel Insignia</li>
+            <li>Va en las 10 tiendas con experiencia completa, junto a la promotora</li>
           </ul>
         </div>
       </article>
     </div>
   </div>
 
-  <div class="rev oscuro" data-tema="oscuro" role="region" aria-label="Cómo funciona la tarjeta que revela el paisaje">
-    <div class="rev-pista">
-      <div class="rev-escena">
-        <p class="cap rev-cap">La tarjeta que revela</p>
-        <div class="rev-barras" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span></div>
-        <p class="rev-ins">Desliza hacia abajo: es como rociar la tarjeta.</p>
-        <ol class="rev-pasos">
-          <li class="on"><b>En blanco</b><span>El paisaje ya está impreso, escondido bajo una capa blanca.</span></li>
-          <li><b>Al rociar</b><span>Donde cae el perfume, la capa se vuelve transparente.</span></li>
-          <li><b>El paisaje</b><span>Un huerto de cítricos aparece junto con el aroma, y se queda.</span></li>
-        </ol>
-        <figure class="rev-frente">
-          <canvas id="rev-c" role="img" aria-label="La tarjeta olfativa de Carlo Corinto L'Absolu: al rociarla con el perfume aparece un paisaje, un huerto de cítricos"></canvas>
-        </figure>
-        <figure class="rev-corte">
-          <div class="lienzo"><canvas id="corte-c" role="img" aria-label="La tarjeta en corte: el papel, el paisaje impreso y encima la capa blanca, que se vuelve transparente donde la moja el perfume"></canvas></div>
-          <figcaption>La tarjeta en corte <span class="ley"><i class="k k0"></i>capa hidrocrómica</span> <span class="ley"><i class="k k1"></i>paisaje impreso</span> <span class="ley"><i class="k k2"></i>papel</span></figcaption>
-        </figure>
-        <p class="rev-como">En las 25 tiendas con activación, el personal de la marca la rocía con el probador y el cliente se la lleva. El paisaje se imprime a color y se cubre con tinta hidrocrómica, una capa blanca y opaca. Cuando la moja un líquido, como el alcohol del perfume, esa capa se vuelve transparente y deja ver lo que tiene debajo, parecido a una hoja de papel que se transparenta al mojarse. La fórmula es permanente: al secarse el perfume, el paisaje se queda en la tarjeta.</p>
+  <div class="app oscuro" data-tema="oscuro" id="experiencia" role="region" aria-label="La experiencia de la tarjeta en el celular">
+    <div class="wrap app-in">
+      <div class="app-v">
+          <figure class="fig-cel">
+            <div class="cel"><div class="cel-p"><iframe src="experiencia/?t=perisur" width="390" height="844" title="La página de registro de L'Absolu, en demostración" loading="lazy"></iframe></div></div>
+            <div class="cel-pasos" role="group" aria-label="Llevar el celular a cada paso">
+              <button type="button" data-paso="registro" aria-pressed="true">Registro</button>
+              <button type="button" data-paso="rociar" aria-pressed="false">Rociar</button>
+              <button type="button" data-paso="kit" aria-pressed="false">Kit de regalo</button>
+              <button type="button" data-paso="digital" aria-pressed="false">Tienda digital</button>
+            </div>
+            <figcaption>
+              <span>Es la página real, en demostración: puedes registrarte y rociar tu tarjeta, y no se envía ni se guarda lo que escribas. <a href="experiencia/?t=perisur" target="_blank" rel="noopener">Ábrela en tu celular</a>.</span>
+              <span class="qr"><img src="assets/img/qr-experiencia.svg" width="96" height="96" alt="Código QR que abre la página en el celular" loading="lazy" decoding="async"><span>Escanéala con tu celular para probarla en pantalla completa.</span></span>
+            </figcaption>
+          </figure>
+      </div>
+      <div class="app-t rv">
+        <p class="cap">La tarjeta que revela</p>
+        <h3>La experiencia en el celular</h3>
+        <p>Una sola pantalla, sin scroll y sin app, la misma en las 25 tiendas. Se abre con el chip del mueble o del acrílico, se ajusta a cualquier celular y ya trae el nombre de la tienda.</p>
+        <ol class="flujo">
+            <li><span><b>Se registra.</b> Con su celular o su correo, y acepta el aviso de privacidad.</span></li>
+            <li><span><b>Rocía su tarjeta.</b> Se abre una ventana con la tarjeta en blanco; al pasar el dedo, como si fuera el atomizador, aparece un huerto de cítricos que guarda como fondo de pantalla.</span></li>
+            <li><span><b>Se lleva el kit.</b> En las 10 tiendas con experiencia completa, si compra L'Absolu, muestra su código y su ticket a la promotora y se lleva el kit. En las 15 digitales, se queda con su paisaje.</span></li>
+          </ol>
+        <ul>
+            <li>Cada toque, registro y kit entregado se cuenta por tienda y por día</li>
+            <li>Un registro por celular o por correo</li>
+            <li>Funciona en iPhone y Android</li>
+          </ul>
       </div>
     </div>
   </div>
-  <figure class="rev-fija wrap"><img src="assets/img/tarjeta-pasos.webp" width="1439" height="754" alt="La tarjeta en tres pasos: en blanco, al rociarla con el perfume y con el paisaje completo completo" loading="lazy" decoding="async"></figure>
 
   <div class="wrap">
     <div class="sec-b">
@@ -514,50 +558,43 @@ html:not(.js) .rev-fija{display:block}
         <div class="pieza-v">
           <figure class="fig-regalo">
             <img src="assets/img/regalo.webp" width="750" height="1114" alt="Kit de regalo Carlo Corinto abierto: libreta, pluma, memoria USB y tarjetero en un estuche con asa de cuerda" loading="lazy" decoding="async">
-            <figcaption>Kit del nivel Insignia, con la memoria USB opcional.</figcaption>
+            <figcaption>Libreta, pluma, memoria USB y tarjetero con chip, en estuche con asa.</figcaption>
           </figure>
         </div>
         <div class="pieza-t">
-          <h3>Regalo por compra</h3>
-          <p>Un regalo de uso diario que lleva la marca más allá de la tienda, y crece con el nivel: en Insignia es el kit completo con libreta, pluma y tarjetero en un estuche con asa; en Completa, el tarjetero y la pluma en estuche; en Esencial, el tarjetero de metal. El tarjetero de Completa e Insignia lleva el chip que abre contenido propio de L'Absolu, y ese contenido cambia hasta el 14 de febrero.</p>
+          <h3>Kit de regalo</h3>
+          <p>Un regalo de uso diario que lleva la marca más allá de la tienda. En las 10 tiendas con experiencia completa, quien compra L'Absolu se registra en su celular y la promotora le entrega el kit. El tarjetero lleva un chip que abre contenido propio de L'Absolu, y ese contenido cambia hasta el 14 de febrero.</p>
           <ul>
-            <li>Precio por pieza: $125 en Esencial, $187.50 en Completa y $250 en Insignia</li>
-            <li>Opcional en Insignia: memoria USB de 8 GB con el emblema, $65 más por kit</li>
-            <li>En Completa e Insignia, se activa con un toque al entregarlo</li>
-            <li>Cada entrega queda registrada por tienda</li>
+            <li>500 kits: 45 por tienda y 50 de reserva</li>
+            <li>Uno por persona, con su ticket de compra y el código del registro</li>
+            <li>Cada entrega queda registrada en la plataforma</li>
+            <li>Precio por kit: $695</li>
           </ul>
         </div>
       </article>
 
-      <article class="pieza par rv" id="experiencia">
+
+      <article class="pieza par rv">
         <div class="pieza-v">
-          <figure class="fig-cel">
-            <div class="cel"><div class="cel-p"><iframe src="experiencia/?t=perisur" width="390" height="844" title="La página de registro de L'Absolu, en demostración" loading="lazy"></iframe></div></div>
-            <div class="cel-pasos" role="group" aria-label="Llevar el celular a cada paso">
-              <button type="button" data-paso="registro" aria-pressed="true">Registro</button>
-              <button type="button" data-paso="rociar" aria-pressed="false">Rociar</button>
-              <button type="button" data-paso="premio" aria-pressed="false">Tarjeta del día</button>
-              <button type="button" data-paso="sinpremio" aria-pressed="false">Ya se entregó</button>
+          <figure class="fig-acri">
+            <div class="acri" role="img" aria-label="Acrílico de mostrador con la tarjeta de L'Absolu, el chip NFC y el código QR">
+              <img class="acri-carta" src="assets/img/tarjeta-revelada.webp" width="437" height="754" alt="" loading="lazy" decoding="async">
+              <div class="acri-pie">
+                <span class="acri-nfc" aria-hidden="true"></span>
+                <span class="acri-txt">Acerca tu celular<small>o escanea el código</small></span>
+                <img class="acri-qr" src="assets/img/qr-experiencia.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+              </div>
             </div>
-            <figcaption>
-              <span>Es la página real, en demostración: puedes registrarte y rociar tu tarjeta, y no se envía ni se guarda lo que escribas. <a href="experiencia/?t=perisur" target="_blank" rel="noopener">Ábrela en tu celular</a>.</span>
-              <span class="qr"><img src="assets/img/qr-experiencia.svg" width="96" height="96" alt="Código QR que abre la página en el celular" loading="lazy" decoding="async"><span>Escanéala con tu celular para probarla en pantalla completa.</span></span>
-            </figcaption>
+            <figcaption>Ilustración del acrílico de mostrador, de unos 10 × 15 cm.</figcaption>
           </figure>
         </div>
         <div class="pieza-t">
-          <h3>Experiencia en el celular</h3>
-          <p>Una sola pantalla, sin scroll y sin app. Se abre con el chip del podium o con la tarjeta NFC que lleva el personal de la marca, se ajusta a cualquier celular y ya trae el nombre de la tienda.</p>
-          <ol class="flujo">
-            <li><span><b>Se registra.</b> Con su celular o su correo. Antes de hacerlo ve si la tarjeta del día de su tienda sigue disponible.</span></li>
-            <li><span><b>Rocía su tarjeta.</b> Se abre una ventana con la tarjeta en blanco; al pasar el dedo aparece el paisaje, como en la tarjeta de la activación, y lo guarda para ponerlo de fondo de pantalla.</span></li>
-            <li><span><b>La tarjeta del día.</b> Cada tienda tiene una tarjeta de regalo Liverpool al día para la primera persona que se registra desde las 12:00, y lo sabe en cuanto se registra. La recoge con un código en los 30 minutos siguientes. No hay azar: la regla se ve antes de participar.</span></li>
-          </ol>
+          <h3>Acrílico con NFC y QR</h3>
+          <p>En las 15 tiendas con dinámica digital, un acrílico en el mostrador de Carlo Corinto invita a acercar el celular. Lleva la tarjeta con el paisaje, el chip NFC y el código QR de su tienda, y abre la misma página que el mueble.</p>
           <ul>
-            <li>Cada toque, registro y entrega se cuenta por tienda y por día</li>
-            <li>Un registro por celular o por correo</li>
-            <li>En las 25 tiendas con activación, el personal de la marca lleva una tarjeta con chip y código QR, del tamaño de una tarjeta de crédito; en las 19 sin podium es la entrada a la página</li>
-            <li>Funciona en iPhone y Android</li>
+            <li>De mostrador, unos 10 × 15 cm</li>
+            <li>No necesita corriente ni personal</li>
+            <li>Cada toque se cuenta en su tienda</li>
           </ul>
         </div>
       </article>
@@ -571,59 +608,43 @@ html:not(.js) .rev-fija{display:block}
     <div class="sec-b">
       <div class="fichas">
         <article class="ficha rv">
-          <h3>Podium traffic stopper <small>13 piezas</small></h3>
+          <h3>Mueble traffic stopper <small>10 piezas</small></h3>
           <dl class="spec">
             <dt>Medidas</dt><dd>Diseñado para adaptarse a los espacios autorizados por Liverpool en cada piso de perfumería.</dd>
-            <dt>Materiales y acabados</dt><dd>Estructura autoportante de MDF de 19 mm con chapa natural de nogal y barniz mate; paneles, repisas y zoclo de aluminio compuesto con acabado bronce cepillado; logotipo en letras de acero inoxidable con acabado bronce, en relieve; nicho con iluminación LED cálida (3000 K) oculta; repisa para exhibir el regalo; composición botánica artificial con cítricos, flores y madera que evoca las notas del perfume (pomelo, violeta y cedro), y chip NFC con su código QR, en la madera o tras una ventana de acrílico, porque el NFC no lee a través del metal. En el nivel Esencial, la madera y el metal son viniles impresos sobre MDF y el logotipo es de acrílico.</dd>
+            <dt>Materiales y acabados</dt><dd>Estructura autoportante de MDF de 19 mm con chapa natural de nogal y barniz mate; paneles, repisas y zoclo de aluminio compuesto con acabado bronce cepillado; logotipo en letras de acero inoxidable con acabado bronce, en relieve; nicho con iluminación LED cálida (3000 K) oculta; repisa para exhibir el kit; composición botánica artificial con cítricos, flores y madera que evoca las notas del perfume (pomelo, violeta y cedro), y chip NFC con su código QR, en la madera o tras una ventana de acrílico, porque el NFC no lee a través del metal.</dd>
             <dt>Producción</dt><dd>Carpintería en CNC con chapa natural, paneles de aluminio compuesto, letras de acero cortadas con láser e iluminación LED. Viaja en módulos y se arma en tienda.</dd>
-            <dt>Instalación</dt><dd>Una visita de montaje por tienda. La iluminación se conecta a una toma de corriente; si el espacio no tiene, lleva batería recargable.</dd>
+            <dt>Instalación</dt><dd>La iluminación se conecta a una toma de corriente; si el espacio no tiene, lleva batería recargable. El envío y la instalación se cotizan por separado.</dd>
+            <dt>Precio</dt><dd>$24,000 por pieza.</dd>
           </dl>
         </article>
         <article class="ficha rv">
-          <h3>Vitrina con animación flotante <small>6 piezas, nivel Insignia</small></h3>
+          <h3>Kit de regalo <small>500 piezas</small></h3>
           <dl class="spec">
-            <dt>Medidas</dt><dd>Módulo de 40 × 40 × 50 cm.</dd>
-            <dt>Materiales y acabados</dt><dd>Acrílico de 6 mm, pantalla oculta y lámina reflejante a 45°. El frasco real va al centro y la animación parece flotar a su alrededor.</dd>
-            <dt>Producción</dt><dd>Animación generada desde el modelo 3D del frasco.</dd>
-            <dt>Instalación</dt><dd>Requiere una toma de corriente.</dd>
-          </dl>
-        </article>
-        <article class="ficha rv">
-          <h3>Tarjetas que revelan <small>7,500 piezas</small></h3>
-          <dl class="spec">
-            <dt>Medidas</dt><dd>Del tamaño de una tarjeta de crédito: 8.6 × 5.4 cm.</dd>
-            <dt>Materiales y acabados</dt><dd>Papel texturizado con el paisaje impreso a color y cubierto con tinta hidrocrómica de efecto permanente: al rociar el perfume, el paisaje aparece y se queda.</dd>
-            <dt>Producción</dt><dd>Impresión a color y serigrafía de la tinta hidrocrómica. Se prueban con L'Absolu antes de imprimir el tiraje.</dd>
-            <dt>Entrega</dt><dd>300 por tienda con activación. Las usa el personal de la marca con el probador.</dd>
-          </dl>
-        </article>
-        <article class="ficha rv">
-          <h3>Regalo por compra <small>1,000 piezas</small></h3>
-          <dl class="spec">
-            <dt>Medidas</dt><dd>Tarjetero de 10 × 7 cm; el estuche cambia según el nivel.</dd>
-            <dt>Materiales y acabados</dt><dd>Insignia: estuche rígido con asa de cuerda e interior de gamuza sintética, con libreta y tarjetero de piel sintética grabados con el emblema y pluma metálica. Completa: estuche con el tarjetero y la pluma. Esencial: tarjetero de metal grabado, sin chip. El tarjetero de Completa e Insignia lleva el chip NFC.</dd>
-            <dt>Precio por pieza</dt><dd>$125 en Esencial, $187.50 en Completa y $250 en Insignia. La memoria USB de 8 GB es opcional en Insignia: $65 más por kit.</dd>
+            <dt>Contenido</dt><dd>Libreta y tarjetero de piel sintética grabados con el emblema, pluma metálica y memoria USB de 8 GB, en un estuche rígido con asa de cuerda e interior de gamuza sintética. El tarjetero lleva un chip NFC que abre contenido de L'Absolu hasta el 14 de febrero.</dd>
+            <dt>Entrega</dt><dd>Con la compra de L'Absolu, vía registro en la plataforma: la promotora valida el código y el ticket el mismo día, y la entrega queda registrada. Uno por persona, hasta agotar existencias.</dd>
+            <dt>Distribución</dt><dd>45 por tienda en las 10 tiendas con experiencia completa, y 50 de reserva para la tienda que más los necesite.</dd>
             <dt>Producción</dt><dd>Grabado láser del emblema y armado de los estuches en México.</dd>
-            <dt>Entrega</dt><dd>850 piezas a tienda y 150 de reserva central.</dd>
+            <dt>Precio</dt><dd>$695 por kit.</dd>
           </dl>
         </article>
         <article class="ficha rv">
-          <h3>Página de registro y tablero <small>una para las 32 tiendas</small></h3>
+          <h3>Plataforma digital y tablero <small>una para las 25 tiendas</small></h3>
           <dl class="spec">
             <dt>Formato</dt><dd>Una sola pantalla para celular, sin scroll y sin app. Reconoce la tienda por el chip o el código QR.</dd>
-            <dt>Acceso</dt><dd>El chip del podium y, en las 25 tiendas con activación, 75 tarjetas NFC negras del tamaño de una tarjeta de crédito que lleva el personal de la marca. Todas con su código QR, para los celulares sin NFC.</dd>
-            <dt>Contenido</dt><dd>Registro con celular o correo, la tarjeta que se rocía con el dedo, el paisaje como fondo de pantalla y la tarjeta del día con su código. Aviso de privacidad y bases a un toque.</dd>
-            <dt>Tablero</dt><dd>Toques, registros, tarjetas del día y regalos por compra entregados, por tienda y por día. Para el personal, una página en su celular para validar los códigos.</dd>
-            <dt>Producción</dt><dd>Desarrollo propio de Pixel Bridge. La demostración de la sección 02 ya es la página real.</dd>
+            <dt>Contenido</dt><dd>Registro con celular o correo, la tarjeta que se rocía con el dedo, el paisaje como fondo de pantalla y, en las tiendas con kits, el código para recibirlo. Aviso de privacidad y bases a un toque.</dd>
+            <dt>Para la promotora</dt><dd>Una página en su celular para validar el código y el ticket y registrar cada kit entregado, con una guía breve en PDF.</dd>
+            <dt>Tablero</dt><dd>Toques, registros y kits entregados, por tienda y por día, y el reporte final con los resultados por tienda.</dd>
+            <dt>Contenido del kit</dt><dd>Lo que abre el chip del tarjetero, que cambia hasta el 14 de febrero.</dd>
+            <dt>Precio</dt><dd>$80,000. Desarrollo propio de Pixel Bridge; la demostración de la sección 02 ya es la página real.</dd>
           </dl>
         </article>
         <article class="ficha rv">
-          <h3>Tarjeta de regalo del día <small>448 y 30 de reserva</small></h3>
+          <h3>Acrílico con NFC y QR <small>15 piezas</small></h3>
           <dl class="spec">
-            <dt>Qué es</dt><dd>Una tarjeta de regalo Liverpool por tienda cada día, del 4 al 17 de enero.</dd>
-            <dt>Valor</dt><dd>$100 en Esencial, $150 en Completa y $200 en Insignia, según las denominaciones que venda Liverpool; siempre menos que el regalo por compra del mismo nivel.</dd>
-            <dt>Regla</dt><dd>Se libera a las 12:00 y es para la primera persona que se registra mientras está disponible. Una por persona en toda la campaña. Si no se recoge en 30 minutos, vuelve a estar disponible, y la que no se entrega en el día pasa al siguiente.</dd>
-            <dt>Entrega</dt><dd>El personal valida el código que llega por SMS o correo y la entrega en una funda con el paisaje. En las 7 tiendas solo con podium, en el mostrador que entrega el regalo por compra.</dd>
+            <dt>Medidas</dt><dd>De mostrador, unos 10 × 15 cm.</dd>
+            <dt>Materiales y acabados</dt><dd>Acrílico transparente de 6 mm con la tarjeta de L'Absolu impresa, el chip NFC y el código QR de su tienda.</dd>
+            <dt>Colocación</dt><dd>En el mostrador de Carlo Corinto en perfumería. No necesita corriente.</dd>
+            <dt>Precio</dt><dd>$500 por pieza.</dd>
           </dl>
         </article>
       </div>
@@ -636,22 +657,21 @@ html:not(.js) .rev-fija{display:block}
     <header class="sec-h rv"><p class="num">04</p><h2>Alcance y distribución por punto de venta</h2></header>
     <div class="sec-b">
       <div class="prose grande rv">
-        <p>En las 25 tiendas con activación, el personal de la marca hace la prueba con las tarjetas que revelan. Las 13 con traffic stopper tienen el podium y los regalos. Seis tiendas viven los tres tiempos completos. En las 32, un chip con su código QR abre la página de registro, en el podium o en la tarjeta que lleva el personal.</p>
+        <p>25 tiendas Liverpool en cinco regiones. Las 10 con experiencia completa son las seis del brief con activación y traffic stopper, y una tienda ancla en Monterrey, Guadalajara, Puebla y Mérida. Las otras 15 llevan la dinámica digital.</p>
       </div>
       <div class="chips rv" role="group" aria-label="Filtrar tiendas por formato">
-        <button type="button" data-f="todas" aria-pressed="true">Todas, 32</button>
-        <button type="button" data-f="a" aria-pressed="false">Activación, 25</button>
-        <button type="button" data-f="t" aria-pressed="false">Traffic stopper y regalo, 13</button>
-        <button type="button" data-f="at" aria-pressed="false">Los tres tiempos, 6</button>
+        <button type="button" data-f="todas" aria-pressed="true">Todas, 25</button>
+        <button type="button" data-f="c" aria-pressed="false">Experiencia completa, 10</button>
+        <button type="button" data-f="d" aria-pressed="false">Dinámica digital, 15</button>
       </div>
-      <p class="chica">A: activación. T: traffic stopper y regalo. El número es la cantidad de regalos.</p>
+      <p class="chica">C: experiencia completa (mueble, promotora y kits). D: dinámica digital (acrílico con NFC y QR). El número es la cantidad de kits.</p>
       <div class="regiones rv" id="regiones"></div>
 
-      <h3 class="sub rv">Regalos por tienda</h3>
+      <h3 class="sub rv">Kits por tienda</h3>
       <div class="prose rv">
-        <p>De 1,000 regalos, 850 salen a las 13 tiendas y 150 quedan de reserva en la Ciudad de México. El reparto pondera el tamaño de cada tienda y el ingreso de su zona, y se afina con la venta de la marca por tienda.</p>
+        <p>De 500 kits, 450 salen a las 10 tiendas con experiencia completa, 45 a cada una, y 50 quedan de reserva en la Ciudad de México. El tablero dice a qué tienda conviene mandar la reserva.</p>
       </div>
-      <ol class="barras rv" id="barras" aria-label="Regalos por tienda"></ol>
+      <ol class="barras rv" id="barras" aria-label="Kits por tienda"></ol>
     </div>
   </div>
 </section>
@@ -661,54 +681,41 @@ html:not(.js) .rev-fija{display:block}
     <header class="sec-h rv"><p class="num">05</p><h2>Desglose de inversión</h2></header>
     <div class="sec-b">
       <div class="prose grande rv">
-        <p>Tres niveles sobre el mismo concepto. Cambian los materiales, los regalos y las piezas insignia. La página de registro y el tablero están en los tres.</p>
+        <p>Una sola inversión para las 25 tiendas. Más de la mitad del subtotal se va al kit de regalo, que es lo que el cliente se lleva a casa.</p>
       </div>
-      <div class="niveles rv" id="niveles">
-        <article class="nivel" data-n="esencial" aria-current="false">
-          <h3 class="cap">Esencial</h3>
-          <p class="tot">$500,000</p>
-          <ul>
-            <li>Página de registro con la tarjeta que se rocía, para las 32 tiendas</li>
-            <li>Tablero por tienda y por día</li>
-            <li>13 podiums traffic stopper con acabados impresos y nicho iluminado</li>
-            <li>Tarjetas que revelan el paisaje para las 25 activaciones</li>
-            <li>Tarjeta de regalo Liverpool del día de $100 en cada tienda: 448 en la campaña</li>
-            <li>1,000 tarjeteros de metal grabado como regalo por compra</li>
-            <li>Guía para el personal de la marca (PDF): el ritual, la tarjeta NFC y cómo validar el código de la tarjeta del día</li>
-            <li>Envío a 32 tiendas y montaje en 13</li>
-          </ul>
-          <button type="button">Ver desglose</button>
-        </article>
-        <article class="nivel" data-n="completa" aria-current="true">
-          <h3 class="cap">Completa</h3>
-          <p class="tot">$750,000</p>
-          <p class="pre">Todo lo de Esencial, con estos cambios:</p>
-          <ul>
-            <li>Podiums con chapa natural de nogal, metal en bronce y letras en relieve</li>
-            <li>Regalo: estuche con tarjetero con chip NFC y pluma metálica</li>
-            <li>Tarjeta de regalo del día de $150</li>
-            <li>Capacitación en video para el personal de la marca</li>
-            <li>Reabasto de regalos a media campaña</li>
-          </ul>
-          <button type="button">Ver desglose</button>
-        </article>
-        <article class="nivel" data-n="insignia" aria-current="false">
-          <h3 class="cap">Insignia</h3>
-          <p class="tot">$1,000,000</p>
-          <p class="pre">Todo lo de Completa, más:</p>
-          <ul>
-            <li>Regalo: el kit completo con libreta, pluma y tarjetero con chip, en estuche con asa</li>
-            <li>Tarjeta de regalo del día de $200</li>
-            <li>Vitrina con animación flotante en las 6 tiendas con los tres tiempos</li>
-            <li>Gemelo virtual de una perfumería para aprobar el montaje antes de producir</li>
-            <li>Reporte final con resultados por tienda</li>
-          </ul>
-          <button type="button">Ver desglose</button>
-        </article>
+      <div class="presupuesto scroll rv">
+        <table>
+          <caption>Precios en pesos mexicanos, más IVA.</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col">Cantidad</th><th scope="col">Precio unitario</th><th scope="col">Importe</th></tr></thead>
+          <tbody>
+            <tr><td>Mueble traffic stopper</td><td>10</td><td>$24,000</td><td>$240,000</td></tr>
+            <tr><td>Kit de regalo</td><td>500</td><td>$695</td><td>$347,500</td></tr>
+            <tr><td>Plataforma digital y tablero</td><td>1</td><td>$80,000</td><td>$80,000</td></tr>
+            <tr><td>Acrílico con NFC y QR</td><td>15</td><td>$500</td><td>$7,500</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row" colspan="3">Subtotal</th><td>$675,000</td></tr>
+            <tr><th scope="row" colspan="3">Comisión de agencia, 15%</th><td>$101,250</td></tr>
+            <tr class="total"><th scope="row" colspan="3">Total del proyecto, más IVA</th><td>$776,250</td></tr>
+          </tfoot>
+        </table>
       </div>
-      <h3 class="sub" id="desg-t" aria-live="polite">Desglose del nivel Completa</h3>
-      <ol class="desg" id="desg"></ol>
-      <p class="chica">Precios en pesos mexicanos.</p>
+      <p class="chica rv">Peso de cada concepto en el subtotal, antes de la comisión</p>
+      <ol class="desg rv" aria-label="Peso de cada concepto en el subtotal">
+        <li><span>Kit de regalo</span><span class="v">51%</span><span class="b"><i style="width:100%"></i></span></li>
+        <li><span>Mueble traffic stopper</span><span class="v">36%</span><span class="b"><i style="width:69%"></i></span></li>
+        <li><span>Plataforma digital y tablero</span><span class="v">12%</span><span class="b"><i style="width:23%"></i></span></li>
+        <li><span>Acrílico con NFC y QR</span><span class="v">1%</span><span class="b"><i style="width:2%"></i></span></li>
+      </ol>
+      <div class="excluye rv">
+        <h3 class="cap">No incluye; se cotiza por separado</h3>
+        <ul>
+          <li>Envío a las 25 tiendas y retiro al final de la campaña</li>
+          <li>Instalación de los muebles</li>
+          <li>Promotoras en las 10 tiendas con experiencia completa</li>
+          <li>Tarjetas olfativas impresas, si la marca las quiere</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -718,20 +725,21 @@ html:not(.js) .rev-fija{display:block}
     <header class="sec-h rv"><p class="num">06</p><h2>Producción, logística e instalación</h2></header>
     <div class="sec-b">
       <div class="prose grande rv">
-        <p>Nueve semanas, del arranque al retiro de piezas. La producción termina antes de Navidad para que los envíos foráneos lleguen con margen.</p>
+        <p>Nueve semanas, del arranque al reporte final. La producción termina antes de Navidad para que los envíos foráneos lleguen con margen.</p>
       </div>
       <div class="gantt rv">
         <div class="g-head" aria-hidden="true"><span>23<br>nov</span><span>30<br>nov</span><span>7<br>dic</span><span>14<br>dic</span><span>21<br>dic</span><span>28<br>dic</span><span>4<br>ene</span><span>11<br>ene</span><span>18<br>ene</span></div>
-        <div class="g-row"><p>Adjudicación y arranque <small>23 al 27 de noviembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:1/2"></i></div></div>
-        <div class="g-row"><p>Diseño final y aprobación de artes <small>30 de noviembre al 4 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/3"></i></div></div>
-        <div class="g-row"><p>Página de registro y tablero <small>30 de noviembre al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/5"></i></div></div>
-        <div class="g-row"><p>Validación legal de la mecánica y las bases <small>30 de noviembre al 4 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/3"></i></div></div>
-        <div class="g-row"><p>Aviso de privacidad y aviso a Profeco, si aplica <small>7 al 15 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:3/5;width:64%"></i></div></div>
-        <div class="g-row"><p>Producción de podiums, tarjetas, chips y regalos <small>7 al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:3/5"></i></div></div>
-        <div class="g-row"><p>Envíos a tiendas <small>21 al 30 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:5/7;width:71%"></i></div></div>
-        <div class="g-row"><p>Montaje y capacitación del personal <small>2 y 3 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:6/7;width:29%;justify-self:end"></i></div></div>
+        <div class="g-row"><p>Adjudicación y arranque <small>23 al 27 de noviembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:1/2;width:71.4%"></i></div></div>
+        <div class="g-row"><p>Diseño final y aprobación de artes <small>30 de noviembre al 4 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/3;width:71.4%"></i></div></div>
+        <div class="g-row"><p>Plataforma digital y tablero <small>30 de noviembre al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/5;width:90.5%"></i></div></div>
+        <div class="g-row"><p>Bases de la promoción y aviso de privacidad <small>30 de noviembre al 11 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:2/4;width:85.7%"></i></div></div>
+        <div class="g-row"><p>Producción de muebles, acrílicos y kits <small>7 al 18 de diciembre</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:3/5;width:85.7%"></i></div></div>
+        <div class="g-row"><p>Envíos a tiendas <small>21 al 30 de diciembre · se cotizan por separado</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:5/7;width:71.4%"></i></div></div>
+        <div class="g-row"><p>Instalación de los muebles <small>2 y 3 de enero · se cotiza por separado</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:6/7;width:29%;justify-self:end"></i></div></div>
+        <div class="g-row"><p>Capacitación de promotoras en la plataforma <small>2 y 3 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:6/7;width:29%;justify-self:end"></i></div></div>
         <div class="g-row"><p>Campaña en tienda <small>4 al 17 de enero</small></p><div class="g-track" aria-hidden="true"><i class="camp" style="grid-column:7/9"></i></div></div>
-        <div class="g-row"><p>Retiro de piezas (y reporte final en Insignia) <small>18 al 22 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:9/10"></i></div></div>
+        <div class="g-row"><p>Retiro de muebles <small>18 al 22 de enero · se cotiza por separado</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:9/10;width:71.4%"></i></div></div>
+        <div class="g-row"><p>Reporte final <small>18 al 22 de enero</small></p><div class="g-track" aria-hidden="true"><i style="grid-column:9/10;width:71.4%"></i></div></div>
       </div>
       <p class="chica">El 25 de diciembre y el 1 de enero no hay operación.</p>
     </div>
@@ -742,14 +750,12 @@ html:not(.js) .rev-fija{display:block}
 
 <footer class="fin oscuro" data-tema="oscuro">
   <div class="wrap fin-in">
-    <h2 class="rv">Para cerrar la propuesta</h2>
+    <h2 class="rv">Siguientes pasos</h2>
     <ol class="rv">
-      <li>Lineamientos de Liverpool para piezas de piso y de mostrador.</li>
-      <li>Definición del regalo con la marca.</li>
-      <li>Venta de la marca por tienda, para afinar el reparto de regalos.</li>
-      <li>Visto bueno de Liverpool para la página de registro y sus tarjetas de regalo (denominaciones y entrega en las 7 tiendas solo con podium), y los datos de la marca para el aviso de privacidad y las bases.</li>
-      <li>Dictamen por escrito de un abogado de promociones sobre la tarjeta del día, antes del 7 de diciembre.</li>
-      <li>Nivel de inversión.</li>
+      <li>Aprobación de la propuesta y de las 10 tiendas con experiencia completa.</li>
+      <li>Cotización por separado de envío y retiro, instalación de los muebles, promotoras y, si la marca las quiere, tarjetas olfativas impresas.</li>
+      <li>Lineamientos de Liverpool para el mueble y su visto bueno para la dinámica de registro.</li>
+      <li>La presentación de L'Absolu que participa y los datos de la marca para las bases de la promoción y el aviso de privacidad.</li>
     </ol>
     <p class="firma">Propuesta preparada por Pixel Bridge, Ciudad de México.</p>
   </div>
@@ -758,37 +764,23 @@ html:not(.js) .rev-fija{display:block}
 
 <script>
 const TIENDAS=[
-  ["Polanco","Valle de México",1,1,95],["Perisur","Valle de México",1,1,85],["Parque Delta","Valle de México",1,1,65],
-  ["Lindavista","Valle de México",1,1,60],["Satélite","Valle de México",1,1,60],["Mitikah","Valle de México",0,1,70],
-  ["Ecatepec","Valle de México",0,1,55],["Insurgentes","Valle de México",1,0,0],
-  ["Monterrey","Norte y noroeste",1,0,0],["Monterrey La Fe","Norte y noroeste",1,1,50],["Monterrey Valle","Norte y noroeste",0,1,60],
-  ["Cd. Juárez","Norte y noroeste",1,0,0],["Tijuana","Norte y noroeste",1,0,0],["Mexicali","Norte y noroeste",1,0,0],
-  ["Culiacán","Norte y noroeste",1,0,0],["Mazatlán","Norte y noroeste",1,0,0],
-  ["Guadalajara","Occidente y Bajío",1,0,0],["Zapopan","Occidente y Bajío",1,0,0],["Zapopan La Perla","Occidente y Bajío",1,0,0],
-  ["Oblatos","Occidente y Bajío",0,1,55],["León","Occidente y Bajío",1,0,0],["León Norte","Occidente y Bajío",0,1,45],
-  ["Querétaro Antea","Occidente y Bajío",0,1,75],["Morelia","Occidente y Bajío",1,0,0],
-  ["Puebla","Centro y sur",1,0,0],["Angelópolis Puebla","Centro y sur",0,1,75],["Pachuca","Centro y sur",1,0,0],["Oaxaca","Centro y sur",1,0,0],
-  ["Mérida","Sureste",1,0,0],["Cancún","Sureste",1,0,0],["Chetumal","Sureste",1,0,0],["Tapachula","Sureste",1,0,0]
+  ["Polanco","Valle de México","c",45],["Perisur","Valle de México","c",45],["Parque Delta","Valle de México","c",45],
+  ["Lindavista","Valle de México","c",45],["Satélite","Valle de México","c",45],["Insurgentes","Valle de México","d",0],
+  ["Monterrey","Norte y noroeste","c",45],["Monterrey La Fe","Norte y noroeste","c",45],["Cd. Juárez","Norte y noroeste","d",0],
+  ["Tijuana","Norte y noroeste","d",0],["Mexicali","Norte y noroeste","d",0],["Culiacán","Norte y noroeste","d",0],
+  ["Mazatlán","Norte y noroeste","d",0],
+  ["Guadalajara","Occidente y Bajío","c",45],["Zapopan","Occidente y Bajío","d",0],["Zapopan La Perla","Occidente y Bajío","d",0],
+  ["León","Occidente y Bajío","d",0],["Morelia","Occidente y Bajío","d",0],
+  ["Puebla","Centro y sur","c",45],["Pachuca","Centro y sur","d",0],["Oaxaca","Centro y sur","d",0],
+  ["Mérida","Sureste","c",45],["Cancún","Sureste","d",0],["Chetumal","Sureste","d",0],["Tapachula","Sureste","d",0]
 ];
 const REGIONES=["Valle de México","Norte y noroeste","Occidente y Bajío","Centro y sur","Sureste"];
-const RESERVA=150;
-const NIVELES={esencial:["Esencial",500000],completa:["Completa",750000],insignia:["Insignia",1000000]};
-const REPARTO=[
-  ["Página de registro y tablero",.15],
-  ["Podiums traffic stopper",.25],
-  ["Tarjetas que revelan y tarjetas NFC del personal",.09],
-  ["Tarjetas de regalo del día",.11],
-  ["Regalos por compra",.25],
-  ["Envíos y montaje",.10],
-  ["Gestión y contingencia",.05]
-];
+const RESERVA=50;
 const FONDO_INICIO=new Date(2027,0,4), FONDO_FIN=new Date(2027,1,14);
-const mxn=new Intl.NumberFormat("es-MX",{style:"currency",currency:"MXN",minimumFractionDigits:0,maximumFractionDigits:0});
 const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
 const quieto=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const limita=(v,a,b)=>Math.max(a,Math.min(b,v));
 const suave=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
-const azar=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
 const AMBAR="#DE9A52";
 (function(){
   const cont=document.getElementById("regiones");
@@ -797,15 +789,15 @@ const AMBAR="#DE9A52";
     h.appendChild(n); d.append(h,ul);
     TIENDAS.filter(t=>t[1]===r).forEach(t=>{
       const li=el("li"), m=el("span","mk");
-      li.dataset.a=t[2]; li.dataset.t=t[3];
-      if(t[2]){const i=el("i","a","A");i.title="Activación";m.appendChild(i)}
-      if(t[3]){const i=el("i","t","T");i.title="Traffic stopper y regalo";m.appendChild(i);m.appendChild(el("span",null,t[4]))}
+      li.dataset.f=t[2];
+      if(t[2]==="c"){const i=el("i","c","C");i.title="Experiencia completa";m.appendChild(i);m.appendChild(el("span",null,t[3]))}
+      else{const i=el("i","d","D");i.title="Dinámica digital";m.appendChild(i)}
       li.append(el("span",null,t[0]),m); ul.appendChild(li);
     });
     cont.appendChild(d);
   });
   const btns=[...document.querySelectorAll(".chips button")];
-  const pasa={todas:()=>true,a:li=>li.dataset.a==="1",t:li=>li.dataset.t==="1",at:li=>li.dataset.a==="1"&&li.dataset.t==="1"};
+  const pasa={todas:()=>true,c:li=>li.dataset.f==="c",d:li=>li.dataset.f==="d"};
   function filtra(f){
     btns.forEach(x=>x.setAttribute("aria-pressed",x.dataset.f===f?"true":"false"));
     cont.querySelectorAll(".region").forEach(reg=>{
@@ -816,10 +808,11 @@ const AMBAR="#DE9A52";
   }
   btns.forEach(b=>b.addEventListener("click",()=>filtra(b.dataset.f)));
   filtra("todas");
+  addEventListener("beforeprint",()=>filtra("todas"));
 })();
 (function(){
   const ol=document.getElementById("barras");
-  const filas=TIENDAS.filter(t=>t[4]>0).sort((a,b)=>b[4]-a[4]).map(t=>[t[0],t[4],false]);
+  const filas=TIENDAS.filter(t=>t[3]>0).sort((a,b)=>b[3]-a[3]).map(t=>[t[0],t[3],false]);
   filas.push(["Reserva central",RESERVA,true]);
   const max=Math.max(...filas.map(f=>f[1]));
   filas.forEach((f,k)=>{
@@ -828,40 +821,6 @@ const AMBAR="#DE9A52";
     li.append(el("span",null,f[0]),b,el("span","v",f[1])); ol.appendChild(li);
   });
   document.querySelectorAll(".g-track i").forEach((i,k)=>i.style.setProperty("--d",(k*90)+"ms"));
-})();
-(function(){
-  const cards=[...document.querySelectorAll(".nivel")], ol=document.getElementById("desg"), tit=document.getElementById("desg-t");
-  const maxP=Math.max(...REPARTO.map(r=>r[1]));
-  const filas=REPARTO.map(([c,p])=>{
-    const li=el("li"), v=el("span","v"), num=document.createTextNode(""), b=el("span","b"), i=el("i");
-    v.append(num,el("small",null,Math.round(p*100)+"%"));
-    i.style.width=(p/maxP*100)+"%"; b.appendChild(i);
-    li.append(el("span",null,c),v,b); ol.appendChild(li);
-    return {p,num};
-  });
-  let actual=0, anim=0;
-  function pinta(id,animar){
-    const [nombre,total]=NIVELES[id], de=actual;
-    actual=total; cancelAnimationFrame(anim);
-    try{const f=document.querySelector(".cel iframe"), a=f&&f.contentWindow&&f.contentWindow.LAbsolu;if(a)a.nivel(id)}catch(e){}
-    document.querySelectorAll('a[href^="experiencia/"]').forEach(x=>x.href="experiencia/?t=perisur&n="+id);
-    cards.forEach(c=>c.setAttribute("aria-current",c.dataset.n===id?"true":"false"));
-    tit.textContent="Desglose del nivel "+nombre+": "+mxn.format(total);
-    if(!animar||quieto){filas.forEach(f=>f.num.nodeValue=mxn.format(total*f.p));return}
-    const t0=performance.now();
-    const paso=t=>{
-      const k=suave((t-t0)/550);
-      filas.forEach(f=>f.num.nodeValue=mxn.format((de+(total-de)*k)*f.p));
-      if(k<1)anim=requestAnimationFrame(paso);
-    };
-    anim=requestAnimationFrame(paso);
-  }
-  cards.forEach(c=>c.querySelector("button").addEventListener("click",()=>{
-    pinta(c.dataset.n,true);
-    const r=ol.getBoundingClientRect();
-    if(r.bottom>innerHeight||r.top<0)tit.scrollIntoView({block:"start"});
-  }));
-  pinta("completa",false);
 })();
 (function(){
   const d=document.querySelector(".r3"); if(!d)return;
@@ -945,127 +904,6 @@ const AMBAR="#DE9A52";
   requestAnimationFrame(paso);
 })();
 (function(){
-  const caja=document.querySelector(".rev"); if(!caja)return;
-  const pista=caja.querySelector(".rev-pista"), esc=caja.querySelector(".rev-escena");
-  const cv=document.getElementById("rev-c"), co=document.getElementById("corte-c");
-  if(!cv.getContext||!co.getContext)return;
-  const c1=cv.getContext("2d"), c2=co.getContext("2d");
-  const pasos=[...caja.querySelectorAll(".rev-pasos li")], barras=[...caja.querySelectorAll(".rev-barras i")];
-  const VENTANA=[.158,.455,.854,.851];
-  const r=azar(5);
-  const BORDE=Array.from({length:6},(_,i)=>({f:2+i+Math.floor(r()*3),a:.03+r()*.06,fase:r()*6.3}));
-  const BRISA=Array.from({length:160},()=>({t:r(),d:r()-.5,s:.5+r()*1.5,a:.3+r()*.6}));
-  const GOTAS=Array.from({length:24},()=>({x:r()-.5,t:r(),s:1.2+r()*1.8}));
-  const tramo=(v,a,b)=>limita((v-a)/(b-a),0,1);
-  const moja=v=>suave(tramo(v,.3,.72));
-  const brisa=v=>tramo(v,.24,.32)*(1-tramo(v,.66,.76));
-  const boquilla=v=>tramo(v,.16,.26)*(1-tramo(v,.74,.84));
-  let dpr=1,W=0,H=0,CW=0,CH=0,p=0,pend=false,tope=0,cargadas=0;
-  const blanca=new Image(), revelada=new Image();
-  [blanca,revelada].forEach(im=>{im.onload=()=>{cargadas++;actualiza(true)}});
-  blanca.src="assets/img/tarjeta-blanca.webp"; revelada.src="assets/img/tarjeta-revelada.webp";
-  function medir(){
-    dpr=Math.min(window.devicePixelRatio||1,2);
-    W=cv.clientWidth; H=cv.clientHeight; cv.width=Math.max(1,Math.round(W*dpr)); cv.height=Math.max(1,Math.round(H*dpr));
-    CW=co.clientWidth; CH=co.clientHeight; co.width=Math.max(1,Math.round(CW*dpr)); co.height=Math.max(1,Math.round(CH*dpr));
-    tope=parseFloat(getComputedStyle(esc).top)||0;
-  }
-  function frente(){
-    c1.setTransform(dpr,0,0,dpr,0,0); c1.clearRect(0,0,W,H);
-    if(cargadas<2)return;
-    const ar=blanca.naturalWidth/blanca.naturalHeight;
-    let ch=H*.94, cw=ch*ar;
-    if(cw>W*.6){cw=W*.6;ch=cw/ar}
-    const x=Math.round((W-cw)/2-cw*.1), y=Math.round((H-ch)/2);
-    c1.fillStyle="rgba(0,0,0,.4)"; c1.fillRect(x+7,y+9,cw,ch);
-    c1.drawImage(blanca,x,y,cw,ch);
-    const vx=x+cw*VENTANA[0], vy=y+ch*VENTANA[1], vw=cw*(VENTANA[2]-VENTANA[0]), vh=ch*(VENTANA[3]-VENTANA[1]);
-    const cx=vx+vw*.64, cy=vy+vh*.42, m=moja(p);
-    if(m>0){
-      const R=Math.hypot(vw,vh)*(.04+1.6*Math.pow(m,1.7));
-      c1.save();
-      c1.beginPath(); c1.rect(vx,vy,vw,vh); c1.clip();
-      c1.beginPath();
-      for(let k=0;k<=72;k++){
-        const t=k/72*6.2832; let f=1;
-        for(const b of BORDE)f+=b.a*Math.sin(b.f*t+b.fase);
-        const px=cx+Math.cos(t)*R*f, py=cy+Math.sin(t)*R*f*.9;
-        if(k)c1.lineTo(px,py); else c1.moveTo(px,py);
-      }
-      c1.closePath();
-      c1.save(); c1.clip(); c1.drawImage(revelada,x,y,cw,ch); c1.restore();
-      c1.strokeStyle="rgba(120,92,58,.3)"; c1.lineWidth=2.5; c1.stroke();
-      c1.restore();
-    }
-    const bx=x+cw+16, by=cy, br=brisa(p), bq=boquilla(p);
-    if(br>0){
-      c1.fillStyle="#FBFBF8";
-      for(const g of BRISA){
-        const t=(g.t+p*7)%1, gx=bx-8+(cx-bx+8)*t, gy=by+g.d*t*vh*.5;
-        c1.globalAlpha=g.a*br*(1-t*.55);
-        c1.beginPath(); c1.arc(gx,gy,g.s*(.6+t),0,6.2832); c1.fill();
-      }
-      c1.globalAlpha=1;
-    }
-    if(bq>0){
-      c1.globalAlpha=bq;
-      const g=c1.createLinearGradient(0,by-15,0,by+15);
-      g.addColorStop(0,"#7F8387"); g.addColorStop(.45,"#E2E4E6"); g.addColorStop(1,"#4A4E52");
-      c1.fillStyle=g;
-      if(c1.roundRect){c1.beginPath();c1.roundRect(bx,by-15,44,30,5);c1.fill()}else c1.fillRect(bx,by-15,44,30);
-      c1.fillStyle="#2A2E32"; c1.fillRect(bx-7,by-5,9,10);
-      c1.globalAlpha=1;
-    }
-  }
-  function corte(){
-    c2.setTransform(dpr,0,0,dpr,0,0); c2.clearRect(0,0,CW,CH);
-    const x0=Math.round(CW*.04), ancho=Math.round(CW*.92), m=moja(p), br=brisa(p);
-    const hP=Math.max(10,CH*.13), hI=Math.max(6,CH*.08), hC=Math.max(10,CH*.15);
-    const yP=CH-hP-4, yI=yP-hI, yC=yI-hC;
-    c2.fillStyle="#B9AE9F"; c2.fillRect(x0,yP,ancho,hP);
-    const g=c2.createLinearGradient(x0,0,x0+ancho,0);
-    g.addColorStop(0,"#7E8F4E"); g.addColorStop(.3,"#D98B3A"); g.addColorStop(.55,"#A3AE63"); g.addColorStop(.8,"#D98B3A"); g.addColorStop(1,"#7E8F4E");
-    c2.fillStyle=g; c2.fillRect(x0,yI,ancho,hI);
-    c2.fillStyle="#FBFBF8"; c2.fillRect(x0,yC,ancho,hC);
-    const cx=x0+ancho*.64, mitad=ancho*(.03+m*.75), a=Math.max(x0,cx-mitad), b=Math.min(x0+ancho,cx+mitad);
-    if(m>0&&b>a){
-      c2.globalAlpha=.85; c2.fillStyle=g; c2.fillRect(a,yC,b-a,hC);
-      c2.globalAlpha=.2; c2.fillStyle="#BFD9EA"; c2.fillRect(a,yC,b-a,hC);
-      c2.globalAlpha=1;
-    }
-    c2.fillStyle="rgba(21,24,26,.18)";
-    for(let x=x0+3;x<x0+ancho-2;x+=6){
-      if(m>0&&x>a&&x<b)continue;
-      c2.fillRect(x,yC+hC*.3,1.5,1.5); c2.fillRect(x+3,yC+hC*.65,1.5,1.5);
-    }
-    if(br>0){
-      c2.fillStyle="#BFD9EA";
-      for(const d of GOTAS){
-        const t=(d.t+p*6)%1;
-        c2.globalAlpha=br*(.35+.65*(1-t));
-        c2.beginPath(); c2.arc(cx+d.x*ancho*.5,4+(yC-8)*t,d.s,0,6.2832); c2.fill();
-      }
-      c2.globalAlpha=1;
-    }
-  }
-  function actualiza(forzar){
-    pend=false;
-    const b=pista.getBoundingClientRect();
-    if(!forzar&&(b.bottom<-50||b.top>innerHeight+50))return;
-    const total=b.height-esc.offsetHeight;
-    p=total>0?limita((tope-b.top)/total,0,1):0;
-    frente(); corte();
-    const fi=p<.3?0:p<.7?1:2;
-    pasos.forEach((li,j)=>li.classList.toggle("on",j===fi));
-    [tramo(p,0,.3),tramo(p,.3,.7),tramo(p,.7,1)].forEach((v,j)=>barras[j].style.transform="scaleX("+v+")");
-  }
-  medir();
-  addEventListener("scroll",()=>{if(!pend){pend=true;requestAnimationFrame(()=>actualiza())}},{passive:true});
-  if("ResizeObserver" in window)new ResizeObserver(()=>{medir();actualiza(true)}).observe(esc);
-  else addEventListener("resize",()=>{medir();actualiza(true)});
-  actualiza(true);
-})();
-(function(){
   const bar=document.getElementById("barra"), av=bar.querySelector(".avance");
   const oscuras=[...document.querySelectorAll("[data-tema=oscuro]")], meta=document.querySelector('meta[name="theme-color"]');
   let pend=false, antes=null;
@@ -1116,7 +954,7 @@ const AMBAR="#DE9A52";
   let ve=true;
   const avisa=()=>{const a=api();if(a)a.activo(ve&&!document.hidden)};
   if("IntersectionObserver" in window)new IntersectionObserver(es=>{ve=es[0].isIntersecting;avisa()}).observe(cel);
-  fr.addEventListener("load",()=>{avisa();const a=api(), n=document.querySelector('.nivel[aria-current="true"]');if(!a)return;if(n)a.nivel(n.dataset.n);if(pendiente){a.ir(pendiente);pendiente=null}});
+  fr.addEventListener("load",()=>{avisa();const a=api();if(a&&pendiente){a.ir(pendiente);pendiente=null}});
 })();
 </script>
 </body>
